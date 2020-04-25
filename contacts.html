@@ -42,32 +42,47 @@
 						<section>
 								<h3>Feel free to contact me using any of the following:</h3>
 								<ul style="list-style: none;">
-								<li><a target="_blank" rel="noopener noreferrer"  href="https://www.linkedin.com/in/m-tartari/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a> &nbsp;&nbsp; m-tartari</li>
-								<li><a target="_blank" rel="noopener noreferrer"  href="https://github.com/m-tartari" class="icon brands alt fa-github"><span class="label">GitHub</span></a> &nbsp;&nbsp; m-tartari</li>
-								<li><a target="_blank" rel="noopener noreferrer"  href="mailto:michele.tartari@live.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a> &nbsp;&nbsp;michele.tartari@live.com</li>
+									<li><a target="_blank" rel="noopener noreferrer" style="color: #ccc;" class="icon solid alt fa-envelope" href="mailto:michele.tartari@live.com">
+											<span class="label">Email</span> 
+											&nbsp;&nbsp;michele.tartari@live.com
+										</a>
+									</li>
+									<li>
+										<a target="_blank" rel="noopener noreferrer"  style="color: #ccc;" class="icon brands alt fa-linkedin-in" href="https://www.linkedin.com/in/m-tartari/">
+											<span class="label">LinkedIn</span>
+											&nbsp;&nbsp; m-tartari
+										</a>
+									</li>
+									<li><a target="_blank" rel="noopener noreferrer" style="color: #ccc;" class="icon brands alt fa-github"  href="https://github.com/m-tartari">
+											<span class="label">GitHub</span> 
+											&nbsp;&nbsp; m-tartari
+										</a>
+									</li>
 								</ul>
-								
 						</section>
 						<!-- Text -->
-							<section>
+							<section> <!-- check https://stackoverflow.com/questions/91905/adding-urgent-priority-to-mail-set-from-mailto-link and https://www.w3.org/TR/WD-html40-970917/htmlweb.html-->
 								<h3>Or prepare it here:</h3>
 								<form method="post" action="mailto:michele.tartari@live.com">
 									<div class="row gtr-uniform gtr-50">
+										<!--
 										<div class="col-6 col-12-xsmall">
 											<input type="text" name="name" id="name" value="" placeholder="Name" />
 										</div>
 										<div class="col-6 col-12-xsmall">
 											<input type="email" name="email" id="email" value="" placeholder="Email" />
 										</div>
+										-->
 										<div class="col-12">
-											<select name="category" id="category">
+											<select name="subject" id="category">
 												<option value="">- Category -</option>
-												<option value="1">Contact request</option>
-												<option value="1">Job proposal</option>
-												<option value="1">Bug report</option>
-												<option value="1">Other</option>
+												<option value="Contact request">Contact request</option>
+												<option value="Job proposal">Job proposal</option>
+												<option value="Bug report">Bug report</option>
+												<option value="Other">Other</option>
 											</select>
 										</div>
+										<!--
 										<div class="col-4 col-12-medium">
 											<input type="radio" id="priority-low" name="priority" checked>
 											<label for="priority-low">Low Priority</label>
@@ -88,8 +103,9 @@
 											<input type="checkbox" id="human" name="human" checked>
 											<label for="human">I am a human and not a robot</label>
 										</div>
+										-->
 										<div class="col-12">
-											<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+											<textarea name="body" id="message" placeholder="Enter your message" rows="6"></textarea>
 										</div>
 										<div class="col-12">
 											<ul class="actions">
