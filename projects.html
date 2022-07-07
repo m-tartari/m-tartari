@@ -1,293 +1,441 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Michele Tartari - Projects</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" type="image/png" href="images/robot.png">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
+  <head>
+    <title>Michele Tartari - Projects</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" type="image/png" href="images/robot.png" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="index.html">Michele Tartari</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="projects.html">Projects</a>
+              <ul>
+                <li><a href="projects.html#robotics">Robotics</a></li>
+                <li><a href="projects.html#engineering">Engineering</a></li>
+                <li><a href="projects.html#hobbies">Hobbies</a></li>
+                <!-- <li><a href="projects.html#other">Others</a></li> -->
+              </ul>
+            </li>
+            <li><a href="curriculum.html">Curriculim</a></li>
+            <li><a href="contacts.html" class="button primary">Contact me</a></li>
+          </ul>
+        </nav>
+      </header>
 
-			<!-- Header -->
-                <header id="header">
-					<h1 id="logo"><a href="index.html">Michele Tartari</a></h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="projects.html">Projects</a>
-								<ul>
-									<li><a href="projects.html#robotics">Robotics</a></li>
-									<li><a href="projects.html#engineering">Engineering</a></li>
-									<li><a href="projects.html#hobbies">Hobbies</a></li>
-									<!-- <li><a href="projects.html#other">Others</a></li> -->
-								</ul>
-							</li>
-							<li><a href="curriculum.html">Curriculim</a></li>
-							<li><a href="contacts.html" class="button primary">Contact me</a></li>
-						</ul>
-					</nav>
-				</header>
-
-			<!-- Main -->
-				<div id="main" class="wrapper style1">
-					<div class="container">
-						<header class="major">
-							<h2>Projects</h2> <!--
+      <!-- Main -->
+      <div id="main" class="wrapper style1">
+        <div class="container">
+          <header class="major">
+            <h2>Projects</h2>
+            <!--
                             <p>Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan</p> -->
-						</header>
-						
-						<!-- Content -->
-						<section id="robotics">
-                            <h2 style="color: #e44c65;">Robotics</h2>
-							<p style="margin-top: -20px;">Here there is a collection of all the projects that are strictly related to the design, development and functioning of robots:</p>
+          </header>
 
-							<button class="accordion"><b>Voice Controlled Mobile Robot for Indoor Applications</b></button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/drive/folders/1Y7TJJN8z1llCkSTnpVHMELD3PqsX8VF9?usp=sharing" class="icon alt far fa-file-pdf"><span class="label">Slideshow</span></a></i>
-								<i class="fa-stack">
-									<i class="fa icon brands alt fa-github fa-stack-1x"></i>
-									<i class="fa alt fa-slash fa-stack-1x "></i>
-								</i>
-								Master Thesis
-								<p>This thesis proposes a design from scratch for a small mobile robot controlled by voice using ROS.
-									The results obtained show both the feasibility of using low power boards and some of their limitations.
-									(Research publication in preparation)
-								</p>
-							</div>
+          <!-- Content -->
+          <section id="robotics">
+            <h2 style="color: #e44c65">Robotics</h2>
+            <p style="margin-top: -20px">
+              Here there is a collection of all the projects that are strictly related to the design, development and functioning of robots:
+            </p>
 
-							<!-- Recharge Electric Car -->
-							<button class="accordion"><b> Recharging Electric Cars with a Mobile Robot </b></button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing" class="icon alt far fa-file-pdf"><span class="label">Slideshow</span></a></i>
-								<i class="fa-stack">
-									<i class="fa icon brands alt fa-github fa-stack-1x"></i>
-									<i class="fa alt fa-slash fa-stack-1x "></i>	
-								</i> 
-								<p>
-									The aim of this project was to prove the possibility to design an autonomous mobile robot whose task was to recharge electric cars in a parking lot.
-									This was done in simulation, using the Gazebo and ROS.
-								</p>
-							</div>
+            <button class="accordion">
+              <b>Voice Controlled Mobile Robot for Indoor Applications</b>
+            </button>
+            <div class="panel">
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/drive/folders/1Y7TJJN8z1llCkSTnpVHMELD3PqsX8VF9?usp=sharing"
+                  class="icon alt far fa-file-pdf"
+                  ><span class="label">Slideshow</span></a
+                ></i
+              >
+              <i class="fa-stack">
+                <i class="fa icon brands alt fa-github fa-stack-1x"></i>
+                <i class="fa alt fa-slash fa-stack-1x"></i>
+              </i>
+              Master Thesis
+              <p>
+                This thesis proposes a design from scratch for a small mobile robot controlled by voice using ROS. The results obtained show both the
+                feasibility of using low power boards and some of their limitations. (Research publication in preparation)
+              </p>
+            </div>
 
-							<!-- EKF Matlab -->
-							<button class="accordion"><b>
-								Mobile Robot Self-Localization
-							</b></button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1BgPj-fgtYDDEsFHmDk2fGVm7DCPFWEeN/view?usp=sharing" class="icon alt far fa-file-pdf"><span class="label">Slideshow</span></a></i>
-								&nbsp;&nbsp;
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/ekf_matlab" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-								<p>
-									For this project we worked using Matlab on data retrieved from a differential drive robot for its localization in a certain area by the means of the Extended Kalman filter (EKF).
-								</p>
-							</div>
+            <!-- Recharge Electric Car -->
+            <button class="accordion"><b> Recharging Electric Cars with a Mobile Robot </b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing"
+                  class="icon alt far fa-file-pdf"
+                  ><span class="label">Slideshow</span></a
+                ></i
+              >
+              <i class="fa-stack">
+                <i class="fa icon brands alt fa-github fa-stack-1x"></i>
+                <i class="fa alt fa-slash fa-stack-1x"></i>
+              </i>
+              <p>
+                The aim of this project was to prove the possibility to design an autonomous mobile robot whose task was to recharge electric cars in a parking
+                lot. This was done in simulation, using the Gazebo and ROS.
+              </p>
+            </div>
 
-							<!-- Biorobotics -->
-							<button class="accordion"><b> Onychophora-Inspired Firefighting Robot</b></button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/open?id=1a_ZvgaQjzvedeo296zrDpdvNL_VJDWTX" class="icon alt far fa-file-pdf"><span class="label">Slideshow</span></a></i>
-								&nbsp;&nbsp;
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/firebot" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-								<p>
-									This project proposes a conceptual design for a firefighting robot suitable for indoor environments by taking inspiration from the biological world.
-								</p>
-							</div>
+            <!-- EKF Matlab -->
+            <button class="accordion"><b> Mobile Robot Self-Localization </b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/1BgPj-fgtYDDEsFHmDk2fGVm7DCPFWEeN/view?usp=sharing"
+                  class="icon alt far fa-file-pdf"
+                  ><span class="label">Slideshow</span></a
+                ></i
+              >
+              &nbsp;&nbsp;
+              <i class="icon"
+                ><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/ekf_matlab" class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              <p>
+                For this project we worked using Matlab on data retrieved from a differential drive robot for its localization in a certain area by the means of
+                the Extended Kalman filter (EKF).
+              </p>
+            </div>
 
-							<!-- DESRO -->
-							<button class="accordion"><b> 3RRR Planar Parallel Manipulator </b></button>
-							<div class="panel">	
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/open?id=11lCJM3EjVsua379BKD5NcEDHQLL4jdQn" class="icon alt far fa-file-pdf"><span class="label">Slideshow</span></a></i>
-								&nbsp;&nbsp;
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/3RRR_planar_parallel_manipulator" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-								<p>
-										This project concerns the design and optimization of a 3RRR planar parallel manipulator using MATLAB and CATIA 
-								</p>
-							</div>
+            <!-- Biorobotics -->
+            <button class="accordion"><b> Onychophora-Inspired Firefighting Robot</b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/open?id=1a_ZvgaQjzvedeo296zrDpdvNL_VJDWTX"
+                  class="icon alt far fa-file-pdf"
+                  ><span class="label">Slideshow</span></a
+                ></i
+              >
+              &nbsp;&nbsp;
+              <i class="icon"
+                ><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/firebot" class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              <p>
+                This project proposes a conceptual design for a firefighting robot suitable for indoor environments by taking inspiration from the biological
+                world.
+              </p>
+            </div>
 
-							<!-- OPTEC -->
-							<button class="accordion"><b> Point-to-Point Trajectory Optimization </b></button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/open?id=11m7r7fLda_jpDEZ-9qAWvnfRN2kLkhlA" class="icon alt far fa-file-pdf"><span class="label">Slideshow</span></a></i>
-								&nbsp;&nbsp;
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/simple_trajectory_optimization" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-								<p>
-									For this project we worked to find the optimal trajectory for a simple model of a robot performing point-to-point navigation in a room with some obstacles using MATLAB.
-								</p>
-							</div>
+            <!-- DESRO -->
+            <button class="accordion"><b> 3RRR Planar Parallel Manipulator </b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/open?id=11lCJM3EjVsua379BKD5NcEDHQLL4jdQn"
+                  class="icon alt far fa-file-pdf"
+                  ><span class="label">Slideshow</span></a
+                ></i
+              >
+              &nbsp;&nbsp;
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/m-tartari/3RRR_planar_parallel_manipulator"
+                  class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              <p>This project concerns the design and optimization of a 3RRR planar parallel manipulator using MATLAB and CATIA</p>
+            </div>
 
-							<!-- SOFAR -->
-							<button class="accordion"><b> Simple Swarm </b></button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/simple_swarm" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-								&nbsp;&nbsp;
-								<p>
-									Simple simulation and visualization of swarms of differential drive robots following a leader. Developed using C++ and ROS.
-								</p>
-							</div>
+            <!-- OPTEC -->
+            <button class="accordion"><b> Point-to-Point Trajectory Optimization </b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/open?id=11m7r7fLda_jpDEZ-9qAWvnfRN2kLkhlA"
+                  class="icon alt far fa-file-pdf"
+                  ><span class="label">Slideshow</span></a
+                ></i
+              >
+              &nbsp;&nbsp;
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/m-tartari/simple_trajectory_optimization"
+                  class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              <p>
+                For this project we worked to find the optimal trajectory for a simple model of a robot performing point-to-point navigation in a room with some
+                obstacles using MATLAB.
+              </p>
+            </div>
 
-							<!-- ARPRO-IRP -->
-							<button class="accordion"><b> Industrial Robot Programming </b></button>
-							<div class="panel">
-									<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/industrial_robot_programming" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-								<p>
-									Industrial Robot Programming using VAL II and V+ tested on a PUMA and a RX90 robots.
-								</p>
-							</div>
+            <!-- SOFAR -->
+            <button class="accordion"><b> Simple Swarm </b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/simple_swarm" class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              &nbsp;&nbsp;
+              <p>Simple simulation and visualization of swarms of differential drive robots following a leader. Developed using C++ and ROS.</p>
+            </div>
 
-							<!-- MOCOM -->
-							<button class="accordion"><b> Modelling and Control of Manipulators </b></button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/modelling_and_control_of_manipulators" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-								<p>
-									This contains several projects regarding modelling and control of various manipulators using MATLAB, Simulink and ADAMS.
-								</p>
-							</div>
+            <!-- ARPRO-IRP -->
+            <button class="accordion"><b> Industrial Robot Programming </b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/industrial_robot_programming" class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              <p>Industrial Robot Programming using VAL II and V+ tested on a PUMA and a RX90 robots.</p>
+            </div>
 
-                        </section>
-						<hr />
-	
+            <!-- MOCOM -->
+            <button class="accordion"><b> Modelling and Control of Manipulators </b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/m-tartari/modelling_and_control_of_manipulators"
+                  class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              <p>This contains several projects regarding modelling and control of various manipulators using MATLAB, Simulink and ADAMS.</p>
+            </div>
+          </section>
+          <hr />
 
-						<!-- Engineering Projects -->
-						<section id="engineering">
-							<h2 style="color: #e44c65;">Engineering</h2>
-							<p style="margin-top: -20px;">Here there is a collection of all the projects that are related to all the other fields of engineering:</p>
+          <!-- Engineering Projects -->
+          <section id="engineering">
+            <h2 style="color: #e44c65">Engineering</h2>
+            <p style="margin-top: -20px">Here there is a collection of all the projects that are related to all the other fields of engineering:</p>
 
-							<!-- Tongji Theis -->
-							<button class="accordion">
-								<b>
-									Solar Panel Fault Detection Method Based on Infrared Image Processing
-								</b>
-							</button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/0B1z42QMR-0UtYzBYSVhRV3ZPWk0/view?usp=sharing" class="icon alt far fa-file-pdf"><span class="label">Slideshow</span></a></i>
-								<i class="fa-stack">
-									<i class="fa icon brands alt fa-github fa-stack-1x"></i>
-									<i class="fa alt fa-slash fa-stack-1x "></i>
-								</i>
-								Bachelor Thesis
-								<p>
-									My Chinese bachelor thesis that proposes a method to detect malfunctioning solar panels by processing thermal images using MATLAB.
-								</p>
-							</div>
+            <!-- Tongji Theis -->
+            <button class="accordion">
+              <b> Solar Panel Fault Detection Method Based on Infrared Image Processing </b>
+            </button>
+            <div class="panel">
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/0B1z42QMR-0UtYzBYSVhRV3ZPWk0/view?usp=sharing"
+                  class="icon alt far fa-file-pdf"
+                  ><span class="label">Slideshow</span></a
+                ></i
+              >
+              <i class="fa-stack">
+                <i class="fa icon brands alt fa-github fa-stack-1x"></i>
+                <i class="fa alt fa-slash fa-stack-1x"></i>
+              </i>
+              Bachelor Thesis
+              <p>My Chinese bachelor thesis that proposes a method to detect malfunctioning solar panels by processing thermal images using MATLAB.</p>
+            </div>
 
-							<!-- Unibo Thesis -->
-							<button class="accordion">
-								<b>
-									Design of a Testing Machine for Flexure Hinges
-								</b>
-							</button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/0B1z42QMR-0UtSkxRVzJPTk1IX0k/view?usp=sharing" class="icon alt far fa-file-pdf"><span class="label">Slideshow</span></a></i>
-								<i class="fa-stack">
-									<i class="fa icon brands alt fa-github fa-stack-1x"></i>
-									<i class="fa alt fa-slash fa-stack-1x "></i>
-								</i>
-								Bachelor Thesis
-								<p>
-									My Italian bachelor thesis that proposes a design from scratch of a machine for the empirical characterization of flexure hinges.
-								</p>
-							</div>
+            <!-- Unibo Thesis -->
+            <button class="accordion">
+              <b> Design of a Testing Machine for Flexure Hinges </b>
+            </button>
+            <div class="panel">
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/0B1z42QMR-0UtSkxRVzJPTk1IX0k/view?usp=sharing"
+                  class="icon alt far fa-file-pdf"
+                  ><span class="label">Slideshow</span></a
+                ></i
+              >
+              <i class="fa-stack">
+                <i class="fa icon brands alt fa-github fa-stack-1x"></i>
+                <i class="fa alt fa-slash fa-stack-1x"></i>
+              </i>
+              Bachelor Thesis
+              <p>My Italian bachelor thesis that proposes a design from scratch of a machine for the empirical characterization of flexure hinges.</p>
+            </div>
 
-							<!-- NOLCO -->
-							<button class="accordion"><b> Control of a Nonlinear System </b></button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1TE3TWkXZjVq8OuBkLl497c_MQSs3MiLQ/view?usp=sharing" class="icon alt far fa-file-pdf"><span class="label">Slideshow</span></a></i>
-								&nbsp;&nbsp;
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/modelling_and_control_of_manipulators" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-								<p>
-									The aim of this project was to implement control laws for a nonlinear system (based on the model of a PVTOL aircraft).
-								</p>
-							</div>
+            <!-- NOLCO -->
+            <button class="accordion"><b> Control of a Nonlinear System </b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/1TE3TWkXZjVq8OuBkLl497c_MQSs3MiLQ/view?usp=sharing"
+                  class="icon alt far fa-file-pdf"
+                  ><span class="label">Slideshow</span></a
+                ></i
+              >
+              &nbsp;&nbsp;
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/m-tartari/modelling_and_control_of_manipulators"
+                  class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              <p>The aim of this project was to implement control laws for a nonlinear system (based on the model of a PVTOL aircraft).</p>
+            </div>
 
-							<!-- Multi-body -->
-							<button class="accordion"><b> Multi-Body System’s Kinematic Analysis </b></button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/15yrDU2blkb34Jy2GXkCIe4qNmDRmp31w/view?usp=sharing" class="icon alt far fa-file-pdf"><span class="label">Slideshow</span></a></i>
-								&nbsp;&nbsp;
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/multi-body-kinematics" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-								<p>
-									For this project the kinematic analysis has been performed upon agiven mechanism using MATLAB. 
-									It has been then validated by comparing it to the ADAMS model of the same mechanism.
-								</p>
-							</div>
+            <!-- Multi-body -->
+            <button class="accordion"><b> Multi-Body System’s Kinematic Analysis </b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/15yrDU2blkb34Jy2GXkCIe4qNmDRmp31w/view?usp=sharing"
+                  class="icon alt far fa-file-pdf"
+                  ><span class="label">Slideshow</span></a
+                ></i
+              >
+              &nbsp;&nbsp;
+              <i class="icon"
+                ><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/multi-body-kinematics" class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              <p>
+                For this project the kinematic analysis has been performed upon agiven mechanism using MATLAB. It has been then validated by comparing it to the
+                ADAMS model of the same mechanism.
+              </p>
+            </div>
 
-							<!-- SIPRO -->
-							<button class="accordion"><b> Signal Processing </b></button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/signal_processing" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-								&nbsp;&nbsp;
-								<p>
-								Several Signal processing projects developed using MATLAB.  
-								</p>
-							</div>
+            <!-- SIPRO -->
+            <button class="accordion"><b> Signal Processing </b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/signal_processing" class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              &nbsp;&nbsp;
+              <p>Several Signal processing projects developed using MATLAB.</p>
+            </div>
 
-							<!-- RETSY -->
-							<button class="accordion"><b> Real Time Systems </b></button>
-							<div class="panel">
-								<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/real_time_systems" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-								&nbsp;&nbsp;
-								<p>
-									Several real-time systems' projects developed using C++ and OIL, and run using Trampoline RTOS on a Teensy board. 
-								</p>
-							</div>
-						</section>
-						<hr />
-	
+            <!-- RETSY -->
+            <button class="accordion"><b> Real Time Systems </b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/real_time_systems" class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              &nbsp;&nbsp;
+              <p>Several real-time systems' projects developed using C++ and OIL, and run using Trampoline RTOS on a Teensy board.</p>
+            </div>
+          </section>
+          <hr />
 
-						<!-- Hobbies -->
-						<section id="hobbies">
-								<h2 style="color: #e44c65;">Hobbies</h2>
-								<p style="margin-top: -20px;">Here there is a collection of projects related to things I do for fun:</p>
-	
-								<!-- Medieval Furniture -->
-								<button class="accordion"><b>Medieval Furniture</b></button>
-								<div class="panel">
-									<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/medieval_furniture" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-									<p>
-										A collection of pdf and CAD models to create late XIV century furniture and medieval camp equipment. These objects are being realized by <a target="_blank" rel="noopener noreferrer" href="http://www.compagniadarmedelsantoluca.it/">Compagnia d'Arme del Santo Luca</a>.
-									</p>
-								</div>
+          <!-- Hobbies -->
+          <section id="hobbies">
+            <h2 style="color: #e44c65">Hobbies</h2>
+            <p style="margin-top: -20px">Here there is a collection of projects related to things I do for fun:</p>
 
-								<!-- Pinterest -->
-								<button class="accordion"><b>Pinterest Pinner</b></button>
-								<div class="panel">
-										<i class="icon"><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/pinterest_pinner" class="icon brands alt fa-github"><span class="label">GitHub</span></a></i>
-									<p>
-											Publishes all photos from a <a target="_blank" rel="noopener noreferrer" href="http://www.compagniadarmedelsantoluca.it/">selected website</a> into a target Pinterest board using Python3 and the Pinterest API. 
-									</p>
-								</div>
-							</section>
-						<hr />
+            <!-- Medieval Furniture -->
+            <button class="accordion"><b>Medieval Furniture</b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/medieval_furniture" class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              <p>
+                A collection of pdf and CAD models to create late XIV century furniture and medieval camp equipment. These objects are being realized by
+                <a target="_blank" rel="noopener noreferrer" href="http://www.compagniadarmedelsantoluca.it/">Compagnia d'Arme del Santo Luca</a>.
+              </p>
+            </div>
 
-					</div>
-				</div>
+            <!-- Pinterest -->
+            <button class="accordion"><b>Pinterest Pinner</b></button>
+            <div class="panel">
+              <i class="icon"
+                ><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari/pinterest_pinner" class="icon brands alt fa-github"
+                  ><span class="label">GitHub</span></a
+                ></i
+              >
+              <p>
+                Publishes all photos from a
+                <a target="_blank" rel="noopener noreferrer" href="http://www.compagniadarmedelsantoluca.it/">selected website</a>
+                into a target Pinterest board using Python3 and the Pinterest API.
+              </p>
+            </div>
+          </section>
+          <hr />
+        </div>
+      </div>
 
-			<!-- Footer -->
-            <footer id="footer">
-				<ul class="icons">
-						<li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/m-tartari/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a target="_blank" rel="noopener noreferrer" href="mailto:michele.tartari@live.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				<ul class="copyright">
-					<li>&copy; 2020-<script>document.write( new Date().getFullYear() );</script> Michele Tartari. All rights reserved.</li>
-				</ul>
-			</footer>
-		</div>
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/m-tartari/" class="icon brands alt fa-linkedin-in"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/m-tartari" class="icon brands alt fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="mailto:michele.tartari@live.com" class="icon solid alt fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>
+            &copy; 2020-
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            Michele Tartari. All rights reserved.
+          </li>
+        </ul>
+      </footer>
+    </div>
 
-	<!-- Scripts -->
-		<script src="assets/js/accordion.js"></script>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
+    <!-- Scripts -->
+    <script src="assets/js/accordion.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
