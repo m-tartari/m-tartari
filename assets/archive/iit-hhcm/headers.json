@@ -1,0 +1,15 @@
+{
+    "Status-Code": 200,
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-XSS-Protection": "1",
+    "Expires": "Thu, 01 Jan 1970 12:00:00 NZST",
+    "Cache-Control": "private, no-cache, no-store, must-revalidate",
+    "Pragma": "no-cache",
+    "Liferay-Portal": "Liferay Community Edition Portal 7.2.0 CE GA1 (Mueller / Build 7200 / June 4, 2019)",
+    "ETag": "\"0\"",
+    "Content-Type": "text/html;charset=UTF-8",
+    "Content-Length": "57839",
+    "Date": "Wed, 06 Jul 2022 22:24:20 NZST",
+    "Set-Cookie": "BNES_JSESSIONID=B+una44FCeztUyo40pUEkDFhigYikfFs5KZMSMIQYlDyCPV5Z977nPAmon3+Ghq4ZXj3h1h5ZWhZN4TyJxtUhbtvtflh0eRFNQc0n7BCh84=; Path=/; Secure; HttpOnly, BNES_GUEST_LANGUAGE_ID=j9hUEucnx+7Wq0kuBQyZ/fAmpFhmcdu+D/LrClopaTaIXi9UhM+4XMu1RL8MfRNwM2WRNTOTi/o0/3KI0+4AQw==; Max-Age=31536000; Expires=Thu, 06-Jul-2023 10:24:20 GMT; Path=/; Secure; HttpOnly, BNES_COOKIE_SUPPORT=eqVsfN8h9l0W2FDklCicOsqeWufWOR8dUzZUWUR7a73iU4HgCKoWmGRyWq7nsWLJEE5ouRwOKOA=; Max-Age=31536000; Expires=Thu, 06-Jul-2023 10:24:20 GMT; Path=/; Secure; HttpOnly"
+}
