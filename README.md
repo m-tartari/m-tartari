@@ -1,4 +1,4 @@
-<h2 align="center">Hi there, I'm Michele - aka <a  href="https://opencv.org/" target="_blank" rel="noreferrer">m-tartari</a> 👋</h1>
+<h2 align="center">Hi there, I'm Michele - aka <a  href="https://m-tartari.eu/" target="_blank" rel="noreferrer">m-tartari</a> 👋</h1>
 <h4 align="center">A Robotics Front-End Engineer from Italy</h3>
 <br/>
 
