@@ -65,9 +65,7 @@
     "[x]"
   ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-  "todo-tree.excludeGlobs": [
+  "todo-tree.filtering.excludeGlobs": [
     "**/node_modules"
   ],
-  "jest.jestCommandLine": "npm run test --",
-  "jest.autoRun": "off"
 }
