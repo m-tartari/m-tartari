@@ -24,7 +24,7 @@ describe('Renders main page correctly', async () => {
         const h1 = await screen.queryByText('Vite + React');
 
         // Post Expectations
-        expect(h1).not.toBeNull();
+        expect(h1).toBeInTheDocument();
     });
 
     /**
@@ -36,7 +36,7 @@ describe('Renders main page correctly', async () => {
         const button = await screen.queryByText('count is 0');
 
         // Expectations
-        expect(button).not.toBeNull();
+        expect(button).toBeInTheDocument();
     });
 
     /**
@@ -49,7 +49,7 @@ describe('Renders main page correctly', async () => {
         const button = await screen.queryByText('count is 0');
 
         // Pre Expectations
-        expect(button).not.toBeNull();
+        expect(button).toBeInTheDocument();
 
         // Actions
         await user.click(button as HTMLElement);
