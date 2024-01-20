@@ -17,12 +17,13 @@ describe('Renders ErrorPage correctly', async () => {
    * Passes - shows title correctly
    */
   it('Should render the error page correctly', () => {
-    const router = createMemoryRouter([{ path: '/', element: <div />, errorElement: <ErrorPage /> }], { initialEntries: ['/some/bad/route'] })
+    const badRoute = '/some/bad/route'
+    const router = createMemoryRouter([{ path: '/', element: <div />, errorElement: <ErrorPage /> }], { initialEntries: [badRoute] })
 
     render(<RouterProvider router={router} />)
 
     expect(screen.getByText('Oops!')).toBeInTheDocument()
     expect(screen.getByText('Sorry, an unexpected error has occurred.')).toBeInTheDocument()
-    expect(screen.getByText('404 Not Found')).toBeInTheDocument()
+    expect(screen.getByText(`404 Error: No route matches URL "${badRoute}"`)).toBeInTheDocument()
   })
 })
