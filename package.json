@@ -4,6 +4,9 @@
   "version": "1.0.0-alpha.0",
   "type": "module",
   "scripts": {
+    "start": "npm run start:dev",
+    "start:dev": "npm run dev",
+    "start:prod": "npm run preview",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
