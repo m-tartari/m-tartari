@@ -9,8 +9,9 @@ export default defineConfig({
     host: true,
   },
   test: {
+    watch: false,
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['./vitest.setup.ts']
+    setupFiles: ['./vitest.setup.ts'],
   }
 })
