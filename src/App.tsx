@@ -1,12 +1,16 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import { ErrorPage, MainPage } from 'components/pages'
+import { MainPage, ContactPage, ErrorPage } from 'components/pages'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <MainPage />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: '/contacts',
+    element: <ContactPage />,
   },
 ])
 
