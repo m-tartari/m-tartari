@@ -24,7 +24,7 @@ const Page: React.FC<BoxProps> = ({ title, children, ...props }) => {
             <Typography
               variant="h2"
               aria-label="page-title"
-              sx={{ borderColor: 'primary.main', borderBottomStyle: 'solid', borderBottomWidth: 2, mt: 6, mb: 4, p: 6 }}>
+              sx={{ textAlign: 'center', borderColor: 'primary.main', borderBottomStyle: 'solid', borderBottomWidth: 2, mt: 6, mb: 4, p: 6 }}>
               {title}
             </Typography>
           </>
