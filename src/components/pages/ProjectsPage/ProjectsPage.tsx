@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box, Link, Typography } from '@mui/material'
 
 import { GitHubIconLink, DescriptionIconLink } from 'components/atoms'
@@ -12,7 +11,7 @@ const ProjectsPage = () => {
         <Typography variant="h4" color="primary.main" gutterBottom>
           Robotics
         </Typography>
-        <Typography>
+        <Typography gutterBottom>
           Here is a collection of all the projects that are strictly related to the design, development and functioning of robots:
         </Typography>
         <Project title="Voice Controlled Mobile Robot for Indoor Applications">
@@ -89,7 +88,7 @@ const ProjectsPage = () => {
         <Typography variant="h4" color="primary.main" gutterBottom sx={{ mt: 4 }}>
           Engineering
         </Typography>
-        <Typography>Here there is a collection of all the projects that are related to all the other fields of engineering:</Typography>
+        <Typography gutterBottom>Here there is a collection of all the projects that are related to all the other fields of engineering:</Typography>
         <Project
           title="Solar Panel Fault Detection Method Based on Infrared Image
                 Processing">
@@ -146,7 +145,7 @@ const ProjectsPage = () => {
         <Typography variant="h4" color="primary.main" gutterBottom sx={{ mt: 4 }}>
           Hobbies
         </Typography>
-        <Typography>Here there is a collection of projects related to things I do for fun:</Typography>
+        <Typography gutterBottom>Here there is a collection of projects related to things I do for fun:</Typography>
         <Project title="Medieval Furniture">
           <GitHubIconLink size="small" fontSize="small" href="https://github.com/m-tartari/medieval_furniture" />
           <Typography>
