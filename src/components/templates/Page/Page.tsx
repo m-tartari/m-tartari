@@ -17,14 +17,35 @@ const Page: React.FC<BoxProps> = ({ title, children, ...props }) => {
   return (
     <Box sx={{ flexGrow: 1 }} aria-label="page">
       <Toobar />
-      <Container component="main" sx={{ mt: 12, mb: 4, minHeight: '80vh', ...props.sx }} maxWidth="sm">
+      <Container
+        component="main"
+        maxWidth={false}
+        sx={{
+          mt: 12,
+          mb: 4,
+          minHeight: '80vh',
+          mx: 'auto',
+          maxWidth: 'calc(100% - 4em)',
+          width: '70em',
+          ...props.sx,
+        }}>
         {/* Children is included in props */}
         {title && (
           <>
             <Typography
               variant="h2"
               aria-label="page-title"
-              sx={{ textAlign: 'center', borderColor: 'primary.main', borderBottomStyle: 'solid', borderBottomWidth: 2, mt: 6, mb: 4, p: 6 }}>
+              sx={{
+                textAlign: 'center',
+                borderColor: 'primary.main',
+                borderBottomStyle: 'solid',
+                borderBottomWidth: 2,
+                mx: 'auto',
+                mt: 6,
+                mb: 4,
+                p: 6,
+                width: '60%',
+              }}>
               {title}
             </Typography>
           </>
