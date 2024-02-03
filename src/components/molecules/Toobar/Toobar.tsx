@@ -85,7 +85,7 @@ const CustomToobar: React.FC<CustomToobarProps> = ({ drawerWidth = 240 }) => {
     <>
       <AppBar
         sx={{
-          backgroundColor: theme => (theme.palette.mode === 'dark' ? 'transparent' : undefined),
+          backgroundColor: theme => (theme.palette.mode === 'dark' ? 'background.paper' : undefined),
         }}>
         <Toolbar sx={{ display: 'flex' }}>
           <IconButton
