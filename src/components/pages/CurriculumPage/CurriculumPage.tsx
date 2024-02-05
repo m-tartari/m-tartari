@@ -11,7 +11,7 @@ const Curriculum = () => {
         </Typography>
 
         {/* id="MinHub-lead" */}
-        <CurriculumItem title="Business Partner & Technical Lead" dates="03/23 - Today" company="MindHub Ferrara">
+        <CurriculumItem title="Business Partner & Technical Lead" dates="03/23 - Today" company="MindHub Ferrara" location="Ferrara, Italy">
           <Typography>
             Co-founded{' '}
             <Link target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61550278936416">
@@ -30,7 +30,7 @@ const Curriculum = () => {
           </Typography>
         </CurriculumItem>
         {/* id="IIT-software" */}
-        <CurriculumItem title="Software Engineer" dates="06/21 - Today" company="Istituto Italiano di Tecnologia">
+        <CurriculumItem title="Software Engineer" dates="06/21 - Today" company="Istituto Italiano di Tecnologia" location="Remote">
           <Typography>
             Worked in{' '}
             <Link target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220706131402/https://alberobotics.it/">
@@ -57,7 +57,7 @@ const Curriculum = () => {
           </Typography>
         </CurriculumItem>
         {/* id="IIT-embedded" */}
-        <CurriculumItem title="Embedded Engineer" dates="04/20 - 06/21" company="Istituto Italiano di Tecnologia">
+        <CurriculumItem title="Embedded Engineer" dates="04/20 - 06/21" company="Istituto Italiano di Tecnologia" location="Genoa, Italy">
           <Typography>
             Worked in{' '}
             <Link target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220706131402/https://alberobotics.it/">
@@ -84,7 +84,8 @@ const Curriculum = () => {
         <CurriculumItem
           title="Researcher - Internship"
           dates="01/19 - 06/19"
-          company="Warsaw University of Technology - Division of Theory of Machines and Robots">
+          company="Warsaw University of Technology - Division of Theory of Machines and Robots"
+          location="Warsaw, Poland">
           <Typography>
             My main duties included:
             <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
@@ -95,7 +96,7 @@ const Curriculum = () => {
           </Typography>
         </CurriculumItem>
         {/* id="WUT-intern" */}
-        <CurriculumItem title="Researcher - Internship" dates="01/17 - 02/17" company="LAR - University of Bologna">
+        <CurriculumItem title="Researcher - Internship" dates="01/17 - 02/17" company="LAR - University of Bologna" location="Bologna, Italy">
           <Typography>
             My main duties included:
             <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
@@ -129,6 +130,7 @@ const Curriculum = () => {
           title="M.Eng. in Robotics and Control"
           company="Warsaw University of Technology"
           // (grade: 5/5,summa cum laude)
+          location="Warsaw, Poland"
           dates="09/18 - 06/19">
           <Typography>
             <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
@@ -153,7 +155,11 @@ const Curriculum = () => {
           </Typography>
         </CurriculumItem>
         {/* id="ECN" */}
-        <CurriculumItem title="M.S. in Robotics and Control Engineering" company="Ecole Centrale de Nantes" dates="09/17 - 06/18">
+        <CurriculumItem
+          title="M.S. in Robotics and Control Engineering"
+          company="Ecole Centrale de Nantes"
+          location="Nantes, France"
+          dates="09/17 - 06/18">
           <Typography>
             <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
               <li>Consortium scholarship issued for EMARO+ students based on academic merits and offered to top applicants only.</li>
@@ -195,6 +201,7 @@ const Curriculum = () => {
           title="B.S. in Control Theory and Control Engineering"
           company="Tongji Univeristy"
           // (grade: 5/5)
+          location="Shanghai, China"
           dates="09/14 - 06/17">
           <Typography>
             <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
@@ -214,6 +221,7 @@ const Curriculum = () => {
         <CurriculumItem
           title="B.S. in Automation Engineering"
           company="Alma Mater Studiorum - University of Bologna"
+          location="Bologna, Italy"
           //(grade: 102/110)
           dates="09/13 - 12/16">
           <Typography>
@@ -239,6 +247,7 @@ const Curriculum = () => {
         <CurriculumItem
           title="Scientific High School Diploma"
           company="Liceo scientifico “Antonio Roiti”"
+          location="Ferrara, Italy"
           // (grade: 92/100)
           dates="09/08 - 06/13">
           <Typography>
@@ -257,7 +266,7 @@ const Curriculum = () => {
           </Typography>
         </CurriculumItem>
         {/* id="EMHS" */}
-        <CurriculumItem title="Foreign Exchange Student Program" company="El Modena High School" dates="09/11 - 06/12">
+        <CurriculumItem title="Foreign Exchange Student Program" company="El Modena High School" dates="09/11 - 06/12" location="California, US">
           <Typography>
             El Modena High School is a traditional 4 year public high school located in the El Modena neighborhood in the eastern portion of the city
             of Orange in Orange County, California. I studied there as a senior year stundent through a foreign exchange student program. <br />
