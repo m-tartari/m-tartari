@@ -1,41 +1,38 @@
-import { Email, LinkedIn, GitHub, Description } from '@mui/icons-material'
-import { IconButtonProps } from '@mui/material'
+import { Email, LinkedIn, GitHub, Description, OndemandVideo, School } from '@mui/icons-material'
+import { Badge, IconButtonProps, SvgIcon } from '@mui/material'
 
 import IconButton from '../IconButton'
 
 interface IconLinkProps extends IconButtonProps {
   href: string
   fontSize?: 'small' | 'large' | 'medium' | 'inherit'
+  index?: number
 }
 
-export const DescriptionIconLink = ({ href: to, fontSize, ...props }: IconLinkProps) => {
+interface IconWrapperProps extends IconLinkProps {
+  Icon: typeof SvgIcon
+}
+
+const IconWrapper = ({ index, href: to, fontSize, Icon, ...props }: IconWrapperProps) => {
+  if (typeof index === 'undefined') {
+    return (
+      <IconButton onClick={() => window.open(to, '_blank')} {...props}>
+        <Icon fontSize={fontSize} />
+      </IconButton>
+    )
+  }
   return (
-    <IconButton aria-label="Email-button" onClick={() => window.open(to, '_blank')} {...props}>
-      <Description fontSize={fontSize} />
+    <IconButton onClick={() => window.open(to, '_blank')} {...props}>
+      <Badge badgeContent={index}>
+        <Icon fontSize={fontSize} />
+      </Badge>
     </IconButton>
   )
 }
 
-export const EmailIconLink = ({ href: to, fontSize, ...props }: IconLinkProps) => {
-  return (
-    <IconButton aria-label="Email-button" onClick={() => window.open(to, '_blank')} {...props}>
-      <Email fontSize={fontSize} />
-    </IconButton>
-  )
-}
-
-export const GitHubIconLink = ({ href: to, fontSize, ...props }: IconLinkProps) => {
-  return (
-    <IconButton aria-label="GitHub-button" onClick={() => window.open(to, '_blank')} {...props}>
-      <GitHub fontSize={fontSize} />
-    </IconButton>
-  )
-}
-
-export const LinkedInIconLink = ({ href: to, fontSize, ...props }: IconLinkProps) => {
-  return (
-    <IconButton aria-label="LinkedIn-button" onClick={() => window.open(to, '_blank')} {...props}>
-      <LinkedIn fontSize={fontSize} />
-    </IconButton>
-  )
-}
+export const DescriptionIconLink = (props: IconLinkProps) => <IconWrapper aria-label="Email-button" Icon={Description} {...props} />
+export const EmailIconLink = (props: IconLinkProps) => <IconWrapper aria-label="Email-button" Icon={Email} {...props} />
+export const GitHubIconLink = (props: IconLinkProps) => <IconWrapper aria-label="GitHub-button" Icon={GitHub} {...props} />
+export const LinkedInIconLink = (props: IconLinkProps) => <IconWrapper aria-label="LinkedIn-button" Icon={LinkedIn} {...props} />
+export const AcademyIconLink = (props: IconLinkProps) => <IconWrapper aria-label="Academy-button" Icon={School} {...props} />
+export const VideoIconLink = (props: IconLinkProps) => <IconWrapper aria-label="Video-button" Icon={OndemandVideo} {...props} />
