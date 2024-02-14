@@ -1,6 +1,6 @@
 import { Box, Link, Typography } from '@mui/material'
 
-import { GitHubIconLink, DescriptionIconLink } from 'components/atoms'
+import { GitHubIconLink, DescriptionIconLink, VideoIconLink, AcademyIconLink } from 'components/atoms'
 import { Project } from 'components/molecules'
 import { Page } from 'components/templates'
 
@@ -14,18 +14,54 @@ const ProjectsPage = () => {
         <Typography gutterBottom>
           Here is a collection of all the projects that are strictly related to the design, development and functioning of robots:
         </Typography>
+        <Project title="LINFA: An Intuitive Block-Programming Interface for Reconfigurable Robots">
+          <VideoIconLink
+            size="small"
+            fontSize="small"
+            href="https://www.linkedin.com/feed/update/urn:li:activity:7034480841569284096/"
+            sx={{ color: 'text.secondary' }}
+          />
+          <Typography component="span" color="text.secondary" gutterBottom>
+            Software Engineer @ IIT
+          </Typography>
+          <Typography>
+            This project aims to simplify the control, monitoring, and programming of reconfigurable robots through an intuitive block-programming
+            interface. It includes a frontend web app, built with TypeScript and React, allowing users to effortlessly change robot operating modes
+            and settings, monitor the robot's state, and assemble programs by dragging and dropping code blocks representing various robot
+            capabilities. Additionally, backend services, developed with TypeScript and Python, translate these programs into formats compatible with
+            the underlying systems and manage mission execution. The project emphasizes extensibility, enabling users with Python experience to
+            integrate custom blocks and capabilities. Automated CI/CD pipelines further streamline integration and deployment processes.
+          </Typography>
+        </Project>
+        <Project title="Revamping HHCM's Modular: Swift Generation and Control of Modular Robot Models">
+          <GitHubIconLink size="small" fontSize="small" href="https://github.com/ADVRHumanoids/modular_hhcm/" sx={{ color: 'text.secondary' }} />
+          <Typography component="span" color="text.secondary" gutterBottom>
+            Software Engineer @ IIT
+          </Typography>
+          <Typography>
+            This project centered on overhauling HHCM's Modular by redesigning its graphical interface, API, and deployment pipeline. Modular serves
+            as a web application for swiftly generating models of modular robots. Starting with a collection of fundamental robotic modules, the
+            system produces URDF, SRDF, and a full ROS package seamlessly and without coding. These can then be utilized for simulating and
+            controlling the robot.
+          </Typography>
+        </Project>
         <Project title="Voice Controlled Mobile Robot for Indoor Applications">
+          <AcademyIconLink size="small" fontSize="small" href="https://doi.org/10.1007/978-3-030-58380-4_7" sx={{ color: 'text.secondary' }} />
           <DescriptionIconLink
             size="small"
             fontSize="small"
             href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing"
+            sx={{ color: 'text.secondary' }}
           />
-          <Typography component="span" variant="caption">
-            Master Thesis
+          <Typography component="span" color="text.secondary">
+            Master Thesis @ WUT
           </Typography>
           <Typography>
-            This thesis proposes a design from scratch for a small mobile robot controlled by voice using ROS. The results obtained show both the
-            feasibility of using low power boards and some of their limitations. (Research publication in preparation)
+            This thesis proposes a design for a small mobile robot controlled by voice. Firstly a preliminary analysis of the state of art of
+            human-robot interaction has been conducted. Then, an analysis of the equipment selected took place, and, later, appropriate methodologies
+            for voice recognition and user detection have been evaluated for this specific case. Finally, an overview of the complete software
+            architecture of the system was given with three possible structures and their comparison. The results obtained show both the feasibility
+            of using low power boards and some of their limitations.
           </Typography>
         </Project>
         <Project title="Recharging Electric Cars with a Mobile Robot">
@@ -89,12 +125,25 @@ const ProjectsPage = () => {
           Engineering
         </Typography>
         <Typography gutterBottom>Here there is a collection of all the projects that are related to all the other fields of engineering:</Typography>
+        <Project title="Automated Actuators and Robotic Modules Calibration">
+          <GitHubIconLink size="small" fontSize="small" href="https://github.com/ADVRHumanoids/motor_calibration" sx={{ color: 'text.secondary' }} />
+          <Typography component="span" color="text.secondary">
+            Embedded Engineer @ IIT
+          </Typography>
+          <Typography>
+            This project focused on automating the calibration of EtherCAT actuators and robotic modules, aiming for a fully automated procedure for
+            newly assembled actuators. The process involved testing the PDO, conducting phase angle calibration, torque sensor calibration, ripple and
+            position-dependent torque offset calibration, inertia and friction identification, and frequency response calibration. The goal was to
+            optimize motor performance and collect necessary data for accurate characterization, with results stored centrally and presented in a
+            comprehensive PDF report.
+          </Typography>
+        </Project>
         <Project
           title="Solar Panel Fault Detection Method Based on Infrared Image
                 Processing">
           <DescriptionIconLink size="small" fontSize="small" href="https://drive.google.com/file/d/0B1z42QMR-0UtYzBYSVhRV3ZPWk0/view?usp=sharing" />
           <Typography component="span" variant="caption">
-            Bachelor Thesis
+            Bachelor Thesis @ TONGJI
           </Typography>
           <Typography>
             My Chinese bachelor thesis that proposes a method to detect malfunctioning solar panels by processing thermal images using MATLAB.
@@ -103,7 +152,7 @@ const ProjectsPage = () => {
         <Project title="Design of a Testing Machine for Flexure Hinges">
           <DescriptionIconLink size="small" fontSize="small" href="https://drive.google.com/file/d/0B1z42QMR-0UtSkxRVzJPTk1IX0k/view?usp=sharing" />
           <Typography component="span" variant="caption">
-            Bachelor Thesis
+            Bachelor Thesis @ UNIBO
           </Typography>
           <Typography>
             My Italian bachelor thesis that proposes a design from scratch of a machine for the empirical characterization of flexure hinges.
