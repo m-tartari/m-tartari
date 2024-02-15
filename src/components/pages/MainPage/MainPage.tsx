@@ -16,7 +16,7 @@ const MainPage = () => {
 
   return (
     <Box aria-label="page" sx={{ flexGrow: 1 }}>
-      <Toobar />
+      <Toobar position="absolute" sx={{ backgroundColor: 'transparent' }} />
       <Hero scrollTarget={refIITLinfa} />
       {/*  1 IIT - Linfa */}
       <ProjectSpotlight
