@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, BoxProps, Container, Typography } from '@mui/material'
+import { Box, BoxProps, Container, Divider, Typography } from '@mui/material'
 
 import { Footer, Toobar } from 'components/molecules'
 
@@ -17,6 +17,32 @@ const Page: React.FC<BoxProps> = ({ title, children, ...props }) => {
   return (
     <Box sx={{ flexGrow: 1 }} aria-label="page">
       <Toobar />
+      {title && (
+        <>
+          <Typography
+            variant="h2"
+            aria-label="page-title"
+            textAlign="center"
+            sx={{
+              mt: 6,
+              p: 6,
+            }}>
+            {title}
+          </Typography>
+          <Divider
+            variant="middle"
+            sx={{
+              borderColor: 'primary.main',
+              borderStyle: 'solid',
+              borderWidth: 2,
+              mx: 'auto',
+              mb: 4,
+              width: '30em',
+              maxWidth: 'calc(60% - 2.5em)',
+            }}
+          />
+        </>
+      )}
       <Container
         component="main"
         maxWidth={false}
@@ -30,26 +56,7 @@ const Page: React.FC<BoxProps> = ({ title, children, ...props }) => {
           ...props.sx,
         }}>
         {/* Children is included in props */}
-        {title && (
-          <>
-            <Typography
-              variant="h2"
-              aria-label="page-title"
-              sx={{
-                textAlign: 'center',
-                borderColor: 'primary.main',
-                borderBottomStyle: 'solid',
-                borderBottomWidth: 2,
-                mx: 'auto',
-                mt: 6,
-                mb: 4,
-                p: 6,
-                width: '60%',
-              }}>
-              {title}
-            </Typography>
-          </>
-        )}
+
         {children}
       </Container>
       <Footer />
