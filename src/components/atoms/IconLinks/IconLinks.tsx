@@ -16,7 +16,12 @@ interface IconWrapperProps extends IconLinkProps {
 const IconWrapper = ({ index, href: to, fontSize, Icon, ...props }: IconWrapperProps) => {
   if (typeof index === 'undefined') {
     return (
-      <IconButton onClick={() => window.open(to, '_blank')} {...props}>
+      <IconButton
+        onClick={e => {
+          e.stopPropagation()
+          window.open(to, '_blank')
+        }}
+        {...props}>
         <Icon fontSize={fontSize} />
       </IconButton>
     )
