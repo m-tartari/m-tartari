@@ -16,12 +16,27 @@ const CurriculumItem = (props: CurriculumEntryProps) => {
       disableGutters
       elevation={0}
       sx={{
+        bgcolor: 'background.default', // use summary hover background
         flexDirection: 'row-reverse',
         '&:not(:last-child)': {
           borderBottom: 0,
         },
         '&::before': {
           display: 'none',
+        },
+        '&:hover': {
+          borderBottom: '1px solid',
+          borderTop: '1px solid',
+          bgcolor: 'background.paper', // use summary hover background
+          elevation: 1,
+          // '& .MuiAccordionSummary-expandIconWrapper .MuiSvgIcon-root': { color: 'primary.dark' }, // use summary hover icon color
+        },
+        '&.Mui-expanded': {
+          borderBottom: '1px solid',
+          borderTop: '1px solid',
+          bgcolor: 'background.paper', // use summary hover background
+          elevation: 1,
+          // '& .MuiAccordionSummary-expandIconWrapper .MuiSvgIcon-root': { color: 'primary.dark' }, // use summary hover icon color
         },
       }}>
       <AccordionSummary
