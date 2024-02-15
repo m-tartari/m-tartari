@@ -2,6 +2,7 @@ import React from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 import {
   AppBar,
+  AppBarProps,
   Box,
   Button,
   Divider,
@@ -35,10 +36,10 @@ const DrawerButton = styled(ListItemButton<typeof RouterLink>)(({ theme }) => ({
   },
 }))
 
-type CustomToobarProps = {
+interface CustomToobarProps extends AppBarProps {
   drawerWidth?: number
 }
-const CustomToobar: React.FC<CustomToobarProps> = ({ drawerWidth = 240 }) => {
+const CustomToobar: React.FC<CustomToobarProps> = ({ drawerWidth = 240, ...props }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false)
 
   const handleDrawerToggle = () => {
@@ -84,8 +85,11 @@ const CustomToobar: React.FC<CustomToobarProps> = ({ drawerWidth = 240 }) => {
   return (
     <>
       <AppBar
+        elevation={0}
+        {...props}
         sx={{
           backgroundColor: theme => (theme.palette.mode === 'dark' ? 'background.paper' : undefined),
+          ...props.sx,
         }}>
         <Toolbar sx={{ display: 'flex' }}>
           <IconButton
@@ -93,13 +97,13 @@ const CustomToobar: React.FC<CustomToobarProps> = ({ drawerWidth = 240 }) => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' }, position: 'absolute', backgroundColor: 'primary' }}>
+            sx={{ mr: 2, display: { md: 'none' }, position: 'absolute', backgroundColor: 'primary' }}>
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: { xs: 'center', sm: 'left' } }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: { xs: 'center', md: 'left' } }}>
             Michele Tartari
           </Typography>
-          <Stack component="div" direction="row" spacing={2} sx={{ display: { xs: 'none', sm: 'flex' } }}>
+          <Stack component="div" direction="row" spacing={2} sx={{ display: { xs: 'none', md: 'flex' } }}>
             <AppBarButton component={RouterLink} to="/">
               <Typography variant="h6">Home</Typography>
             </AppBarButton>
