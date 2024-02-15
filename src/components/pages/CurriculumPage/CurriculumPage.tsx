@@ -298,7 +298,7 @@ const Curriculum = () => {
               <Table>
                 <TableRow>
                   <TableCell>
-                    <b>Languages:</b> JavaScript(Proficient), Python(Proficient), C++(Proficient), Bash(Good), C(Fair), SQL(Fair)
+                    <b>Languages:</b> TypeScript/Javascript(Proficient), Python(Proficient), Bash(Good), C++(Good), C(Fair)
                   </TableCell>
                 </TableRow>
                 <TableRow>
