@@ -1,4 +1,6 @@
 import { Box, Divider, Link, Table, TableCell, TableRow, Typography } from '@mui/material'
+
+import { Award, Extracurricular, Publication } from 'components/atoms'
 import { CurriculumItem } from 'components/molecules'
 import { Page } from 'components/templates'
 
@@ -291,32 +293,26 @@ const Curriculum = () => {
           </TableRow>
 
           <TableRow>
-            <TableCell width="15%">
+            <TableCell rowSpan={4} width="15%" id="digital_skills">
               <b>Digital</b>
             </TableCell>
-            <TableCell width="85%" id="digital_skills">
-              <Table>
-                <TableRow>
-                  <TableCell>
-                    <b>Languages:</b> TypeScript/Javascript(Proficient), Python(Proficient), Bash(Good), C++(Good), C(Fair)
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <b>Softwares:</b> git(Proficient), Matlab(Good), LaTeX(Good), CATIA(Fair)
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <b>Middleware:</b> Robotic Operative System (ROS, Good)
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>
-                    <b>OS Used:</b> Linux, Microsoft
-                  </TableCell>
-                </TableRow>
-              </Table>
+            <TableCell width="85%">
+              <b>Languages:</b> TypeScript/Javascript(Proficient), Python(Proficient), Bash(Good), C++(Good), C(Fair)
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>
+              <b>Softwares:</b> git(Proficient), Matlab(Good), LaTeX(Good), CATIA(Fair)
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>
+              <b>Middleware:</b> Robotic Operative System (ROS, Good)
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>
+              <b>OS Used:</b> Linux, Microsoft
             </TableCell>
           </TableRow>
           <TableRow>
