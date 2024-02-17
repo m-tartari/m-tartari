@@ -329,47 +329,73 @@ const Curriculum = () => {
           </TableRow>
         </Table>
 
-        {/* Presentations, Proceedings, and Papers */}
+        {/* Accomplishments */}
         <Divider sx={{ mt: 4, mb: 4 }} />
         <Typography variant="h4" color="primary.main" gutterBottom>
-          Awards, Presentations, Proceedings, and Papers
+          Accomplishments
         </Typography>
-        <Typography variant="h5">Awards</Typography>
-        <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
-          <li>
-            2021 <b>Premio Innovazione Robotica ed Automazione - Horizon</b>, 21st MECSPE fair. Bologna, Italy
-          </li>
-          <li>
-            2018 <b>Consortium schoolarship</b>, EMARO+ Consortium. Warsaw, Poland
-          </li>
-          <li>
-            2017 <b>Consortium schoolarship</b>, EMARO+ Consortium. Nantes, France
-          </li>
-          <li>
-            2014 <b>Study Grant</b>, Università di Bologna. Bologna, Italy
-          </li>
-        </ul>
-        <Typography variant="h5">Press Releases</Typography>
-        <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
-          <li>
-            2020{' '}
-            <Link target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=Blat-e2Vyzk&feature=youtu.be">
-              <em>Covid-19: L'impatto sui giovani talenti</em>
-            </Link>
-            . Organized by: Talents in Motion. Rome, Italy.
-          </li>
-        </ul>
-        <Typography variant="h5">Publications</Typography>
-        <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
-          <li>
-            Zielinska T., <b>Tartari M.</b> (2020){' '}
-            <Link target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-3-030-58380-4_7">
-              <em>Control System Design for Human Assisting Robot</em>
-            </Link>
-            . In: ROMANSY 23 - Robot Design, Dynamics and Control. CISM International Centre for Mechanical Sciences (Courses and Lectures), vol 601.
-            Springer, Cham.
-          </li>
-        </ul>
+        <Box pb={1}>
+          <Typography variant="h5">Awards</Typography>
+
+          <Award
+            year="2021"
+            title="Premio Innovazione Robotica ed Automazione - Horizon"
+            organization={
+              <>
+                21
+                <sup>
+                  <small>st</small>
+                </sup>{' '}
+                MECSPE fair
+              </>
+            }
+            location="Bologna, Italy"
+          />
+          {/* https://twitter.com/IITalk/status/1466745516851617796 */}
+          {/* https://www.linkedin.com/feed/update/urn:li:activity:6869549011855032321/ */}
+          <Award year="2018" title="Consortium schoolarship" organization="EMARO+ Consortium" location="Warsaw, Poland" />
+          <Award year="2017" title="Consortium schoolarship" organization="EMARO+ Consortium" location="Nantes, France" />
+          <Award year="2014" title="Study Grant" organization="Università di Bologna" location="Bologna, Italy" />
+        </Box>
+
+        <Box pb={1}>
+          <Typography variant="h5">Press Releases</Typography>
+          <Award
+            year="2020"
+            title="Covid-19: L'impatto sui giovani talenti"
+            titleProps={{
+              onClick: () => window.open('https://www.youtube.com/watch?v=Blat-e2Vyzk&feature=youtu.be', '_blank'),
+              sx: {
+                cursor: 'pointer',
+                ':hover': {
+                  backgroundColor: 'transparent',
+                  color: 'primary.main',
+                },
+              },
+            }}
+            organization="Talents in Motion"
+            location="Rome, Italy"
+          />
+        </Box>
+
+        <Box py={1}>
+          <Typography variant="h5">Publications</Typography>
+          <Publication
+            year="2020"
+            title="Control System Design for Human Assisting Robot"
+            authors={
+              <>
+                Zielinska T.,{' '}
+                <Typography component="span" color="text.primary">
+                  Tartari M.
+                </Typography>
+              </>
+            }
+            location="ROMANSY 23 - Robot Design, Dynamics and Control. CISM International Centre for Mechanical Sciences (Courses and Lectures), vol
+              601. Springer, Cham."
+            link="https://doi.org/10.1007/978-3-030-58380-4_7"
+          />
+        </Box>
 
         {/* Extacurricoular  */}
         <Divider sx={{ mt: 4, mb: 4 }} />
