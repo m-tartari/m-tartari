@@ -1,5 +1,5 @@
 import React from 'react'
-import { Accordion, AccordionDetails, AccordionSummary, Grid, Typography } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Box, Grid, Typography } from '@mui/material'
 import { ExpandMore as ExpandIcon } from '@mui/icons-material'
 
 interface CurriculumEntryProps {
@@ -53,7 +53,7 @@ const CurriculumItem = (props: CurriculumEntryProps) => {
             marginLeft: 2,
           },
         }}>
-        <Grid container direction="row" justifyContent="space-between" alignItems="stretch">
+        <Grid container direction="row" justifyContent="space-between" alignItems="stretch" display={{ xs: 'none', sm: 'flex' }}>
           <Grid item xs={9} component={Typography} variant="h6">
             <b>{props.title}</b>
           </Grid>
@@ -67,6 +67,20 @@ const CurriculumItem = (props: CurriculumEntryProps) => {
             <em>{props.location}</em>
           </Grid>
         </Grid>
+        <Box display={{ xs: 'block', sm: 'none' }}>
+          <Typography variant="subtitle1" color="primary.main">
+            {props.dates}
+          </Typography>
+          <Typography variant="h6">
+            <b>{props.title}</b>
+          </Typography>
+          <Typography variant="button" color="text.secondary">
+            {props.company}
+          </Typography>
+          <Typography variant="subtitle2" color="text.secondary">
+            <em>{props.location}</em>
+          </Typography>
+        </Box>
       </AccordionSummary>
       <AccordionDetails>{props.children}</AccordionDetails>
     </Accordion>
