@@ -13,3 +13,15 @@ afterEach(() => {
   vi.resetAllMocks()
   cleanup()
 })
+
+/**
+ * Mocks the ResizeObserver API (used by ParallaxProvider)
+ */
+vi.stubGlobal(
+  'ResizeObserver',
+  vi.fn().mockImplementation(() => ({
+    observe: vi.fn(),
+    unobserve: vi.fn(),
+    disconnect: vi.fn(),
+  }))
+)
