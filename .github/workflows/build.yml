@@ -1,0 +1,35 @@
+name: build
+on:
+  push:
+    branches: ['master']
+  pull_request: {}
+  workflow_call: {}
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install dependecies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Test and generate coverage report
+        run: npm run test:coverage
+
+      # TODO: upload coverage report to codecov
+      # - name: Upload coverage report to Codecov
+      #   uses: codecov/codecov-action@v3
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }}
