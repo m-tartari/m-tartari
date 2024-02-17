@@ -5,12 +5,6 @@ import { EmailIconLink, GitHubIconLink, LinkedInIconLink } from 'components/atom
 import { ExpandMore } from '@mui/icons-material'
 
 const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) => {
-  const executeScroll = () => {
-    if (typeof props.scrollTarget !== 'undefined') {
-      const target = props.scrollTarget as React.MutableRefObject<HTMLSelectElement | null>
-      target.current?.scrollIntoView()
-    }
-  }
   return (
     <Box
       sx={{
@@ -84,7 +78,10 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
       </Box>
 
       {props.scrollTarget && (
-        <IconButton size="large" onClick={executeScroll} sx={{ position: 'absolute', p: 1, bottom: 3 }}>
+        <IconButton
+          size="large"
+          onClick={() => (props.scrollTarget as React.MutableRefObject<HTMLSelectElement | null>).current?.scrollIntoView()}
+          sx={{ position: 'absolute', p: 1, bottom: 3 }}>
           <ExpandMore fontSize="large" />
         </IconButton>
       )}
