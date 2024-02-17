@@ -1,60 +1,22 @@
-import { describe, it, expect, afterEach } from 'vitest'
-import { render, screen, cleanup } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { screen } from '@testing-library/react'
+
+import { renderWithRouter as render } from 'components/utils/tests'
 
 import MainPage from './MainPage'
 
 // Tests
-describe('Renders main page correctly', async () => {
-  /**
-   * Resets all renders after each test
-   */
-  afterEach(() => {
-    cleanup()
-  })
-
-  /**
-   * Passes - shows title correctly
-   */
+describe('Main page', async () => {
   it('Should render the page correctly', async () => {
     // Setup
     await render(<MainPage />)
-    const h1 = await screen.queryByText('Vite + React')
 
-    // Post Expectations
-    expect(h1).toBeInTheDocument()
-  })
+    // Make sure the page title is correct
+    expect(screen.getByText('Robotics Engineer')).toBeInTheDocument()
 
-  /**
-   * Passes - shows the button count correctly present
-   */
-  it('Should show the button count set to 0', async () => {
-    // Setup
-    await render(<MainPage />)
-    const button = await screen.queryByText('count is 0')
-
-    // Expectations
-    expect(button).toBeInTheDocument()
-  })
-
-  /**
-   * Passes - clicks the button 3 times and shows the correct count
-   */
-  it('Should show the button count set to 3', async () => {
-    // Setup
-    const user = userEvent.setup()
-    await render(<MainPage />)
-    const button = await screen.queryByText('count is 0')
-
-    // Pre Expectations
-    expect(button).toBeInTheDocument()
-
-    // Actions
-    await user.click(button as HTMLElement)
-    await user.click(button as HTMLElement)
-    await user.click(button as HTMLElement)
-
-    // Post Expectations
-    expect(button?.innerHTML).toBe('count is 3')
+    // Make sure the project spotlights are present
+    expect(screen.getByText('LINFA: An Intuitive Block-Programming Interface for Reconfigurable Robots')).toBeInTheDocument()
+    expect(screen.getByText("Revamping HHCM's Modular: Swift Generation of Modular Robot Models")).toBeInTheDocument()
+    expect(screen.getByText('Automated Actuators and Robotic Modules Calibration')).toBeInTheDocument()
+    expect(screen.getByText('Voice Controlled Mobile Robot for Indoor Applications')).toBeInTheDocument()
   })
 })
