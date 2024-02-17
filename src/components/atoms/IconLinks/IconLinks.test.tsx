@@ -14,6 +14,8 @@ const labels: { [key: string]: string } = {
   VideoIconLink: 'Video-button',
   ExtrernalIconLink: 'External-link-button',
 }
+
+vi.stubGlobal('open', vi.fn())
 describe('IconLinks', () => {
   const open = vi.spyOn(window, 'open')
 
