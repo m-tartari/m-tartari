@@ -125,14 +125,6 @@ const Description = (props: Props) => {
 }
 
 const ProjectSpotlight = React.forwardRef<HTMLSelectElement, Props>((props, ref) => {
-  const executeScroll = () => {
-    if (typeof props.scrollTarget !== 'undefined') {
-      const target = props.scrollTarget as React.MutableRefObject<HTMLSelectElement | null>
-      target.current?.scrollIntoView()
-    }
-  }
-  // run this function from an event handler or an effect to execute scroll
-
   return (
     <section ref={ref}>
       <ParallaxProvider>
@@ -160,7 +152,7 @@ const ProjectSpotlight = React.forwardRef<HTMLSelectElement, Props>((props, ref)
           {props.scrollTarget && (
             <IconButton
               size="large"
-              onClick={executeScroll}
+              onClick={() => (props.scrollTarget as React.MutableRefObject<HTMLSelectElement | null>).current?.scrollIntoView()}
               sx={{ position: 'absolute', p: 1, bottom: 2, left: '50%', transform: 'translate(-50%, 0)' }}>
               <ExpandMore fontSize="large" />
             </IconButton>
