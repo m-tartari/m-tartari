@@ -1,7 +1,7 @@
 import { screen, cleanup, render } from '@testing-library/react'
 import { RouterProvider, createMemoryRouter } from 'react-router-dom'
 
-import ErrorPage from './ErrorPage'
+import ErrorPage from '.'
 
 // Tests
 describe('Renders ErrorPage correctly', async () => {

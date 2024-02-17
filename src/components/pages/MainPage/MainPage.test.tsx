@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react'
 
 import { renderWithRouter as render } from 'components/utils/tests'
 
-import MainPage from './MainPage'
+import MainPage from '.'
 
 // Tests
 describe('Main page', async () => {

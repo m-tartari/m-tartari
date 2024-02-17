@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 
 import { renderWithRouter as render } from 'components/utils/tests'
 
-import ContactPage from './ContactPage'
+import ContactPage from '.'
 
 vi.stubGlobal('open', vi.fn())
 describe('ContactPage', () => {
