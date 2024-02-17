@@ -404,20 +404,19 @@ const Curriculum = () => {
         </Typography>
         {/* Volunteering  */}
         <Typography variant="h5">Volunteering</Typography>
-        <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
-          <li>2013 - Present · Blood Donor, Bone Marrow Donor at AVIS & ADMO.</li>
-          <li>2008 - 2014 · Scoutism and associated volunteering activities in Agesci.</li>
-          <li>2011 - 2012 · Boy Scout of America (BSA)</li>
-        </ul>
-
+        <Box component="ul" pl={4} mt={0}>
+          <Extracurricular Component="li" year="2013 - Today" title="Blood Donor, Bone Marrow Donor at AVIS & ADMO" />
+          <Extracurricular Component="li" year="2008 - 2014" title="Scoutism and associated volunteering activities in Agesci" />
+          <Extracurricular Component="li" year="2011 - 2012" title="Boy Scout of America (BSA)" />
+        </Box>
         {/* Other */}
         {/* Interests */}
         <Typography variant="h5">Interests</Typography>
-        <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
-          <li>Historical Handcrafting & Reenactment</li>
-          <li>Hiking/Travelling</li>
-          <li>Ju-jitsu</li>
-        </ul>
+        <Box component="ul" pl={4} mt={0}>
+          <Extracurricular Component="li" title="Historical Handcrafting & Reenactment" />
+          <Extracurricular Component="li" title="Hiking/Travelling" />
+          <Extracurricular Component="li" title="Ju-jitsu" />
+        </Box>
       </Box>
     </Page>
   )
