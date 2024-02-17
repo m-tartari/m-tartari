@@ -35,7 +35,7 @@ const IconWrapper = ({ index, href: to, fontSize, Icon, ...props }: IconWrapperP
   )
 }
 
-export const DescriptionIconLink = (props: IconLinkProps) => <IconWrapper aria-label="Email-button" Icon={Description} {...props} />
+export const DescriptionIconLink = (props: IconLinkProps) => <IconWrapper aria-label="Doc-button" Icon={Description} {...props} />
 export const EmailIconLink = (props: IconLinkProps) => <IconWrapper aria-label="Email-button" Icon={Email} {...props} />
 export const GitHubIconLink = (props: IconLinkProps) => <IconWrapper aria-label="GitHub-button" Icon={GitHub} {...props} />
 export const LinkedInIconLink = (props: IconLinkProps) => <IconWrapper aria-label="LinkedIn-button" Icon={LinkedIn} {...props} />
