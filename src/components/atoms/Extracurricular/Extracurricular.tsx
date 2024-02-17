@@ -11,15 +11,17 @@ type ExtracurricularProps = {
 
 const Extracurricular = ({ Component = Box, ...props }: ExtracurricularProps) => {
   return (
-    <Component sx={{ pl: 2, ...props.sx }} display="flex" columnGap={1} alignItems="flex-start">
-      <Typography variant="body1" flexGrow={1} {...props.titleProps}>
-        {props.title}
-      </Typography>
-      {props.year && (
-        <Typography variant="subtitle1" color="primary.main">
-          {props.year}
+    <Component sx={{ ...props.sx }}>
+      <Box pl={2} display="flex" alignItems="flex-start" columnGap={1} flexWrap="wrap-reverse">
+        <Typography variant="body1" flexGrow={1} {...props.titleProps}>
+          {props.title}
         </Typography>
-      )}
+        {props.year && (
+          <Typography variant="subtitle1" color="primary.main" flexGrow={0}>
+            {props.year}
+          </Typography>
+        )}
+      </Box>
     </Component>
   )
 }
