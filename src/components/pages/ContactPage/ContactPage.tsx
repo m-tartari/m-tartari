@@ -24,7 +24,7 @@ const ContactPage = () => {
       </Typography>
       <List>
         <ListItem disablePadding>
-          <ListItemButton onClick={() => window.open('mailto:michele.tartari+web@live.com', '_blank')}>
+          <ListItemButton aria-label="Email button" onClick={() => window.open('mailto:michele.tartari+web@live.com', '_blank')}>
             <DraftsIcon fontSize="large" />
             <Typography variant="h6" ml={2}>
               michele.tartari+web
@@ -34,7 +34,7 @@ const ContactPage = () => {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton onClick={() => window.open('https://www.linkedin.com/in/m-tartari/', '_blank')}>
+          <ListItemButton aria-label="LinkedIn button" onClick={() => window.open('https://www.linkedin.com/in/m-tartari/', '_blank')}>
             <LinkedInIcon fontSize="large" />
             <Typography variant="h6" ml={2}>
               m-tartari
@@ -42,7 +42,7 @@ const ContactPage = () => {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton onClick={() => window.open('https://www.github.com/m-tartari/', '_blank')}>
+          <ListItemButton aria-label="GitHub button" onClick={() => window.open('https://www.github.com/m-tartari/', '_blank')}>
             <GitHubIcon fontSize="large" />
             <Typography variant="h6" ml={2}>
               m-tartari
