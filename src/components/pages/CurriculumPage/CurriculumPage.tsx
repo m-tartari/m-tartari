@@ -315,7 +315,7 @@ const Curriculum = () => {
               <b>OS Used:</b> Linux, Microsoft
             </TableCell>
           </TableRow>
-          <TableRow>
+          <TableRow sx={{ '&:last-child td': { borderBottom: 0 } }}>
             <TableCell width="15%">
               <b>Softskills</b>
             </TableCell>
