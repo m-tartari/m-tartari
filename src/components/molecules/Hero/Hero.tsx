@@ -13,7 +13,7 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
         minHeight: '100vh',
         boxShadow: '0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25)',
 
-        backgroundImage: 'url("images/banner-blur.jpg")',
+        backgroundImage: 'url("images/banner-blur.webp")',
         backgroundPosition: 'center center',
         backgroundAttachment: 'fixed',
         backgroundSize: 'cover',

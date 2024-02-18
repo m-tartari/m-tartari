@@ -25,7 +25,7 @@ const MainPage = () => {
           ref={refIITLinfa}
           scrollTarget={refIITModular}
           anchor="bottom"
-          image="images/IIT_Linfa.png"
+          image="images/IIT_Linfa.webp"
           title="LINFA: An Intuitive Block-Programming Interface for Reconfigurable Robots"
           caption={
             <>
@@ -49,7 +49,7 @@ const MainPage = () => {
           anchor="right"
           // anchor="left"
           image="images/IIT_Modular.png"
-          mobileImage="images/IIT_Modular_Mobile.png"
+          mobileImage="images/IIT_Modular_Mobile.webp"
           title="Revamping HHCM's Modular: Swift Generation of Modular Robot Models"
           caption={
             <>
@@ -71,7 +71,7 @@ const MainPage = () => {
           ref={refIITCalibration}
           scrollTarget={refWUTThesis}
           anchor="left"
-          image="images/IIT_Modules.jpg"
+          image="images/IIT_Modules.webp"
           title="Automated Actuators and Robotic Modules Calibration"
           caption={
             <>
@@ -92,6 +92,7 @@ const MainPage = () => {
           ref={refWUTThesis}
           anchor="bottom"
           image="images/thesis.jpg"
+          mobileImage="images/thesis.webp"
           title="Voice Controlled Mobile Robot for Indoor Applications"
           caption={
             <>
