@@ -19,3 +19,7 @@ updates:
       typescript-eslint:
         patterns:
           - '@typescript-eslint*'
+      mui:
+        patterns:
+          - '@mui/material'
+          - '@mui/icon-material'
