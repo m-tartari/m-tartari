@@ -16,3 +16,6 @@ updates:
         patterns:
           - 'vitest'
           - '@vitest*'
+      typescript-eslint:
+        patterns:
+          - '@typescript-eslint*'
