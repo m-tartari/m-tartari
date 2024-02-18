@@ -16,3 +16,10 @@ updates:
         patterns:
           - 'vitest'
           - '@vitest*'
+      typescript-eslint:
+        patterns:
+          - '@typescript-eslint*'
+      mui:
+        patterns:
+          - '@mui/material'
+          - '@mui/icon-material'

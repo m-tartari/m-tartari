@@ -2,6 +2,7 @@ import React from 'react'
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax'
 import { Box, Grid, IconButton, Typography, useTheme } from '@mui/material'
 import { ExpandMore } from '@mui/icons-material'
+import { useViewport } from '../../utils/viewport'
 
 type AnchorType = 'left' | 'top' | 'right' | 'bottom'
 
@@ -10,6 +11,7 @@ type Props = {
   title: string
   caption: React.ReactNode
   children: React.ReactNode
+  mobileImage?: string
   ref?: React.ForwardedRef<HTMLSelectElement>
   anchor?: AnchorType
   scrollTarget?: React.ForwardedRef<HTMLSelectElement>
@@ -124,7 +126,7 @@ const Description = (props: Props) => {
   }
 }
 
-const ProjectSpotlight = React.forwardRef<HTMLSelectElement, Props>((props, ref) => {
+const DesktopComponent = React.forwardRef<HTMLSelectElement, Props>((props, ref) => {
   return (
     <section ref={ref}>
       <ParallaxProvider>
@@ -161,6 +163,53 @@ const ProjectSpotlight = React.forwardRef<HTMLSelectElement, Props>((props, ref)
       </ParallaxProvider>
     </section>
   )
+})
+
+const MobileComponent = React.forwardRef<HTMLSelectElement, Props>((props, ref) => {
+  const theme = useTheme()
+  return (
+    <>
+      <Box
+        ref={ref}
+        component="img"
+        sx={{
+          width: '100%',
+          height: '100%',
+          maxHeight: '60vh',
+        }}
+        src={props.mobileImage ?? props.image}
+      />
+      <Box
+        sx={{
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+
+          borderTopStyle: 'solid',
+          borderTopWidth: theme.spacing(0.5),
+          borderTopColor: theme.palette.primary.main,
+          p: `${theme.spacing(7)} ${theme.spacing(5)} ${theme.spacing(5.5)} ${theme.spacing(5)}`,
+        }}>
+        <Grid container spacing={2} maxWidth="xl">
+          <Grid item xs={12} md={4}>
+            <Typography variant="h4">{props.title}</Typography>
+            {props.caption}
+          </Grid>
+          <Grid item component={Typography} xs={12} md={8}>
+            {props.children}
+          </Grid>
+        </Grid>
+      </Box>
+    </>
+  )
+})
+
+const ProjectSpotlight = React.forwardRef<HTMLSelectElement, Props>((props, ref) => {
+  const { width } = useViewport()
+  const theme = useTheme()
+
+  return width < theme.breakpoints.values.md ? <MobileComponent {...props} ref={ref} /> : <DesktopComponent {...props} ref={ref} />
 })
 
 export default ProjectSpotlight
