@@ -68,4 +68,5 @@
   "todo-tree.filtering.excludeGlobs": [
     "**/node_modules"
   ],
+  "vitest.enable": true
 }

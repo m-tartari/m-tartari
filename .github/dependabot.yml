@@ -22,4 +22,4 @@ updates:
       mui:
         patterns:
           - '@mui/material'
-          - '@mui/icon-material'
+          - '@mui/icons-material'

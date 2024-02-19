@@ -28,8 +28,8 @@ jobs:
       - name: Test and generate coverage report
         run: npm run test:coverage
 
-      # TODO: upload coverage report to codecov
-      # - name: Upload coverage report to Codecov
-      #   uses: codecov/codecov-action@v3
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        env:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: m-tartari/m-tartari.github.io
