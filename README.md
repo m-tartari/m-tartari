@@ -1,5 +1,8 @@
-
 # [m-tartari.eu](https://m-tartari.eu/)
+
+[![Deployment status](https://github.com/m-tartari/m-tartari.github.io/actions/workflows/deploy.yml/badge.svg)](./.github/workflows/deploy.yml)
+[![Build Status](https://github.com/m-tartari/m-tartari.github.io/actions/workflows/build.yml/badge.svg)](./.github/workflows/build.yml)
+[![codecov](https://codecov.io/gh/m-tartari/m-tartari.github.io/graph/badge.svg?token=TY80ZNAWME)](https://codecov.io/gh/m-tartari/m-tartari.github.io)
 
 A website where I showcase my projects and skills.
 
