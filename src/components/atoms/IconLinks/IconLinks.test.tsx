@@ -12,7 +12,8 @@ const labels: { [key: string]: string } = {
   LinkedInIconLink: 'LinkedIn-button',
   AcademyIconLink: 'Academy-button',
   VideoIconLink: 'Video-button',
-  ExtrernalIconLink: 'External-link-button',
+  ExternalIconLink: 'External-link-button',
+  ExternalAppIconLink: 'External-app-button',
 }
 
 vi.stubGlobal('open', vi.fn())

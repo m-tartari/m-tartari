@@ -1,4 +1,4 @@
-import { Email, LinkedIn, GitHub, Description, OndemandVideo, School, OpenInNew } from '@mui/icons-material'
+import { Email, LinkedIn, GitHub, Description, OndemandVideo, School, OpenInNew, OpenInBrowser } from '@mui/icons-material'
 import { Badge, IconButtonProps, SvgIcon } from '@mui/material'
 
 import IconButton from '../IconButton'
@@ -41,4 +41,5 @@ export const GitHubIconLink = (props: IconLinkProps) => <IconWrapper aria-label=
 export const LinkedInIconLink = (props: IconLinkProps) => <IconWrapper aria-label="LinkedIn-button" Icon={LinkedIn} {...props} />
 export const AcademyIconLink = (props: IconLinkProps) => <IconWrapper aria-label="Academy-button" Icon={School} {...props} />
 export const VideoIconLink = (props: IconLinkProps) => <IconWrapper aria-label="Video-button" Icon={OndemandVideo} {...props} />
-export const ExtrernalIconLink = (props: IconLinkProps) => <IconWrapper aria-label="External-link-button" Icon={OpenInNew} {...props} />
+export const ExternalIconLink = (props: IconLinkProps) => <IconWrapper aria-label="External-link-button" Icon={OpenInNew} {...props} />
+export const ExternalAppIconLink = (props: IconLinkProps) => <IconWrapper aria-label="External-app-button" Icon={OpenInBrowser} {...props} />
