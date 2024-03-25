@@ -30,7 +30,7 @@ const MainPage = () => {
           caption={
             <>
               <VideoIconLink size="small" fontSize="small" href="https://www.linkedin.com/feed/update/urn:li:activity:7034480841569284096/" />
-              <Typography component="span" variant="caption">
+              <Typography component="span" color="text.secondary" ml={1}>
                 Software Engineer @ IIT
               </Typography>
             </>
@@ -54,7 +54,7 @@ const MainPage = () => {
           caption={
             <>
               <GitHubIconLink size="small" fontSize="small" href="https://github.com/ADVRHumanoids/motor_calibration" />
-              <Typography component="span" variant="caption">
+              <Typography component="span" color="text.secondary" ml={1}>
                 Software Engineer @ IIT
               </Typography>
             </>
@@ -76,7 +76,7 @@ const MainPage = () => {
           caption={
             <>
               <GitHubIconLink size="small" fontSize="small" href="https://github.com/ADVRHumanoids/motor_calibration" />
-              <Typography component="span" variant="caption">
+              <Typography component="span" color="text.secondary" ml={1}>
                 Embedded Engineer @ IIT
               </Typography>
             </>
@@ -103,7 +103,7 @@ const MainPage = () => {
                 fontSize="small"
                 href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing"
               />
-              <Typography component="span" variant="caption" color="text.secondary">
+              <Typography component="span" color="text.secondary" ml={1}>
                 Master Thesis @ WUT
               </Typography>
             </>

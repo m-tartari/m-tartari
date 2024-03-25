@@ -28,7 +28,7 @@ const ProjectsPage = () => {
                 sx={{ color: 'text.secondary' }}
               />
               {/* <Typography color="text.secondary" display="inline-block"> */}
-              <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
+              <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
                 Software Engineer @ IIT
               </Typography>
             </>
@@ -50,7 +50,7 @@ const ProjectsPage = () => {
                 Software Engineer @ IIT
               </Typography>
               <GitHubIconLink size="small" fontSize="small" href="https://github.com/ADVRHumanoids/modular_hhcm/" sx={{ color: 'text.secondary' }} />
-              <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
+              <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
                 Software Engineer @ IIT
               </Typography>
             </>
@@ -76,7 +76,7 @@ const ProjectsPage = () => {
                 href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing"
                 sx={{ color: 'text.secondary' }}
               />
-              <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
+              <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
                 Master Thesis @ WUT
               </Typography>
             </>
@@ -245,7 +245,7 @@ const ProjectsPage = () => {
                 href="https://github.com/ADVRHumanoids/motor_calibration"
                 sx={{ color: 'text.secondary' }}
               />
-              <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
+              <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
                 Embedded Engineer @ IIT
               </Typography>
             </>
@@ -272,7 +272,7 @@ const ProjectsPage = () => {
                 href="https://drive.google.com/file/d/0B1z42QMR-0UtYzBYSVhRV3ZPWk0/view?usp=sharing"
                 sx={{ color: 'text.secondary' }}
               />
-              <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
+              <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
                 Bachelor Thesis @ TONGJI
               </Typography>
             </>
@@ -294,7 +294,7 @@ const ProjectsPage = () => {
                 href="https://drive.google.com/file/d/0B1z42QMR-0UtSkxRVzJPTk1IX0k/view?usp=sharing"
                 sx={{ color: 'text.secondary' }}
               />
-              <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
+              <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
                 Bachelor Thesis @ UNIBO
               </Typography>
             </>
