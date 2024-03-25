@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Typography } from '@mui/material'
 
 import { ViewportProvider } from 'components/utils/viewport'
-import { AcademyIconLink, DescriptionIconLink, GitHubIconLink, VideoIconLink } from 'components/atoms'
+import { AcademyIconLink, DescriptionIconLink, ExternalAppIconLink, GitHubIconLink, VideoIconLink } from 'components/atoms'
 import { Footer, Hero, Toobar, ProjectSpotlight } from 'components/molecules'
 
 const MainPage = () => {
@@ -54,6 +54,7 @@ const MainPage = () => {
           caption={
             <>
               <GitHubIconLink size="small" fontSize="small" href="https://github.com/ADVRHumanoids/motor_calibration" />
+              <ExternalAppIconLink size="small" fontSize="small" href="https://modular.alberobotics.it" />
               <Typography component="span" color="text.secondary" ml={1}>
                 Software Engineer @ IIT
               </Typography>

@@ -1,6 +1,6 @@
 import { Box, Divider, Link, Typography } from '@mui/material'
 
-import { GitHubIconLink, DescriptionIconLink, VideoIconLink, AcademyIconLink } from 'components/atoms'
+import { GitHubIconLink, DescriptionIconLink, VideoIconLink, AcademyIconLink, ExternalAppIconLink } from 'components/atoms'
 import { Project } from 'components/molecules'
 import { Page } from 'components/templates'
 
@@ -50,6 +50,7 @@ const ProjectsPage = () => {
                 Software Engineer @ IIT
               </Typography>
               <GitHubIconLink size="small" fontSize="small" href="https://github.com/ADVRHumanoids/modular_hhcm/" sx={{ color: 'text.secondary' }} />
+              <ExternalAppIconLink size="small" fontSize="small" href="https://modular.alberobotics.it" sx={{ color: 'text.secondary' }} />
               <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
                 Software Engineer @ IIT
               </Typography>
