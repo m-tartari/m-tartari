@@ -1,13 +1,13 @@
-import { Box, Divider, Link, Table, TableCell, TableRow, Typography } from '@mui/material'
+import { Box, Divider, Link, Stack, Table, TableCell, TableRow, Typography } from '@mui/material'
 
-import { Award, Extracurricular, Publication } from 'components/atoms'
+import { Award, ExternalIconLink, Extracurricular, Publication } from 'components/atoms'
 import { CurriculumItem } from 'components/molecules'
 import { Page } from 'components/templates'
 
 const Curriculum = () => {
   return (
     <Page title="Curriculum">
-      <Box component="section" id="robotics">
+      <Box component="section" id="work">
         <Typography variant="h4" color="primary.main" gutterBottom>
           Work Experience
         </Typography>
@@ -114,10 +114,22 @@ const Curriculum = () => {
           Education
         </Typography>
 
+        <Typography variant="h5" gutterBottom>
+          Certifications
+        </Typography>
+        {/* id="WUT" */}
+        <CurriculumItem title="IBM Full Stack Software Developer Professional Certificate" dates="03/24">
+          <Stack direction="row" alignItems="flex-end">
+            <Typography>Credential ID: EZ34GWQLRHEG</Typography>
+            <ExternalIconLink size="small" fontSize="small" href="https://www.coursera.org/account/accomplishments/professional-cert/EZ34GWQLRHEG" />
+          </Stack>
+        </CurriculumItem>
+
         <Typography
           variant="h5"
           onClick={() => window.open('https://master-emaro.ec-nantes.fr/', '_blank')}
           sx={{
+            mt: 2,
             cursor: 'pointer',
             ':hover': {
               backgroundColor: 'transparent',
