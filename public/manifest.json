@@ -1,0 +1,24 @@
+{
+  "short_name": "m-tartari",
+  "name": "Michele Tartari",
+  "version": "1.0.0-alpha.0",
+  "description": "Robotics/Full Stack Software Engineer",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1b1d27",
+  "background_color": "#1b1d27"
+}
