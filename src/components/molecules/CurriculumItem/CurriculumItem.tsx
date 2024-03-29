@@ -5,8 +5,8 @@ import { ExpandMore as ExpandIcon } from '@mui/icons-material'
 interface CurriculumEntryProps {
   title: string
   dates: string
-  company: string
-  location: string
+  company?: string
+  location?: string
   children?: React.ReactNode
 }
 
@@ -60,12 +60,16 @@ const CurriculumItem = (props: CurriculumEntryProps) => {
           <Grid item xs={3} component={Typography} variant="h6" color="primary.main" textAlign="right">
             {props.dates}
           </Grid>
-          <Grid item xs={9} component={Typography} variant="overline" color="text.secondary">
-            {props.company}
-          </Grid>
-          <Grid item xs={3} component={Typography} variant="subtitle1" color="text.secondary" textAlign="right">
-            <em>{props.location}</em>
-          </Grid>
+          {typeof props.company !== 'undefined' && (
+            <Grid item xs={9} component={Typography} variant="overline" color="text.secondary">
+              {props.company}
+            </Grid>
+          )}
+          {typeof props.location !== 'undefined' && (
+            <Grid item xs={3} component={Typography} variant="subtitle1" color="text.secondary" textAlign="right">
+              <em>{props.location}</em>
+            </Grid>
+          )}
         </Grid>
         <Box display={{ xs: 'block', sm: 'none' }}>
           <Typography variant="subtitle1" color="primary.main">
@@ -74,12 +78,16 @@ const CurriculumItem = (props: CurriculumEntryProps) => {
           <Typography variant="h6">
             <b>{props.title}</b>
           </Typography>
-          <Typography variant="button" color="text.secondary">
-            {props.company}
-          </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
-            <em>{props.location}</em>
-          </Typography>
+          {typeof props.company !== 'undefined' && (
+            <Typography variant="button" color="text.secondary">
+              {props.company}
+            </Typography>
+          )}
+          {typeof props.location !== 'undefined' && (
+            <Typography variant="subtitle2" color="text.secondary">
+              <em>{props.location}</em>
+            </Typography>
+          )}
         </Box>
       </AccordionSummary>
       <AccordionDetails>{props.children}</AccordionDetails>
