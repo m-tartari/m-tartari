@@ -24,7 +24,7 @@ const ContactPage = () => {
       </Typography>
       <List>
         <ListItem disablePadding>
-          <ListItemButton aria-label="Email button" onClick={() => window.open('mailto:michele.tartari+web@live.com', '_blank')}>
+          <ListItemButton aria-label="Email button" onClick={() => window.open('mailto:info@m-tartari.eu', '_blank')}>
             <DraftsIcon fontSize="large" />
             <Typography variant="h6" ml={2}>
               michele.tartari+web

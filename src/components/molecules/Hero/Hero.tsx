@@ -62,7 +62,7 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
           <Stack direction="row" sx={{ display: 'inline-block' }}>
             <LinkedInIconLink size="large" sx={{ color: 'text.secondary' }} fontSize="large" href="https://www.linkedin.com/in/m-tartari/" />
             <GitHubIconLink size="large" sx={{ color: 'text.secondary' }} fontSize="large" href="https://www.github.com/m-tartari/" />
-            <EmailIconLink size="large" sx={{ color: 'text.secondary' }} fontSize="large" href="mailto:michele.tartari+web@live.com" />
+            <EmailIconLink size="large" sx={{ color: 'text.secondary' }} fontSize="large" href="mailto:info@m-tartari.eu" />
           </Stack>
         </Box>
         <Avatar
