@@ -27,9 +27,9 @@ const ContactPage = () => {
           <ListItemButton aria-label="Email button" onClick={() => window.open('mailto:info@m-tartari.eu', '_blank')}>
             <DraftsIcon fontSize="large" />
             <Typography variant="h6" ml={2}>
-              michele.tartari+web
+              info
               <wbr />
-              @live.com
+              @m-tartari.eu
             </Typography>
           </ListItemButton>
         </ListItem>
