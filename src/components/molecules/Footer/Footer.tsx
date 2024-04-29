@@ -9,7 +9,7 @@ const Footer = () => {
       <Stack direction="row">
         <LinkedInIconLink size="large" fontSize="large" href="https://www.linkedin.com/in/m-tartari/" />
         <GitHubIconLink size="large" fontSize="large" href="https://www.github.com/m-tartari/" />
-        <EmailIconLink size="large" fontSize="large" href="mailto:michele.tartari+web@live.com" />
+        <EmailIconLink size="large" fontSize="large" href="mailto:info@m-tartari.eu" />
       </Stack>
       <Typography variant="subtitle2" align="center" color="text.secondary" component="em" mt={3}>
         &copy; {year} Michele Tartari. All rights reserved.

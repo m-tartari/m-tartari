@@ -22,7 +22,7 @@ describe('ContactPage', () => {
     render(<ContactPage />)
 
     await userEvent.click(screen.getByLabelText('Email button'))
-    expect(open).toHaveBeenCalledWith('mailto:michele.tartari+web@live.com', '_blank')
+    expect(open).toHaveBeenCalledWith('mailto:info@m-tartari.eu', '_blank')
   })
 
   test('opens the correct link when the LinkedIn button is clicked', async () => {
