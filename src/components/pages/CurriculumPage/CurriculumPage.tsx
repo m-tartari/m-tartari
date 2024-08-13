@@ -12,6 +12,19 @@ const Curriculum = () => {
           Work Experience
         </Typography>
 
+        {/* id="selfemployed-software" */}
+        <CurriculumItem title="Software Engineering Consultant" dates="04/24 - Today" company="Self-Employed" location="Remote">
+          <Typography>
+            <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
+              <li>
+                Design and development of customized graphical interfaces and software components to facilitate the use of robots and industrial
+                machines.
+              </li>
+              <li>Production and maintenance of revisions of the documentation.</li>
+              <li>Providing technical assistance for R&D activities.</li>
+            </ul>
+          </Typography>
+        </CurriculumItem>
         {/* id="MinHub-lead" */}
         <CurriculumItem title="Business Partner & Technical Lead" dates="03/23 - Today" company="MindHub Ferrara" location="Ferrara, Italy">
           <Typography>
@@ -32,7 +45,7 @@ const Curriculum = () => {
           </Typography>
         </CurriculumItem>
         {/* id="IIT-software" */}
-        <CurriculumItem title="Software Engineer" dates="06/21 - Today" company="Istituto Italiano di Tecnologia" location="Remote">
+        <CurriculumItem title="Software Engineer" dates="06/21 - 04/24" company="Istituto Italiano di Tecnologia" location="Remote">
           <Typography>
             Worked in{' '}
             <Link target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220706131402/https://alberobotics.it/">
