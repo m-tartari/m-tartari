@@ -2,8 +2,10 @@
 <h4 align="center">A Robotics/Full-Stack Engineer from Italy</h3>
 <br/>
 
+<!-- 
 ![Michele's GitHub stats](https://github-readme-stats-git-main-m-tartaris-projects.vercel.app/api?username=m-tartari&count_private=true&show_icons=true&theme=github_dark&custom_title=GitHub%20Stats)
-<!-- ![Michele's Top Languages](https://github-readme-stats-git-main-m-tartaris-projects.vercel.app/api/top-langs?username=m-tartari&count_private=true&show_icons=true&theme=github_dark&locale=en&layout=compact) -->
+![Michele's Top Languages](https://github-readme-stats-git-main-m-tartaris-projects.vercel.app/api/top-langs?username=m-tartari&count_private=true&show_icons=true&theme=github_dark&locale=en&layout=compact) 
+-->
 
 ### Languages and Tools:
 [<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/>](https://www.typescriptlang.org/)
