@@ -36,9 +36,9 @@ jobs:
           node-version: 'lts/*'
           cache: 'npm'
       - name: Install dependencies
-        run: npm install
+        run: npm ci --omit=dev
       - name: Build
-        run: npm run build
+        run: npm run build:prod
       - name: Copy index.html to 404.html
         # see https://stackoverflow.com/a/76148302
         run: cp ./dist/index.html ./dist/404.html
