@@ -12,14 +12,22 @@ updates:
       prefix: '⬆️ chore'
       include: 'scope'
     groups:
+      vite:
+        patterns:
+          - 'vite*'
       vitest:
         patterns:
           - 'vitest'
           - '@vitest*'
-      typescript-eslint:
+      eslint:
         patterns:
+          - 'eslint*'
           - '@typescript-eslint*'
       mui:
         patterns:
           - '@mui/material'
           - '@mui/icons-material'
+          - '@emotion/*'
+      testing-library:
+        patterns:
+          - '@testing-library/*'
