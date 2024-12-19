@@ -12,17 +12,28 @@ updates:
       prefix: '⬆️ chore'
       include: 'scope'
     groups:
+      react:
+        patterns:
+          - 'react'
+          - 'react-dom'
+          - 'react-router-dom'
+          - '@types/react'
+          - '@types/react-dom'
       vite:
         patterns:
-          - 'vite*'
+          - 'vite'
+          - 'vite-*'
+          - '@vitejs/*'
       vitest:
         patterns:
           - 'vitest'
           - '@vitest*'
-      eslint:
+      lint:
         patterns:
           - 'eslint*'
+          - '@eslint*'
           - '@typescript-eslint*'
+          - 'prettier'
       mui:
         patterns:
           - '@mui/material'
@@ -31,3 +42,7 @@ updates:
       testing-library:
         patterns:
           - '@testing-library/*'
+      lodash:
+        patterns:
+          - 'lodash*'
+          - '@types/lodash*'
