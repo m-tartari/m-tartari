@@ -26,7 +26,7 @@ const Curriculum = () => {
           </Typography>
         </CurriculumItem>
         {/* id="MinHub-lead" */}
-        <CurriculumItem title="Business Partner & Technical Lead" dates="03/23 - Today" company="MindHub Ferrara" location="Ferrara, Italy">
+        <CurriculumItem title="Business Partner & Technical Lead" dates="03/23 - 12/24" company="MindHub Ferrara" location="Ferrara, Italy">
           <Typography>
             Co-founded{' '}
             <Link target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61550278936416">
@@ -322,12 +322,12 @@ const Curriculum = () => {
               <b>Digital</b>
             </TableCell>
             <TableCell width="85%">
-              <b>Languages:</b> TypeScript/Javascript(Proficient), Python(Proficient), Bash(Good), C++(Good), C(Fair)
+              <b>Languages:</b> TypeScript/Javascript (Proficient), Python (Proficient), Bash (Good), C++ (Good), C (Fair)
             </TableCell>
           </TableRow>
           <TableRow>
             <TableCell>
-              <b>Softwares:</b> git(Proficient), Matlab(Good), LaTeX(Good), CATIA(Fair)
+              <b>Softwares:</b> git (Proficient), Matlab (Good), LaTeX (Good), CATIA (Fair)
             </TableCell>
           </TableRow>
           <TableRow>
