@@ -8,14 +8,14 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
   return (
     <Box
       sx={{
-        postition: 'relative',
+        position: 'relative',
 
         minHeight: '100vh',
         boxShadow: '0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25)',
 
         backgroundImage: 'url("images/banner-blur.webp")',
         backgroundPosition: 'center center',
-        backgroundAttachment: 'fixed',
+        backgroundAttachment: { xs: 'scroll !important', md: 'fixed' },
         backgroundSize: 'cover',
 
         display: 'flex',
@@ -42,19 +42,15 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
 							<h3>Robotics Engineer</h3>
              */}
           <Typography
-            variant="h3"
-            // sx={{
-            // fontSize: '2.5em',
-            // margin: 0,
-            // }}
-          >
+            // sx={{ fontSize: '2.5em',margin: 0 }}
+            variant="h3">
             Robotics Engineer
           </Typography>
           <Typography
             color="text.secondary"
             sx={{
-              margin: '0.5em 0 0 0',
               // margin: { xs: '0.5em 1em', md: '0.5em 0 0 0' },
+              margin: '0.5em 0 0 0',
               top: 0,
             }}>
             See some of my works below. Send a message to get in touch.
