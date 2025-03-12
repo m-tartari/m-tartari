@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material'
 
 import { ViewportProvider } from 'components/utils/viewport'
 import { AcademyIconLink, DescriptionIconLink, ExternalAppIconLink, GitHubIconLink, VideoIconLink } from 'components/atoms'
-import { Footer, Hero, Toobar, ProjectSpotlight } from 'components/molecules'
+import { Footer, Hero, Toolbar, ProjectSpotlight } from 'components/molecules'
 
 const MainPage = () => {
   React.useEffect(() => {
@@ -18,7 +18,7 @@ const MainPage = () => {
   return (
     <ViewportProvider>
       <Box aria-label="page" sx={{ flexGrow: 1 }}>
-        <Toobar position="absolute" sx={{ backgroundColor: 'transparent' }} />
+        <Toolbar position="absolute" sx={{ backgroundColor: 'transparent' }} />
         <Hero scrollTarget={refIITLinfa} />
         {/*  1 IIT - Linfa */}
         <ProjectSpotlight
