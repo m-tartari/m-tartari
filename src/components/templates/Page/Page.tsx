@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, BoxProps, Container, Divider, Typography } from '@mui/material'
 
-import { Footer, Toobar } from 'components/molecules'
+import { Footer, Toolbar } from 'components/molecules'
 
 /**
  * React function component that implements the default page template.
@@ -16,7 +16,7 @@ const Page: React.FC<BoxProps> = ({ title, children, ...props }) => {
 
   return (
     <Box sx={{ flexGrow: 1 }} aria-label="page">
-      <Toobar />
+      <Toolbar />
       {title && (
         <>
           <Typography

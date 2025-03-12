@@ -16,6 +16,7 @@ import {
   Toolbar,
   Typography,
   styled,
+  useScrollTrigger,
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 
@@ -36,11 +37,18 @@ const DrawerButton = styled(ListItemButton<typeof RouterLink>)(({ theme }) => ({
   },
 }))
 
-interface CustomToobarProps extends AppBarProps {
+interface CustomToolbarProps extends AppBarProps {
   drawerWidth?: number
+  window?: Window
 }
-const CustomToobar: React.FC<CustomToobarProps> = ({ drawerWidth = 240, ...props }) => {
+const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window, ...props }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false)
+
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+    target: window ?? undefined,
+  })
 
   const handleDrawerToggle = () => {
     setMobileOpen(prevState => !prevState)
@@ -88,7 +96,7 @@ const CustomToobar: React.FC<CustomToobarProps> = ({ drawerWidth = 240, ...props
         elevation={0}
         {...props}
         sx={{
-          backgroundColor: theme => (theme.palette.mode === 'dark' ? 'background.paper' : undefined),
+          backgroundColor: trigger ? theme => (theme.palette.mode === 'dark' ? 'background.paper' : undefined) : 'transparent',
           ...props.sx,
         }}>
         <Toolbar sx={{ display: 'flex' }}>
@@ -145,4 +153,4 @@ const CustomToobar: React.FC<CustomToobarProps> = ({ drawerWidth = 240, ...props
   )
 }
 
-export default CustomToobar
+export default CustomToolbar
