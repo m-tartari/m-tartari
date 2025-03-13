@@ -77,7 +77,7 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
         <IconButton
           size="large"
           onClick={() => (props.scrollTarget as React.MutableRefObject<HTMLSelectElement | null>).current?.scrollIntoView()}
-          sx={{ position: 'absolute', p: 1, bottom: 3 }}>
+          sx={{ display: { xs: 'none', md: 'block' }, position: 'absolute', p: 1, bottom: 3 }}>
           <ExpandMore fontSize="large" />
         </IconButton>
       )}
