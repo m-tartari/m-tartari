@@ -18,7 +18,7 @@ const MainPage = () => {
   return (
     <ViewportProvider>
       <Box aria-label="page" sx={{ flexGrow: 1 }}>
-        <Toolbar position="absolute" sx={{ backgroundColor: 'transparent' }} />
+        <Toolbar />
         <Hero scrollTarget={refIITLinfa} />
         {/*  1 IIT - Linfa */}
         <ProjectSpotlight

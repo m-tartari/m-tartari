@@ -1,8 +1,9 @@
 import React from 'react'
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax'
-import { Box, Grid, IconButton, Typography, useTheme } from '@mui/material'
+import { Box, Grid2 as Grid, IconButton, Typography, useTheme } from '@mui/material'
 import { ExpandMore } from '@mui/icons-material'
-import { useViewport } from '../../utils/viewport'
+
+import { useViewport } from 'components/utils/viewport/index.js'
 
 type AnchorType = 'left' | 'top' | 'right' | 'bottom'
 
@@ -18,13 +19,11 @@ type Props = {
 }
 
 const Description = (props: Props) => {
-  const theme = useTheme()
-
   switch (props.anchor) {
     case 'bottom':
       return (
         <Box
-          sx={{
+          sx={theme => ({
             width: '100%',
             display: 'flex',
             alignItems: 'center',
@@ -39,13 +38,13 @@ const Description = (props: Props) => {
             borderTopWidth: theme.spacing(0.5),
             borderTopColor: theme.palette.primary.main,
             p: `${theme.spacing(7)} ${theme.spacing(5)} ${theme.spacing(5.5)} ${theme.spacing(5)}`,
-          }}>
+          })}>
           <Grid container spacing={2} maxWidth="xl">
-            <Grid item xs={12} md={4}>
+            <Grid size={4}>
               <Typography variant="h4">{props.title}</Typography>
               {props.caption}
             </Grid>
-            <Grid item component={Typography} xs={12} md={8}>
+            <Grid component={Typography} size={8}>
               {props.children}
             </Grid>
           </Grid>
@@ -54,7 +53,7 @@ const Description = (props: Props) => {
     case 'top':
       return (
         <Box
-          sx={{
+          sx={theme => ({
             display: 'flex',
             position: 'absolute',
             bgcolor: 'background.default',
@@ -67,13 +66,13 @@ const Description = (props: Props) => {
             borderBottomColor: theme.palette.primary.main,
             p: `${theme.spacing(5)} ${theme.spacing(5)} ${theme.spacing(3)} ${theme.spacing(5)}`,
             // p: '5.1em 3.1em 3.1em 3.1em',
-          }}>
+          })}>
           <Grid container spacing={2} maxWidth="xl">
-            <Grid item xs={12} md={4}>
+            <Grid size={4}>
               <Typography variant="h4">{props.title}</Typography>
               {props.caption}
             </Grid>
-            <Grid item component={Typography} xs={12} md={8}>
+            <Grid component={Typography} size={8}>
               {props.children}
             </Grid>
           </Grid>
@@ -82,7 +81,7 @@ const Description = (props: Props) => {
     case 'right':
       return (
         <Box
-          sx={{
+          sx={theme => ({
             height: '102%',
             width: '28em',
             position: 'absolute',
@@ -93,9 +92,9 @@ const Description = (props: Props) => {
             // borderLeftWidth: '0.35em',
             borderLeftStyle: 'solid',
             borderLeftColor: theme.palette.primary.main,
-            p: `${theme.spacing(3)} ${theme.spacing(5)} ${theme.spacing(5)} ${theme.spacing(5)}`,
+            p: `${theme.spacing(10)} ${theme.spacing(5)} ${theme.spacing(5)} ${theme.spacing(5)}`,
             // p: '5.1em 3.1em 3.1em 3.1em',
-          }}>
+          })}>
           <Typography variant="h4">{props.title}</Typography>
           {props.caption}
           <Typography mt={3}>{props.children}</Typography>
@@ -104,7 +103,7 @@ const Description = (props: Props) => {
     case 'left':
       return (
         <Box
-          sx={{
+          sx={theme => ({
             height: '102%',
             width: '28em',
             position: 'absolute',
@@ -115,9 +114,9 @@ const Description = (props: Props) => {
             // borderLeftWidth: '0.35em',
             borderRightStyle: 'solid',
             borderRightColor: theme.palette.primary.main,
-            p: `${theme.spacing(3)} ${theme.spacing(5)} ${theme.spacing(5)} ${theme.spacing(5)}`,
+            p: `${theme.spacing(10)} ${theme.spacing(5)} ${theme.spacing(5)} ${theme.spacing(5)}`,
             // p: '5.1em 3.1em 3.1em 3.1em',
-          }}>
+          })}>
           <Typography variant="h4">{props.title}</Typography>
           {props.caption}
           <Typography mt={3}>{props.children}</Typography>
@@ -166,9 +165,8 @@ const DesktopComponent = React.forwardRef<HTMLSelectElement, Props>((props, ref)
 })
 
 const MobileComponent = React.forwardRef<HTMLSelectElement, Props>((props, ref) => {
-  const theme = useTheme()
   return (
-    <>
+    <Box component="section">
       <Box
         ref={ref}
         component="img"
@@ -180,28 +178,18 @@ const MobileComponent = React.forwardRef<HTMLSelectElement, Props>((props, ref) 
         src={props.mobileImage ?? props.image}
       />
       <Box
-        sx={{
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-
+        sx={theme => ({
+          mt: theme.spacing(-1.05),
           borderTopStyle: 'solid',
           borderTopWidth: theme.spacing(0.5),
           borderTopColor: theme.palette.primary.main,
           p: `${theme.spacing(7)} ${theme.spacing(5)} ${theme.spacing(5.5)} ${theme.spacing(5)}`,
-        }}>
-        <Grid container spacing={2} maxWidth="xl">
-          <Grid item xs={12} md={4}>
-            <Typography variant="h4">{props.title}</Typography>
-            {props.caption}
-          </Grid>
-          <Grid item component={Typography} xs={12} md={8}>
-            {props.children}
-          </Grid>
-        </Grid>
+        })}>
+        <Typography variant="h4">{props.title}</Typography>
+        {props.caption}
+        <Typography pt={1}>{props.children}</Typography>
       </Box>
-    </>
+    </Box>
   )
 })
 
