@@ -51,12 +51,10 @@ const Page: React.FC<BoxProps> = ({ title, children, ...props }) => {
           mb: 4,
           minHeight: '80vh',
           mx: 'auto',
-          maxWidth: 'calc(100% - 4em)',
+          maxWidth: { xs: '100%', md: 'calc(100% - 4em)' },
           width: '70em',
           ...props.sx,
         }}>
-        {/* Children is included in props */}
-
         {children}
       </Container>
       <Footer />
