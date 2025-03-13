@@ -24,18 +24,25 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
         wrap: 'wrap',
       }}>
       <Box
-        sx={{
+        sx={theme => ({
           maxWidth: '95%',
           marginRight: '1%',
-          padding: { xs: '3em', md: '6em' },
-          textAlign: { xs: 'center', md: 'right' },
-
           display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'center',
           alignItems: 'center',
           gap: '3em',
-        }}>
+
+          [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+            textAlign: 'center',
+            padding: '3em',
+          },
+          [theme.breakpoints.up('sm')]: {
+            flexDirection: 'row',
+            textAlign: 'right',
+            padding: '6em',
+          },
+        })}>
         <Box>
           {/*
               <h2>Michele Tartari</h2>
@@ -77,7 +84,7 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
         <IconButton
           size="large"
           onClick={() => (props.scrollTarget as React.MutableRefObject<HTMLSelectElement | null>).current?.scrollIntoView()}
-          sx={{ position: 'absolute', p: 1, bottom: 3 }}>
+          sx={{ display: { xs: 'none', md: 'block' }, position: 'absolute', p: 1, bottom: 3 }}>
           <ExpandMore fontSize="large" />
         </IconButton>
       )}

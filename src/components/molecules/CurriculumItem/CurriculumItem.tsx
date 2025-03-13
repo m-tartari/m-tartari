@@ -1,5 +1,5 @@
 import React from 'react'
-import { Accordion, AccordionDetails, AccordionSummary, Box, Grid, Typography } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Box, Grid2 as Grid, Typography } from '@mui/material'
 import { ExpandMore as ExpandIcon } from '@mui/icons-material'
 
 interface CurriculumEntryProps {
@@ -53,20 +53,20 @@ const CurriculumItem = (props: CurriculumEntryProps) => {
             marginLeft: 2,
           },
         }}>
-        <Grid container direction="row" justifyContent="space-between" alignItems="stretch" display={{ xs: 'none', sm: 'flex' }}>
-          <Grid item xs={9} component={Typography} variant="h6">
+        <Grid container width={1} direction="row" justifyContent="space-between" alignItems="stretch" display={{ xs: 'none', sm: 'flex' }}>
+          <Grid component={Typography} size={9} variant="h6">
             <b>{props.title}</b>
           </Grid>
-          <Grid item xs={3} component={Typography} variant="h6" color="primary.main" textAlign="right">
+          <Grid component={Typography} size={3} variant="h6" color="primary.main" textAlign="right">
             {props.dates}
           </Grid>
           {typeof props.company !== 'undefined' && (
-            <Grid item xs={9} component={Typography} variant="overline" color="text.secondary">
+            <Grid component={Typography} size={9} variant="overline" color="text.secondary">
               {props.company}
             </Grid>
           )}
           {typeof props.location !== 'undefined' && (
-            <Grid item xs={3} component={Typography} variant="subtitle1" color="text.secondary" textAlign="right">
+            <Grid component={Typography} size={3} variant="subtitle1" color="text.secondary" textAlign="right">
               <em>{props.location}</em>
             </Grid>
           )}
