@@ -7,7 +7,6 @@ updates:
       timezone: 'Europe/Rome'
       interval: 'daily'
     open-pull-requests-limit: 10
-    rebase-strategy: 'disabled' # Disable rebasing for npm pull requests
     commit-message:
       prefix: '⬆️ chore'
       include: 'scope'
