@@ -19,11 +19,20 @@ jobs:
           node-version: 'lts/*'
           cache: 'npm'
 
+      - name: Install production dependencies
+        run: npm ci --omit=dev
+
+      - name: Build (production)
+        run: npm run build:prod
+
       - name: Install dependencies
         run: npm ci
 
       - name: Build
         run: npm run build
+
+      - name: Lint
+        run: npm run lint
 
       - name: Test and generate coverage report
         run: npm run test:coverage
