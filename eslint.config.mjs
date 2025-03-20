@@ -17,7 +17,7 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ['**/dist', '**/.eslintrc.cjs', 'eslint.config.mjs'],
+    ignores: ['coverage', '**/dist', '**/.eslintrc.cjs', 'eslint.config.mjs', 'public/mockServiceWorker.js'],
   },
   ...fixupConfigRules(
     compat.extends(
