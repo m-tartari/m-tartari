@@ -28,7 +28,7 @@
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.0",
     "react-scroll-parallax": "^3.4.5",
-    "vite": "^6.2.2",
+    "vite": "^6.2.3",
     "vite-tsconfig-paths": "^5.1.4"
   },
   "devDependencies": {
