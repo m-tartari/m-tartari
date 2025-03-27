@@ -6,6 +6,7 @@ import viteTsconfigPaths from 'vite-tsconfig-paths'
 export default defineConfig({
   plugins: [react(), viteTsconfigPaths()],
   resolve: {
+    conditions: ['mui-modern', 'module'],
     alias: {
       components: '/src/components',
       style: '/src/style',

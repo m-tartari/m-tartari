@@ -15,14 +15,15 @@
     "lint:fix": "npm run lint -- --fix",
     "preview": "vite preview",
     "test": "vitest",
-    "test:coverage": "npm run test -- --coverage"
+    "test:coverage": "npm run test -- --coverage",
+    "test:ci-workflow": "npm ci --omit=dev && npm run build:prod && npm ci && npm run build && npm run lint && npm run test:coverage"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@fontsource/roboto": "^5.2.5",
-    "@mui/icons-material": "^6.4.8",
-    "@mui/material": "^6.0.2",
+    "@mui/icons-material": "^7.0.0",
+    "@mui/material": "^7.0.0",
     "@vitejs/plugin-react-swc": "^3.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

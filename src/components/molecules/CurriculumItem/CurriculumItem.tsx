@@ -1,5 +1,5 @@
 import React from 'react'
-import { Accordion, AccordionDetails, AccordionSummary, Box, Grid2 as Grid, Typography } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Box, Grid, Typography } from '@mui/material'
 import { ExpandMore as ExpandIcon } from '@mui/icons-material'
 
 interface CurriculumEntryProps {

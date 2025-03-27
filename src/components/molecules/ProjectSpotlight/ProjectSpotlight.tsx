@@ -1,6 +1,6 @@
 import React from 'react'
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax'
-import { Box, Grid2 as Grid, IconButton, Typography, useTheme } from '@mui/material'
+import { Box, Grid, IconButton, Typography, useTheme } from '@mui/material'
 import { ExpandMore } from '@mui/icons-material'
 
 import { useViewport } from 'components/utils/viewport/index.js'
