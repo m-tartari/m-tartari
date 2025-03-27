@@ -15,7 +15,8 @@
     "lint:fix": "npm run lint -- --fix",
     "preview": "vite preview",
     "test": "vitest",
-    "test:coverage": "npm run test -- --coverage"
+    "test:coverage": "npm run test -- --coverage",
+    "test:ci-workflow": "npm ci --omit=dev && npm run build:prod && npm ci && npm run build && npm run lint && npm run test:coverage"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
