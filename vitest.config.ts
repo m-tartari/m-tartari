@@ -2,6 +2,7 @@ import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   resolve: {
+    conditions: ['mui-modern', 'module'],
     alias: {
       components: '/src/components',
       style: '/src/style',
