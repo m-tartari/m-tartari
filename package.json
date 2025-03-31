@@ -25,9 +25,9 @@
     "@mui/icons-material": "^7.0.0",
     "@mui/material": "^7.0.0",
     "@vitejs/plugin-react-swc": "^3.8.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.4.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.4.1",
     "react-scroll-parallax": "^3.4.5",
     "vite": "^6.2.3",
     "vite-tsconfig-paths": "^5.1.4"
