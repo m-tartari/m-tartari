@@ -153,7 +153,7 @@ const DesktopComponent = React.forwardRef<HTMLSelectElement, Props>((props, ref)
           {props.scrollTarget && (
             <IconButton
               size="large"
-              onClick={() => (props.scrollTarget as React.MutableRefObject<HTMLSelectElement | null>).current?.scrollIntoView()}
+              onClick={() => (props.scrollTarget as React.RefObject<HTMLSelectElement | null>).current?.scrollIntoView()}
               sx={{ position: 'absolute', p: 1, bottom: 2, left: '50%', transform: 'translate(-50%, 0)' }}>
               <ExpandMore fontSize="large" />
             </IconButton>

@@ -44,28 +44,14 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
           },
         })}>
         <Box>
-          {/*
-              <h2>Michele Tartari</h2>
-							<h3>Robotics Engineer</h3>
-             */}
-          <Typography
-            // sx={{ fontSize: '2.5em',margin: 0 }}
-            variant="h3">
-            Robotics Engineer
-          </Typography>
-          <Typography
-            color="text.secondary"
-            sx={{
-              // margin: { xs: '0.5em 1em', md: '0.5em 0 0 0' },
-              margin: '0.5em 0 0 0',
-              top: 0,
-            }}>
+          <Typography variant="h3">Robotics Engineer</Typography>
+          <Typography color="text.secondary" sx={{ margin: '0.5em 0 0 0', top: 0 }}>
             See some of my works below. Send a message to get in touch.
           </Typography>
-          <Stack direction="row" sx={{ display: 'inline-block' }}>
-            <LinkedInIconLink size="large" sx={{ color: 'text.secondary' }} fontSize="large" href="https://www.linkedin.com/in/m-tartari/" />
-            <GitHubIconLink size="large" sx={{ color: 'text.secondary' }} fontSize="large" href="https://www.github.com/m-tartari/" />
-            <EmailIconLink size="large" sx={{ color: 'text.secondary' }} fontSize="large" href="mailto:info@m-tartari.eu" />
+          <Stack direction="row" gap={2} mt={2} justifyContent={{ xs: 'center', sm: 'end' }}>
+            <LinkedInIconLink sx={{ color: 'text.secondary' }} fontSize="large" href="https://www.linkedin.com/in/m-tartari/" />
+            <GitHubIconLink sx={{ color: 'text.secondary' }} fontSize="large" href="https://www.github.com/m-tartari/" />
+            <EmailIconLink sx={{ color: 'text.secondary' }} fontSize="large" href="mailto:info@m-tartari.eu" />
           </Stack>
         </Box>
         <Avatar
@@ -83,8 +69,8 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
       {props.scrollTarget && (
         <IconButton
           size="large"
-          onClick={() => (props.scrollTarget as React.MutableRefObject<HTMLSelectElement | null>).current?.scrollIntoView()}
-          sx={{ display: { xs: 'none', md: 'block' }, position: 'absolute', p: 1, bottom: 3 }}>
+          onClick={() => (props.scrollTarget as React.RefObject<HTMLElement | null>).current?.scrollIntoView()}
+          sx={{ position: 'absolute', p: 1, bottom: 2, left: '50%', transform: 'translate(-50%, 0)' }}>
           <ExpandMore fontSize="large" />
         </IconButton>
       )}

@@ -1,9 +1,8 @@
 // IconLinks.test.tsx
 
 import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 
-import * as IconLinks from '.'
+import * as IconLinks from './index.js'
 
 const labels: { [key: string]: string } = {
   DescriptionIconLink: 'Doc-button',
@@ -18,8 +17,6 @@ const labels: { [key: string]: string } = {
 
 vi.stubGlobal('open', vi.fn())
 describe('IconLinks', () => {
-  const open = vi.spyOn(window, 'open')
-
   const defaultProps = {
     href: 'https://test.com',
     fontSize: 'large' as const,
@@ -28,20 +25,10 @@ describe('IconLinks', () => {
   describe.each(Object.entries(IconLinks))('%s', (name, Icon) => {
     test('renders correctly and without crashing', async () => {
       render(<Icon {...defaultProps} />)
-      await userEvent.click(screen.getByLabelText(labels[name]))
-      expect(open).toHaveBeenCalledTimes(1)
-      expect(open).toHaveBeenLastCalledWith(defaultProps.href, '_blank')
-    })
-
-    test('stops propagation when the icon button is clicked', async () => {
-      const onClick = vi.fn()
-      render(
-        <div onClick={onClick}>
-          <Icon {...defaultProps} />
-        </div>
-      )
-      await userEvent.click(screen.getByLabelText(labels[name]))
-      expect(onClick).not.toHaveBeenCalled()
+      const link = screen.getByLabelText(labels[name])
+      expect(link).toHaveAttribute('href', defaultProps.href)
+      expect(link).toHaveAttribute('target', '_blank')
+      expect(link).toHaveAttribute('rel', 'noopener noreferrer')
     })
 
     test("renders the badge when 'index' is provided", () => {

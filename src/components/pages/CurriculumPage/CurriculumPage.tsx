@@ -29,7 +29,12 @@ const Curriculum = () => {
         <CurriculumItem title="Business Partner & Technical Lead" dates="03/23 - 12/24" company="MindHub Ferrara" location="Ferrara, Italy">
           <Typography>
             Co-founded{' '}
-            <Link target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61550278936416">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              // href="https://www.facebook.com/profile.php?id=61550278936416"
+              // href="https://mind-hub.it/contact-hall/mindhub-ferrara/"
+              href="https://www.linkedin.com/company/mindhub-ferrara/">
               MindHub Ferrara
             </Link>
             , the first programming school for children in Ferrara, under the{' '}
@@ -132,9 +137,9 @@ const Curriculum = () => {
         </Typography>
         {/* id="WUT" */}
         <CurriculumItem title="IBM Full Stack Software Developer Professional Certificate" dates="03/24">
-          <Stack direction="row" alignItems="flex-end">
+          <Stack direction="row" alignItems="center" gap={0.5}>
             <Typography>Credential ID: EZ34GWQLRHEG</Typography>
-            <ExternalIconLink size="small" fontSize="small" href="https://www.coursera.org/account/accomplishments/professional-cert/EZ34GWQLRHEG" />
+            <ExternalIconLink fontSize="inherit" href="https://www.coursera.org/account/accomplishments/professional-cert/EZ34GWQLRHEG" />
           </Stack>
         </CurriculumItem>
 
@@ -414,7 +419,7 @@ const Curriculum = () => {
             }
             location="ROMANSY 23 - Robot Design, Dynamics and Control. CISM International Centre for Mechanical Sciences (Courses and Lectures), vol
               601. Springer, Cham."
-            link="https://doi.org/10.1007/978-3-030-58380-4_7"
+            href="https://doi.org/10.1007/978-3-030-58380-4_7"
           />
         </Box>
 

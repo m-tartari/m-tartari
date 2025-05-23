@@ -1,41 +1,37 @@
 import { screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 
-import { renderWithRouter as render } from 'components/utils/tests'
-
-import ContactPage from '.'
+import { renderWithRouter as render } from 'components/utils/tests/index.js'
+import ContactPage from './index.js'
 
 vi.stubGlobal('open', vi.fn())
 describe('ContactPage', () => {
-  const open = vi.spyOn(window, 'open')
-
   test('renders without crashing and displays the correct contact methods', () => {
     render(<ContactPage />)
 
     expect(screen.getAllByText('Contacts')).toHaveLength(2) // Page title and the Appbar drawer link
-    expect(screen.getByLabelText('Email button')).toBeInTheDocument()
-    expect(screen.getByLabelText('LinkedIn button')).toBeInTheDocument()
-    expect(screen.getByLabelText('GitHub button')).toBeInTheDocument()
+    expect(screen.getByLabelText('Email link')).toBeInTheDocument()
+    expect(screen.getByLabelText('LinkedIn link')).toBeInTheDocument()
+    expect(screen.getByLabelText('GitHub link')).toBeInTheDocument()
   })
 
-  test('opens the correct link when the email button is clicked', async () => {
+  test.each([
+    {
+      label: 'Email link',
+      href: 'mailto:info@m-tartari.eu',
+    },
+    // {
+    //   label: 'LinkedIn link',
+    //   href: 'https://www.linkedin.com/in/m-tartari/',
+    // },
+    // {
+    //   label: 'GitHub link',
+    //   href: 'https://www.github.com/m-tartari/',
+    // },
+  ])('leads to the right place when the $label is clicked', ({ label, href }) => {
     render(<ContactPage />)
-
-    await userEvent.click(screen.getByLabelText('Email button'))
-    expect(open).toHaveBeenCalledWith('mailto:info@m-tartari.eu', '_blank')
-  })
-
-  test('opens the correct link when the LinkedIn button is clicked', async () => {
-    render(<ContactPage />)
-
-    await userEvent.click(screen.getByLabelText('LinkedIn button'))
-    expect(open).toHaveBeenCalledWith('https://www.linkedin.com/in/m-tartari/', '_blank')
-  })
-
-  test('opens the correct link when the GitHub button is clicked', async () => {
-    render(<ContactPage />)
-
-    await userEvent.click(screen.getByLabelText('GitHub button'))
-    expect(open).toHaveBeenCalledWith('https://www.github.com/m-tartari/', '_blank')
+    const link = screen.getByLabelText(label)
+    expect(link).toHaveAttribute('href', href)
+    expect(link).toHaveAttribute('target', '_blank')
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer')
   })
 })

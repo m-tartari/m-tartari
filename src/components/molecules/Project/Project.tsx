@@ -1,5 +1,5 @@
 import React from 'react'
-import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Stack, Typography } from '@mui/material'
 import { ExpandMore as ExpandIcon } from '@mui/icons-material'
 
 interface ProjectProps {
@@ -54,7 +54,9 @@ const Project = (props: ProjectProps) => {
           <Typography variant="h6">
             <b>{props.title}</b>
           </Typography>
-          {props.subtitle}
+          <Stack direction="row" gap={1} alignItems="center">
+            {props.subtitle}
+          </Stack>
         </div>
       </AccordionSummary>
       <AccordionDetails>{props.children}</AccordionDetails>

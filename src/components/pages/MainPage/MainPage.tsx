@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Stack, Typography } from '@mui/material'
 
 import { ViewportProvider } from 'components/utils/viewport'
 import { AcademyIconLink, DescriptionIconLink, ExternalAppIconLink, GitHubIconLink, VideoIconLink } from 'components/atoms'
@@ -28,12 +28,10 @@ const MainPage = () => {
           image="images/IIT_Linfa.webp"
           title="LINFA: An Intuitive Block-Programming Interface for Reconfigurable Robots"
           caption={
-            <>
-              <VideoIconLink size="small" fontSize="small" href="https://www.linkedin.com/feed/update/urn:li:activity:7034480841569284096/" />
-              <Typography component="span" color="text.secondary" ml={1}>
-                Software Engineer @ IIT
-              </Typography>
-            </>
+            <Stack direction="row" gap={1} alignItems="center">
+              <VideoIconLink fontSize="small" pt={0.5} href="https://www.linkedin.com/feed/update/urn:li:activity:7034480841569284096/" />
+              <Typography color="text.secondary">Software Engineer @ IIT</Typography>
+            </Stack>
           }>
           This project aims to simplify the control, monitoring, and programming of reconfigurable robots through an intuitive block-programming
           interface. It includes a front-end web app, built with TypeScript and React, allowing users to effortlessly change robot operating modes and
@@ -52,13 +50,11 @@ const MainPage = () => {
           mobileImage="images/IIT_Modular_Mobile.webp"
           title="Revamping HHCM's Modular: Swift Generation of Modular Robot Models"
           caption={
-            <>
-              <GitHubIconLink size="small" fontSize="small" href="https://github.com/ADVRHumanoids/motor_calibration" />
-              <ExternalAppIconLink size="small" fontSize="small" href="https://modular.alberobotics.it" />
-              <Typography component="span" color="text.secondary" ml={1}>
-                Software Engineer @ IIT
-              </Typography>
-            </>
+            <Stack direction="row" gap={1} alignItems="center">
+              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/ADVRHumanoids/modular_hhcm" />
+              <ExternalAppIconLink pt={0.5} fontSize="small" href="https://modular.alberobotics.it" />
+              <Typography color="text.secondary">Software Engineer @ IIT</Typography>
+            </Stack>
           }>
           This project focused on overhauling HHCM's Modular, enhancing its graphical interface, API, and deployment pipeline. Modular serves as a web
           application for the swift generation of modular robot models, with an offline approach (Building Mode) enabling users to set up robots in a
@@ -75,12 +71,10 @@ const MainPage = () => {
           image="images/IIT_Modules.webp"
           title="Automated Actuators and Robotic Modules Calibration"
           caption={
-            <>
-              <GitHubIconLink size="small" fontSize="small" href="https://github.com/ADVRHumanoids/motor_calibration" />
-              <Typography component="span" color="text.secondary" ml={1}>
-                Embedded Engineer @ IIT
-              </Typography>
-            </>
+            <Stack direction="row" gap={1} alignItems="center">
+              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/ADVRHumanoids/motor_calibration" />
+              <Typography color="text.secondary">Embedded Engineer @ IIT</Typography>
+            </Stack>
           }>
           This project focused on automating the calibration of EtherCAT actuators and robotic modules, aiming for a fully automated procedure for
           newly assembled actuators. The process involved testing the PDO, conducting phase angle calibration, torque sensor calibration, ripple and
@@ -96,18 +90,11 @@ const MainPage = () => {
           mobileImage="images/thesis.webp"
           title="Voice Controlled Mobile Robot for Indoor Applications"
           caption={
-            <>
-              <AcademyIconLink size="small" fontSize="small" href="https://doi.org/10.1007/978-3-030-58380-4_7" />
-
-              <DescriptionIconLink
-                size="small"
-                fontSize="small"
-                href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing"
-              />
-              <Typography component="span" color="text.secondary" ml={1}>
-                Master Thesis @ WUT
-              </Typography>
-            </>
+            <Stack direction="row" gap={1} alignItems="center">
+              <AcademyIconLink pt={0.5} fontSize="small" href="https://doi.org/10.1007/978-3-030-58380-4_7" />
+              <DescriptionIconLink pt={0.5} href="https://drive.google.com/drive/folders/1Y7TJJN8z1llCkSTnpVHMELD3PqsX8VF9?usp=sharing" />
+              <Typography color="text.secondary">Master Thesis @ WUT</Typography>
+            </Stack>
           }>
           This thesis proposes a design for a small mobile robot controlled by voice. Firstly a preliminary analysis of the state of art of
           human-robot interaction has been conducted. Then, an analysis of the equipment selected took place, and, later, appropriate methodologies

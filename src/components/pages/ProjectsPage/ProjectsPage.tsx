@@ -22,13 +22,13 @@ const ProjectsPage = () => {
                 Software Engineer @ IIT
               </Typography>
               <VideoIconLink
-                size="small"
+                pt={0.5}
                 fontSize="small"
                 href="https://www.linkedin.com/feed/update/urn:li:activity:7034480841569284096/"
                 sx={{ color: 'text.secondary' }}
               />
               {/* <Typography color="text.secondary" display="inline-block"> */}
-              <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
+              <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
                 Software Engineer @ IIT
               </Typography>
             </>
@@ -49,9 +49,9 @@ const ProjectsPage = () => {
               <Typography color="text.secondary" display={{ sm: 'none' }}>
                 Software Engineer @ IIT
               </Typography>
-              <GitHubIconLink size="small" fontSize="small" href="https://github.com/ADVRHumanoids/modular_hhcm/" sx={{ color: 'text.secondary' }} />
-              <ExternalAppIconLink size="small" fontSize="small" href="https://modular.alberobotics.it" sx={{ color: 'text.secondary' }} />
-              <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
+              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/ADVRHumanoids/modular_hhcm/" sx={{ color: 'text.secondary' }} />
+              <ExternalAppIconLink pt={0.5} fontSize="small" href="https://modular.alberobotics.it" sx={{ color: 'text.secondary' }} />
+              <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
                 Software Engineer @ IIT
               </Typography>
             </>
@@ -70,14 +70,14 @@ const ProjectsPage = () => {
               <Typography color="text.secondary" display={{ sm: 'none' }}>
                 Master Thesis @ WUT
               </Typography>
-              <AcademyIconLink size="small" fontSize="small" href="https://doi.org/10.1007/978-3-030-58380-4_7" sx={{ color: 'text.secondary' }} />
+              <AcademyIconLink pt={0.5} fontSize="small" href="https://doi.org/10.1007/978-3-030-58380-4_7" sx={{ color: 'text.secondary' }} />
               <DescriptionIconLink
-                size="small"
+                pt={0.5}
                 fontSize="small"
-                href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing"
+                href="https://drive.google.com/drive/folders/1Y7TJJN8z1llCkSTnpVHMELD3PqsX8VF9?usp=sharing"
                 sx={{ color: 'text.secondary' }}
               />
-              <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
+              <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
                 Master Thesis @ WUT
               </Typography>
             </>
@@ -93,15 +93,12 @@ const ProjectsPage = () => {
         <Project
           title="Recharging Electric Cars with a Mobile Robot"
           subtitle={
-            <>
-              <GitHubIconLink size="small" fontSize="small" href="https://github.com/m-tartari/ekf_matlab" sx={{ color: 'text.secondary' }} />
-              <DescriptionIconLink
-                size="small"
-                fontSize="small"
-                href="https://drive.google.com/file/d/1BgPj-fgtYDDEsFHmDk2fGVm7DCPFWEeN/view?usp=sharing"
-                sx={{ color: 'text.secondary' }}
-              />
-            </>
+            <DescriptionIconLink
+              pt={0.5}
+              fontSize="small"
+              href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing"
+              sx={{ color: 'text.secondary' }}
+            />
           }>
           <Typography>
             The aim of this project was to prove the possibility to design an autonomous mobile robot whose task was to recharge electric cars in a
@@ -112,11 +109,11 @@ const ProjectsPage = () => {
           title="Mobile Robot Self-Localization"
           subtitle={
             <>
-              <GitHubIconLink size="small" fontSize="small" href="https://github.com/m-tartari/firebot" sx={{ color: 'text.secondary' }} />
+              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/ekf_matlab" sx={{ color: 'text.secondary' }} />
               <DescriptionIconLink
-                size="small"
+                pt={0.5}
                 fontSize="small"
-                href="https://drive.google.com/open?id=1a_ZvgaQjzvedeo296zrDpdvNL_VJDWTX"
+                href="https://drive.google.com/file/d/1BgPj-fgtYDDEsFHmDk2fGVm7DCPFWEeN/view?usp=sharing"
                 sx={{ color: 'text.secondary' }}
               />
             </>
@@ -130,16 +127,11 @@ const ProjectsPage = () => {
           title="Onychophora-Inspired Firefighting Robot"
           subtitle={
             <>
-              <GitHubIconLink
-                size="small"
-                fontSize="small"
-                href="https://github.com/m-tartari/3RRR_planar_parallel_manipulator"
-                sx={{ color: 'text.secondary' }}
-              />
+              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/firebot" sx={{ color: 'text.secondary' }} />
               <DescriptionIconLink
-                size="small"
+                pt={0.5}
                 fontSize="small"
-                href="https://drive.google.com/open?id=11lCJM3EjVsua379BKD5NcEDHQLL4jdQn"
+                href="https://drive.google.com/open?id=1a_ZvgaQjzvedeo296zrDpdvNL_VJDWTX"
                 sx={{ color: 'text.secondary' }}
               />
             </>
@@ -155,13 +147,13 @@ const ProjectsPage = () => {
             <>
               {/* */}
               <GitHubIconLink
-                size="small"
+                pt={0.5}
                 fontSize="small"
                 href="https://github.com/m-tartari/simple_trajectory_optimization"
                 sx={{ color: 'text.secondary' }}
               />
               <DescriptionIconLink
-                size="small"
+                pt={0.5}
                 fontSize="small"
                 href="https://drive.google.com/open?id=11m7r7fLda_jpDEZ-9qAWvnfRN2kLkhlA"
                 sx={{ color: 'text.secondary' }}
@@ -176,12 +168,20 @@ const ProjectsPage = () => {
         <Project
           title="3RRR Planar Parallel Manipulator"
           subtitle={
-            <GitHubIconLink
-              size="small"
-              fontSize="small"
-              href="https://github.com/m-tartari/3RRR_planar_parallel_manipulator"
-              sx={{ color: 'text.secondary' }}
-            />
+            <>
+              <GitHubIconLink
+                pt={0.5}
+                fontSize="small"
+                href="https://github.com/m-tartari/3RRR_planar_parallel_manipulator"
+                sx={{ color: 'text.secondary' }}
+              />
+              <DescriptionIconLink
+                pt={0.5}
+                fontSize="small"
+                href="https://drive.google.com/open?id=11lCJM3EjVsua379BKD5NcEDHQLL4jdQn"
+                sx={{ color: 'text.secondary' }}
+              />
+            </>
           }>
           <Typography>This project concerns the design and optimization of a 3RRR planar parallel manipulator using MATLAB and CATIA</Typography>
         </Project>
@@ -189,7 +189,7 @@ const ProjectsPage = () => {
           title="Simple Swarm"
           subtitle={
             <>
-              <GitHubIconLink size="small" fontSize="small" href="https://github.com/m-tartari/simple_swarm" sx={{ color: 'text.secondary' }} />
+              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/simple_swarm" sx={{ color: 'text.secondary' }} />
             </>
           }>
           <Typography>
@@ -201,7 +201,7 @@ const ProjectsPage = () => {
           subtitle={
             <>
               <GitHubIconLink
-                size="small"
+                pt={0.5}
                 fontSize="small"
                 href="https://github.com/m-tartari/industrial_robot_programming"
                 sx={{ color: 'text.secondary' }}
@@ -215,7 +215,7 @@ const ProjectsPage = () => {
           subtitle={
             <>
               <GitHubIconLink
-                size="small"
+                pt={0.5}
                 fontSize="small"
                 href="https://github.com/m-tartari/modelling_and_control_of_manipulators"
                 sx={{ color: 'text.secondary' }}
@@ -240,13 +240,8 @@ const ProjectsPage = () => {
               <Typography color="text.secondary" display={{ sm: 'none' }}>
                 Embedded Engineer @ IIT
               </Typography>
-              <GitHubIconLink
-                size="small"
-                fontSize="small"
-                href="https://github.com/ADVRHumanoids/motor_calibration"
-                sx={{ color: 'text.secondary' }}
-              />
-              <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
+              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/ADVRHumanoids/motor_calibration" sx={{ color: 'text.secondary' }} />
+              <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
                 Embedded Engineer @ IIT
               </Typography>
             </>
@@ -268,12 +263,12 @@ const ProjectsPage = () => {
                 Bachelor Thesis @ TONGJI
               </Typography>
               <DescriptionIconLink
-                size="small"
+                pt={0.5}
                 fontSize="small"
-                href="https://drive.google.com/file/d/0B1z42QMR-0UtYzBYSVhRV3ZPWk0/view?usp=sharing"
+                href="https://drive.google.com/file/d/0B1z42QMR-0UtYzBYSVhRV3ZPWk0/view?resourcekey=0-3O0frJlyho7TRKwNcy8f4g"
                 sx={{ color: 'text.secondary' }}
               />
-              <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
+              <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
                 Bachelor Thesis @ TONGJI
               </Typography>
             </>
@@ -290,12 +285,12 @@ const ProjectsPage = () => {
                 Bachelor Thesis @ UNIBO
               </Typography>
               <DescriptionIconLink
-                size="small"
+                pt={0.5}
                 fontSize="small"
-                href="https://drive.google.com/file/d/0B1z42QMR-0UtSkxRVzJPTk1IX0k/view?usp=sharing"
+                href="https://drive.google.com/file/d/0B1z42QMR-0UtSkxRVzJPTk1IX0k/view?resourcekey=0-LN4KALZlLWc_lKekqqQbIw"
                 sx={{ color: 'text.secondary' }}
               />
-              <Typography color="text.secondary" ml={1} display={{ xs: 'none', sm: 'inline' }}>
+              <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
                 Bachelor Thesis @ UNIBO
               </Typography>
             </>
@@ -308,14 +303,9 @@ const ProjectsPage = () => {
           title="Control of a Nonlinear System"
           subtitle={
             <>
-              <GitHubIconLink
-                size="small"
-                fontSize="small"
-                href="https://github.com/m-tartari/modelling_and_control_of_manipulators"
-                sx={{ color: 'text.secondary' }}
-              />
+              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/nonlinear_control" sx={{ color: 'text.secondary' }} />
               <DescriptionIconLink
-                size="small"
+                pt={0.5}
                 fontSize="small"
                 href="https://drive.google.com/file/d/1TE3TWkXZjVq8OuBkLl497c_MQSs3MiLQ/view?usp=sharing"
                 sx={{ color: 'text.secondary' }}
@@ -330,14 +320,9 @@ const ProjectsPage = () => {
           title="Multi-Body System's Kinematic Analysis"
           subtitle={
             <>
-              <GitHubIconLink
-                size="small"
-                fontSize="small"
-                href="https://github.com/m-tartari/multi-body-kinematics"
-                sx={{ color: 'text.secondary' }}
-              />
+              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/multi-body-kinematics" sx={{ color: 'text.secondary' }} />
               <DescriptionIconLink
-                size="small"
+                pt={0.5}
                 fontSize="small"
                 href="https://drive.google.com/file/d/15yrDU2blkb34Jy2GXkCIe4qNmDRmp31w/view?usp=sharing"
                 sx={{ color: 'text.secondary' }}
@@ -352,14 +337,14 @@ const ProjectsPage = () => {
         <Project
           title="Signal Processing"
           subtitle={
-            <GitHubIconLink size="small" fontSize="small" href="https://github.com/m-tartari/signal_processing" sx={{ color: 'text.secondary' }} />
+            <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/signal_processing" sx={{ color: 'text.secondary' }} />
           }>
           <Typography>Several Signal processing projects developed using MATLAB.</Typography>
         </Project>
         <Project
           title="Real Time Systems"
           subtitle={
-            <GitHubIconLink size="small" fontSize="small" href="https://github.com/m-tartari/real_time_systems" sx={{ color: 'text.secondary' }} />
+            <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/real_time_systems" sx={{ color: 'text.secondary' }} />
           }>
           <Typography>Several real-time systems' projects developed using C++ and OIL, and run using Trampoline RTOS on a Teensy board.</Typography>
         </Project>
@@ -373,7 +358,7 @@ const ProjectsPage = () => {
         <Project
           title="Medieval Furniture"
           subtitle={
-            <GitHubIconLink size="small" fontSize="small" href="https://github.com/m-tartari/medieval_furniture" sx={{ color: 'text.secondary' }} />
+            <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/medieval_furniture" sx={{ color: 'text.secondary' }} />
           }>
           <Typography>
             A collection of pdf and CAD models to create late XIV century furniture and medieval camp equipment. These objects are being realized by{' '}
@@ -386,7 +371,7 @@ const ProjectsPage = () => {
         <Project
           title="Pinterest Pinner"
           subtitle={
-            <GitHubIconLink size="small" fontSize="small" href="https://github.com/m-tartari/pinterest_pinner" sx={{ color: 'text.secondary' }} />
+            <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/pinterest_pinner" sx={{ color: 'text.secondary' }} />
           }>
           <Typography>
             Publishes all photos from a{' '}
