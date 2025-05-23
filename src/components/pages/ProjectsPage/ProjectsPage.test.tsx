@@ -1,12 +1,9 @@
 import { screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 
-import { renderWithRouter as render } from 'components/utils/tests'
-
+import { renderWithRouter as render } from 'components/utils/tests/index.js'
 import ProjectsPage from '.'
 
 vi.stubGlobal('open', vi.fn())
-const open = vi.spyOn(window, 'open')
 describe('ProjectsPage component', () => {
   test('renders without crashing and displays the correct project titles', () => {
     render(<ProjectsPage />)
@@ -25,8 +22,10 @@ describe('ProjectsPage component', () => {
   test('opens the correct links when the link buttons are clicked', async () => {
     render(<ProjectsPage />)
 
-    // test one of the many links
-    await userEvent.click(screen.getByLabelText('Video-button'))
-    expect(open).toHaveBeenLastCalledWith('https://www.linkedin.com/feed/update/urn:li:activity:7034480841569284096/', '_blank')
+    // inspect one of the many links
+    const link = screen.getByLabelText('Video-button')
+    expect(link).toHaveAttribute('href', 'https://www.linkedin.com/feed/update/urn:li:activity:7034480841569284096/')
+    expect(link).toHaveAttribute('target', '_blank')
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer')
   })
 })
