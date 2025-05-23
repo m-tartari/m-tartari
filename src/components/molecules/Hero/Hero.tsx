@@ -62,10 +62,10 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
             }}>
             See some of my works below. Send a message to get in touch.
           </Typography>
-          <Stack direction="row" sx={{ display: 'inline-block' }}>
-            <LinkedInIconLink size="large" sx={{ color: 'text.secondary' }} fontSize="large" href="https://www.linkedin.com/in/m-tartari/" />
-            <GitHubIconLink size="large" sx={{ color: 'text.secondary' }} fontSize="large" href="https://www.github.com/m-tartari/" />
-            <EmailIconLink size="large" sx={{ color: 'text.secondary' }} fontSize="large" href="mailto:info@m-tartari.eu" />
+          <Stack direction="row" gap={2} mt={2} justifyContent={{ xs: 'center', sm: 'end' }}>
+            <LinkedInIconLink sx={{ color: 'text.secondary' }} fontSize="large" href="https://www.linkedin.com/in/m-tartari/" />
+            <GitHubIconLink sx={{ color: 'text.secondary' }} fontSize="large" href="https://www.github.com/m-tartari/" />
+            <EmailIconLink sx={{ color: 'text.secondary' }} fontSize="large" href="mailto:info@m-tartari.eu" />
           </Stack>
         </Box>
         <Avatar
@@ -83,7 +83,7 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
       {props.scrollTarget && (
         <IconButton
           size="large"
-          onClick={() => (props.scrollTarget as React.MutableRefObject<HTMLSelectElement | null>).current?.scrollIntoView()}
+          onClick={() => (props.scrollTarget as React.RefObject<HTMLSelectElement | null>).current?.scrollIntoView()}
           sx={{ display: { xs: 'none', md: 'block' }, position: 'absolute', p: 1, bottom: 3 }}>
           <ExpandMore fontSize="large" />
         </IconButton>

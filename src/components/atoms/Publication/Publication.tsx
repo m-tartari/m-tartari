@@ -26,7 +26,7 @@ const Publication = ({ Component = Box, ...props }: AwardEntryProps) => {
             <b>{props.title}</b>
           </Typography>
           , In: {props.location}
-          {typeof props.link !== 'undefined' && <ExternalIconLink size="small" fontSize="small" href={props.link} sx={{ color: 'text.secondary' }} />}
+          {typeof props.link !== 'undefined' && <ExternalIconLink fontSize="inherit" href={props.link} sx={{ color: 'text.secondary' }} />}
         </Typography>
       </Box>
     </Component>

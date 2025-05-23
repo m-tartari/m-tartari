@@ -132,9 +132,9 @@ const Curriculum = () => {
         </Typography>
         {/* id="WUT" */}
         <CurriculumItem title="IBM Full Stack Software Developer Professional Certificate" dates="03/24">
-          <Stack direction="row" alignItems="flex-end">
+          <Stack direction="row" alignItems="center" gap={0.5}>
             <Typography>Credential ID: EZ34GWQLRHEG</Typography>
-            <ExternalIconLink size="small" fontSize="small" href="https://www.coursera.org/account/accomplishments/professional-cert/EZ34GWQLRHEG" />
+            <ExternalIconLink fontSize="inherit" href="https://www.coursera.org/account/accomplishments/professional-cert/EZ34GWQLRHEG" />
           </Stack>
         </CurriculumItem>
 

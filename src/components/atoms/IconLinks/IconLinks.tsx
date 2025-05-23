@@ -1,10 +1,7 @@
 import { Email, LinkedIn, GitHub, Description, OndemandVideo, School, OpenInNew, OpenInBrowser } from '@mui/icons-material'
-import { Badge, IconButtonProps, SvgIcon } from '@mui/material'
+import { Badge, Link, LinkProps, SvgIcon } from '@mui/material'
 
-import IconButton from '../IconButton'
-
-interface IconLinkProps extends IconButtonProps {
-  href: string
+interface IconLinkProps extends LinkProps {
   fontSize?: 'small' | 'large' | 'medium' | 'inherit'
   index?: number
 }
@@ -13,25 +10,46 @@ interface IconWrapperProps extends IconLinkProps {
   Icon: typeof SvgIcon
 }
 
-const IconWrapper = ({ index, href: to, fontSize, Icon, ...props }: IconWrapperProps) => {
+const IconWrapper: React.FC<IconWrapperProps> = ({ index, fontSize, Icon, sx, ...props }) => {
   if (typeof index === 'undefined') {
     return (
-      <IconButton
-        onClick={e => {
-          e.stopPropagation()
-          window.open(to, '_blank')
-        }}
+      <Link
+        color="inherit"
+        rel="noopener noreferrer"
+        target="_blank"
+        underline="hover"
+        sx={theme => ({
+          color: 'inherit',
+          ':hover': {
+            backgroundColor: 'transparent',
+            color: theme.palette.primary.main,
+          },
+          ...sx,
+        })}
         {...props}>
         <Icon fontSize={fontSize} />
-      </IconButton>
+      </Link>
     )
   }
   return (
-    <IconButton onClick={() => window.open(to, '_blank')} {...props}>
+    <Link
+      color="inherit"
+      rel="noopener noreferrer"
+      target="_blank"
+      underline="hover"
+      sx={theme => ({
+        color: 'inherit',
+        ':hover': {
+          backgroundColor: 'transparent',
+          color: theme.palette.primary.main,
+        },
+        ...sx,
+      })}
+      {...props}>
       <Badge badgeContent={index}>
         <Icon fontSize={fontSize} />
       </Badge>
-    </IconButton>
+    </Link>
   )
 }
 
