@@ -419,7 +419,7 @@ const Curriculum = () => {
             }
             location="ROMANSY 23 - Robot Design, Dynamics and Control. CISM International Centre for Mechanical Sciences (Courses and Lectures), vol
               601. Springer, Cham."
-            link="https://doi.org/10.1007/978-3-030-58380-4_7"
+            href="https://doi.org/10.1007/978-3-030-58380-4_7"
           />
         </Box>
 
