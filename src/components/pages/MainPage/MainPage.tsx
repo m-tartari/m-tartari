@@ -92,7 +92,7 @@ const MainPage = () => {
           caption={
             <Stack direction="row" gap={1} alignItems="center">
               <AcademyIconLink pt={0.5} fontSize="small" href="https://doi.org/10.1007/978-3-030-58380-4_7" />
-              <DescriptionIconLink pt={0.5} href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing" />
+              <DescriptionIconLink pt={0.5} href="https://drive.google.com/drive/folders/1Y7TJJN8z1llCkSTnpVHMELD3PqsX8VF9?usp=sharing" />
               <Typography color="text.secondary">Master Thesis @ WUT</Typography>
             </Stack>
           }>

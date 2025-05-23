@@ -74,7 +74,7 @@ const ProjectsPage = () => {
               <DescriptionIconLink
                 pt={0.5}
                 fontSize="small"
-                href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing"
+                href="https://drive.google.com/drive/folders/1Y7TJJN8z1llCkSTnpVHMELD3PqsX8VF9?usp=sharing"
                 sx={{ color: 'text.secondary' }}
               />
               <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
@@ -93,15 +93,12 @@ const ProjectsPage = () => {
         <Project
           title="Recharging Electric Cars with a Mobile Robot"
           subtitle={
-            <>
-              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/ekf_matlab" sx={{ color: 'text.secondary' }} />
-              <DescriptionIconLink
-                pt={0.5}
-                fontSize="small"
-                href="https://drive.google.com/file/d/1BgPj-fgtYDDEsFHmDk2fGVm7DCPFWEeN/view?usp=sharing"
-                sx={{ color: 'text.secondary' }}
-              />
-            </>
+            <DescriptionIconLink
+              pt={0.5}
+              fontSize="small"
+              href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing"
+              sx={{ color: 'text.secondary' }}
+            />
           }>
           <Typography>
             The aim of this project was to prove the possibility to design an autonomous mobile robot whose task was to recharge electric cars in a
@@ -112,11 +109,11 @@ const ProjectsPage = () => {
           title="Mobile Robot Self-Localization"
           subtitle={
             <>
-              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/firebot" sx={{ color: 'text.secondary' }} />
+              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/ekf_matlab" sx={{ color: 'text.secondary' }} />
               <DescriptionIconLink
                 pt={0.5}
                 fontSize="small"
-                href="https://drive.google.com/open?id=1a_ZvgaQjzvedeo296zrDpdvNL_VJDWTX"
+                href="https://drive.google.com/file/d/1BgPj-fgtYDDEsFHmDk2fGVm7DCPFWEeN/view?usp=sharing"
                 sx={{ color: 'text.secondary' }}
               />
             </>
@@ -130,16 +127,11 @@ const ProjectsPage = () => {
           title="Onychophora-Inspired Firefighting Robot"
           subtitle={
             <>
-              <GitHubIconLink
-                pt={0.5}
-                fontSize="small"
-                href="https://github.com/m-tartari/3RRR_planar_parallel_manipulator"
-                sx={{ color: 'text.secondary' }}
-              />
+              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/firebot" sx={{ color: 'text.secondary' }} />
               <DescriptionIconLink
                 pt={0.5}
                 fontSize="small"
-                href="https://drive.google.com/open?id=11lCJM3EjVsua379BKD5NcEDHQLL4jdQn"
+                href="https://drive.google.com/open?id=1a_ZvgaQjzvedeo296zrDpdvNL_VJDWTX"
                 sx={{ color: 'text.secondary' }}
               />
             </>
@@ -176,12 +168,20 @@ const ProjectsPage = () => {
         <Project
           title="3RRR Planar Parallel Manipulator"
           subtitle={
-            <GitHubIconLink
-              pt={0.5}
-              fontSize="small"
-              href="https://github.com/m-tartari/3RRR_planar_parallel_manipulator"
-              sx={{ color: 'text.secondary' }}
-            />
+            <>
+              <GitHubIconLink
+                pt={0.5}
+                fontSize="small"
+                href="https://github.com/m-tartari/3RRR_planar_parallel_manipulator"
+                sx={{ color: 'text.secondary' }}
+              />
+              <DescriptionIconLink
+                pt={0.5}
+                fontSize="small"
+                href="https://drive.google.com/open?id=11lCJM3EjVsua379BKD5NcEDHQLL4jdQn"
+                sx={{ color: 'text.secondary' }}
+              />
+            </>
           }>
           <Typography>This project concerns the design and optimization of a 3RRR planar parallel manipulator using MATLAB and CATIA</Typography>
         </Project>
@@ -265,7 +265,7 @@ const ProjectsPage = () => {
               <DescriptionIconLink
                 pt={0.5}
                 fontSize="small"
-                href="https://drive.google.com/file/d/0B1z42QMR-0UtYzBYSVhRV3ZPWk0/view?usp=sharing"
+                href="https://drive.google.com/file/d/0B1z42QMR-0UtYzBYSVhRV3ZPWk0/view?resourcekey=0-3O0frJlyho7TRKwNcy8f4g"
                 sx={{ color: 'text.secondary' }}
               />
               <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
@@ -287,7 +287,7 @@ const ProjectsPage = () => {
               <DescriptionIconLink
                 pt={0.5}
                 fontSize="small"
-                href="https://drive.google.com/file/d/0B1z42QMR-0UtSkxRVzJPTk1IX0k/view?usp=sharing"
+                href="https://drive.google.com/file/d/0B1z42QMR-0UtSkxRVzJPTk1IX0k/view?resourcekey=0-LN4KALZlLWc_lKekqqQbIw"
                 sx={{ color: 'text.secondary' }}
               />
               <Typography color="text.secondary" display={{ xs: 'none', sm: 'inline' }}>
@@ -303,12 +303,7 @@ const ProjectsPage = () => {
           title="Control of a Nonlinear System"
           subtitle={
             <>
-              <GitHubIconLink
-                pt={0.5}
-                fontSize="small"
-                href="https://github.com/m-tartari/modelling_and_control_of_manipulators"
-                sx={{ color: 'text.secondary' }}
-              />
+              <GitHubIconLink pt={0.5} fontSize="small" href="https://github.com/m-tartari/nonlinear_control" sx={{ color: 'text.secondary' }} />
               <DescriptionIconLink
                 pt={0.5}
                 fontSize="small"

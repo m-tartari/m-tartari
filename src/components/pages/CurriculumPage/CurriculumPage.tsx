@@ -29,7 +29,12 @@ const Curriculum = () => {
         <CurriculumItem title="Business Partner & Technical Lead" dates="03/23 - 12/24" company="MindHub Ferrara" location="Ferrara, Italy">
           <Typography>
             Co-founded{' '}
-            <Link target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61550278936416">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              // href="https://www.facebook.com/profile.php?id=61550278936416"
+              // href="https://mind-hub.it/contact-hall/mindhub-ferrara/"
+              href="https://www.linkedin.com/company/mindhub-ferrara/">
               MindHub Ferrara
             </Link>
             , the first programming school for children in Ferrara, under the{' '}
