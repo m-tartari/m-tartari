@@ -52,7 +52,7 @@ const Page: React.FC<BoxProps> = ({ title, children, ...props }) => {
           minHeight: '80vh',
           mx: 'auto',
           maxWidth: { xs: '100%', md: 'calc(100% - 4em)' },
-          width: '70em',
+          width: '80em',
           ...props.sx,
         }}>
         {children}
