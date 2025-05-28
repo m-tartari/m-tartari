@@ -74,6 +74,8 @@
 				"diffEditor.ignoreTrimWhitespace": false,
 				"diffEditor.wordWrap": "off",
 				// Javascript
+				"javascript.preferences.importModuleSpecifierEnding": "js",
+				"typescript.preferences.importModuleSpecifierEnding": "js",
 				"javascript.updateImportsOnFileMove.enabled": "always",
 				"typescript.preferences.importModuleSpecifier": "non-relative",
 				"typescript.updateImportsOnFileMove.enabled": "always",

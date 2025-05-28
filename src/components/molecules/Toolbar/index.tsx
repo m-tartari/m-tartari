@@ -17,6 +17,7 @@ import {
   Typography,
   styled,
   useScrollTrigger,
+  useTheme,
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 
@@ -43,6 +44,7 @@ interface CustomToolbarProps extends AppBarProps {
 }
 const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window, ...props }) => {
   const [mobileOpen, setMobileOpen] = React.useState(false)
+  const theme = useTheme()
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -66,11 +68,6 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window
             <ListItemText primary="Home" />
           </DrawerButton>
         </ListItem>
-        {/* <ListItem disablePadding>
-              <DrawerButton component={RouterLink} to="/">
-                <Typography variant="h6">Home</Typography>
-              </DrawerButton>
-            </ListItem> */}
         <ListItem key="Projects" disablePadding>
           <DrawerButton component={RouterLink} to="/projects">
             <ListItemText primary="Projects" />
@@ -96,10 +93,15 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window
         elevation={0}
         {...props}
         sx={{
-          backgroundColor: trigger ? theme => (theme.palette.mode === 'dark' ? 'background.paper' : undefined) : 'transparent',
+          backgroundColor: trigger ? (theme.palette.mode === 'dark' ? 'background.paper' : undefined) : 'transparent',
           ...props.sx,
         }}>
-        <Toolbar sx={{ display: 'flex' }}>
+        <Toolbar
+          sx={{
+            display: 'flex',
+            // maxWidth: '100%',
+            // [theme.breakpoints.up('md')]: { width: theme => theme.breakpoints.values.lg, mx: 'auto' },
+          }}>
           <IconButton
             color="primary"
             aria-label="open drawer"
@@ -108,9 +110,20 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window
             sx={{ mr: 2, display: { md: 'none' }, position: 'absolute', backgroundColor: 'primary' }}>
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: { xs: 'center', md: 'left' } }}>
-            Michele Tartari
-          </Typography>
+          <AppBarButton
+            component={RouterLink}
+            to="/"
+            disableRipple
+            sx={theme => ({
+              [theme.breakpoints.down('md')]: {
+                mx: 'auto',
+              },
+              [theme.breakpoints.up('md')]: {
+                mr: 'auto',
+              },
+            })}>
+            <Typography variant="h6"> Michele Tartari</Typography>
+          </AppBarButton>
           <Stack component="div" direction="row" spacing={2} sx={{ display: { xs: 'none', md: 'flex' } }}>
             <AppBarButton component={RouterLink} to="/">
               <Typography variant="h6">Home</Typography>

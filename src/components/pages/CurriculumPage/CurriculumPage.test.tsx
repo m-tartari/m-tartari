@@ -1,11 +1,16 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { useAnalytics } from 'use-analytics'
 
 import { renderWithRouter as render } from 'components/utils/tests'
 
-import CurriculumPage from '.'
+import CurriculumPage from './index.js'
 
 vi.stubGlobal('open', vi.fn())
+vi.mock('use-analytics', () => ({
+  useAnalytics: () => ({ plugins: { enable: vi.fn(), disable: vi.fn() } }),
+}))
 
 describe('Curriculum component', () => {
   const open = vi.spyOn(window, 'open')

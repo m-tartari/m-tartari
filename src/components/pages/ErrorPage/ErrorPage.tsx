@@ -1,10 +1,12 @@
 import { isRouteErrorResponse, useRouteError } from 'react-router-dom'
-import { Box, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
+
+import { Page } from 'components/templates/index.js'
 
 const ErrorPage: React.FC = () => {
   const error: unknown = useRouteError()
   return (
-    <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" minHeight="100vh">
+    <Page sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '90vh' }}>
       <Typography variant="h1" color="primary.main">
         Oops!
       </Typography>
@@ -14,7 +16,7 @@ const ErrorPage: React.FC = () => {
           {error.status} {error.data}
         </Typography>
       )}
-    </Box>
+    </Page>
   )
 }
 
