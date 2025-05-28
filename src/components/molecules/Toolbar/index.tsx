@@ -100,7 +100,7 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window
           sx={{
             display: 'flex',
             // maxWidth: '100%',
-            // [theme.breakpoints.up('md')]: { width: '80em', mx: 'auto' },
+            // [theme.breakpoints.up('md')]: { width: theme => theme.breakpoints.values.lg, mx: 'auto' },
           }}>
           <IconButton
             color="primary"
