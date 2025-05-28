@@ -3,18 +3,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import ErrorPage from 'components/pages/ErrorPage/index.js'
 import RootLayout from 'components/templates/RouteTracker/index.js'
+import Loading from 'components/molecules/LoadingScreen/index.js'
 
 const MainPage = React.lazy(() => import('components/pages/MainPage/index.js'))
 const ProjectsPage = React.lazy(() => import('components/pages/ProjectsPage/index.js'))
 const CurriculumPage = React.lazy(() => import('components/pages/CurriculumPage/index.js'))
 const ContactPage = React.lazy(() => import('components/pages/ContactPage/index.js'))
 const PrivacyPage = React.lazy(() => import('components/pages/PrivacyPage/index.js'))
-
-const Loading = () => (
-  <Backdrop open={true} aria-label="loading-screen">
-    <CircularProgress />
-  </Backdrop>
-)
 
 const router = createBrowserRouter([
   {
