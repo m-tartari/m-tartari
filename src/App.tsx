@@ -4,10 +4,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ErrorPage from 'components/pages/ErrorPage/index.js'
 import RootLayout from 'components/templates/RouteTracker/index.js'
 
-const MainPage = React.lazy(() => import('components/pages/MainPage'))
-const ProjectsPage = React.lazy(() => import('components/pages/ProjectsPage'))
-const CurriculumPage = React.lazy(() => import('components/pages/CurriculumPage'))
-const ContactPage = React.lazy(() => import('components/pages/ContactPage'))
+const MainPage = React.lazy(() => import('components/pages/MainPage/index.js'))
+const ProjectsPage = React.lazy(() => import('components/pages/ProjectsPage/index.js'))
+const CurriculumPage = React.lazy(() => import('components/pages/CurriculumPage/index.js'))
+const ContactPage = React.lazy(() => import('components/pages/ContactPage/index.js'))
+const PrivacyPage = React.lazy(() => import('components/pages/PrivacyPage/index.js'))
 
 const Loading = () => (
   <Backdrop open={true} aria-label="loading-screen">
@@ -50,6 +51,14 @@ const router = createBrowserRouter([
         element: (
           <React.Suspense fallback={<Loading />}>
             <ContactPage />
+          </React.Suspense>
+        ),
+      },
+      {
+        path: 'privacy',
+        element: (
+          <React.Suspense fallback={<Loading />}>
+            <PrivacyPage />
           </React.Suspense>
         ),
       },
