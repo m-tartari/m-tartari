@@ -22,7 +22,7 @@ const Footer: React.FC<FooterProps> = ({ showCookieConsent = true }) => {
       </Stack>
 
       <Typography variant="subtitle2" align="center" color="text.secondary" component="em" mt={3}>
-        & copy; {year} Michele Tartari.All rights reserved.
+        © {year} Michele Tartari. All rights reserved.
       </Typography>
 
       <Stack mt={1}>
