@@ -42,14 +42,24 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
           },
         })}>
         <Box>
-          <Typography variant="h3">Robotics Engineer</Typography>
-          <Typography color="text.secondary" sx={{ margin: '0.5em 0 0 0', top: 0 }}>
-            See some of my works below. Send a message to get in touch.
+          <Typography variant="h1">
+            Robotics
+            <br /> Engineer
           </Typography>
-          <Stack direction="row" gap={2} mt={2} justifyContent={{ xs: 'center', sm: 'end' }}>
-            <LinkedInIconLink sx={{ color: 'text.secondary' }} fontSize="large" href="https://www.linkedin.com/in/m-tartari/" />
-            <GitHubIconLink sx={{ color: 'text.secondary' }} fontSize="large" href="https://www.github.com/m-tartari/" />
-            <EmailIconLink sx={{ color: 'text.secondary' }} fontSize="large" href="mailto:info@m-tartari.eu" />
+          <Typography
+            variant="h6"
+            color="text.secondary"
+            sx={{
+              margin: '0.5em 0 0 0',
+              pt: 1,
+            }}>
+            Discover some of my works below.
+            <br /> Send a message to get in touch.
+          </Typography>
+          <Stack direction="row" gap={2} mt={2} justifyContent={{ xs: 'center', md: 'end' }} color="text.secondary">
+            <LinkedInIconLink fontSize="large" href="https://www.linkedin.com/in/m-tartari/" />
+            <GitHubIconLink fontSize="large" href="https://www.github.com/m-tartari/" />
+            <EmailIconLink fontSize="large" href="mailto:info@m-tartari.eu" />
           </Stack>
         </Box>
         <Avatar

@@ -24,26 +24,31 @@ const Page: React.FC<PageProps> = ({ title, children, showCookieConsent, ...prop
       {title && (
         <>
           <Typography
-            variant="h2"
+            variant="h1"
             aria-label="page-title"
             textAlign="center"
             sx={{
               mt: 6,
-              p: 6,
+              py: 6,
             }}>
             {title}
           </Typography>
           <Divider
             variant="middle"
-            sx={{
+            sx={theme => ({
               borderColor: 'primary.main',
               borderStyle: 'solid',
               borderWidth: 2,
               mx: 'auto',
               mb: 4,
-              width: '30em',
               maxWidth: 'calc(60% - 2.5em)',
-            }}
+              [theme.breakpoints.up('md')]: {
+                width: theme => theme.breakpoints.values.sm,
+              },
+              [theme.breakpoints.down('sm')]: {
+                maxWidth: '75vw',
+              },
+            })}
           />
         </>
       )}
@@ -51,7 +56,7 @@ const Page: React.FC<PageProps> = ({ title, children, showCookieConsent, ...prop
         component="main"
         maxWidth={false}
         sx={{
-          mt: 12,
+          mt: { xs: 8, md: 12 },
           mb: 4,
           minHeight: '80vh',
           mx: 'auto',
