@@ -1,8 +1,29 @@
 /* istanbul ignore file */
-import { createTheme } from '@mui/material/styles'
-
+import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 // A custom theme for this app
-const theme = createTheme({
+let theme = createTheme({
+  typography: {
+    fontFamily: 'Inter, sans-serif', // Base font for headings
+
+    h1: {
+      fontFamily: 'Oswald, sans-serif',
+      textTransform: 'uppercase',
+      fontWeight: 700,
+    },
+    h2: {
+      fontFamily: 'Oswald, sans-serif',
+      textTransform: 'uppercase',
+      fontWeight: 700,
+    },
+    h3: {
+      fontFamily: 'Oswald, sans-serif',
+      fontWeight: 700,
+    },
+    h4: {
+      fontFamily: 'Oswald, sans-serif',
+      fontWeight: 700,
+    },
+  },
   palette: {
     mode: 'dark',
     primary: {
@@ -17,5 +38,7 @@ const theme = createTheme({
     },
   },
 })
+
+theme = responsiveFontSizes(theme)
 
 export default theme

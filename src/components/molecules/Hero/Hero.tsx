@@ -25,19 +25,17 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
       }}>
       <Box
         sx={theme => ({
-          maxWidth: '95%',
-          marginRight: '1%',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
           gap: '3em',
 
-          [theme.breakpoints.down('sm')]: {
+          [theme.breakpoints.down('md')]: {
             flexDirection: 'column',
             textAlign: 'center',
-            padding: '3em',
+            padding: '2em',
           },
-          [theme.breakpoints.up('sm')]: {
+          [theme.breakpoints.up('md')]: {
             flexDirection: 'row',
             textAlign: 'right',
             padding: '6em',
