@@ -18,11 +18,18 @@ import theme from 'style/theme.js'
 import App from './App.js'
 import './index.css'
 
+const themeParam = new URLSearchParams(window.location.search).get('theme')
+let mode: 'light' | 'dark' | 'system' = 'dark'
+
+if (themeParam === 'light' || themeParam === 'dark' || themeParam === 'system') {
+  mode = themeParam
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <AnalyticsProvider instance={analytics}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme} defaultMode={mode}>
         <CssBaseline />
         <App />
       </ThemeProvider>
