@@ -13,6 +13,10 @@ const RouteTracker = () => {
     analytics.page()
   }, [analytics, location])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location])
+
   return <Outlet />
 }
 
