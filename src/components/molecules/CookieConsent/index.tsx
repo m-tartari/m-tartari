@@ -3,6 +3,7 @@ import { Box, Button, Link, Stack, Typography, Unstable_TrapFocus as TrapFocus, 
 import { useAnalytics } from 'use-analytics'
 
 import { ANALYTICS_PLUGINS, COOKIE_CONSENT_KEY } from 'components/utils/analytics/index.js'
+import { SectionSubheader } from 'components/atoms/index.js'
 
 interface Consent {
   necessary: boolean // Always true, but included for completeness
@@ -63,9 +64,9 @@ const CookieConsent = () => {
               zIndex: 9999,
             })}>
             <Box>
-              <Typography id="cookie-consent-dialog-title" variant="h6" component="h2" fontWeight="bold" gutterBottom>
+              <SectionSubheader id="cookie-consent-dialog-title" component="h2" variant="h6">
                 Cookie Preferences
-              </Typography>
+              </SectionSubheader>
               <Typography id="cookie-consent-dialog-description" variant="body2" color="textSecondary">
                 <span style={{ display: 'inline-block' }}>We use cookies to improve your browsing experience and analyze our traffic.</span>
                 <span style={{ display: 'inline-block' }}>By clicking "Accept All", you consent to our use of cookies.</span>

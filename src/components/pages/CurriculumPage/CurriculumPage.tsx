@@ -1,6 +1,6 @@
 import { Box, Divider, Link, Stack, Table, TableCell, TableRow, Typography } from '@mui/material'
 
-import { Award, ExternalIconLink, Extracurricular, Publication } from 'components/atoms'
+import { Award, ExternalIconLink, Extracurricular, Publication, SectionHeader, SectionSubheader } from 'components/atoms'
 import { CurriculumItem } from 'components/molecules'
 import { Page } from 'components/templates'
 
@@ -8,9 +8,7 @@ const Curriculum = () => {
   return (
     <Page title="Curriculum">
       <Box component="section" id="work">
-        <Typography variant="h4" color="primary.main" gutterBottom>
-          Work Experience
-        </Typography>
+        <SectionHeader>Work Experience</SectionHeader>
 
         {/* id="selfemployed-software" */}
         <CurriculumItem title="Software Engineering Consultant" dates="04/24 - Today" company="Self-Employed" location="Remote">
@@ -128,13 +126,9 @@ const Curriculum = () => {
         </CurriculumItem>
 
         <Divider sx={{ mt: 4, mb: 4 }} />
-        <Typography variant="h4" color="primary.main" gutterBottom>
-          Education
-        </Typography>
+        <SectionHeader>Education</SectionHeader>
 
-        <Typography variant="h5" gutterBottom>
-          Certifications
-        </Typography>
+        <SectionSubheader fontWeight={300}>Certifications</SectionSubheader>
         {/* id="WUT" */}
         <CurriculumItem title="IBM Full Stack Software Developer Professional Certificate" dates="03/24">
           <Stack direction="row" alignItems="center" gap={0.5}>
@@ -143,20 +137,19 @@ const Curriculum = () => {
           </Stack>
         </CurriculumItem>
 
-        <Typography
-          variant="h5"
-          onClick={() => window.open('https://master-emaro.ec-nantes.fr/', '_blank')}
-          sx={{
-            mt: 2,
-            cursor: 'pointer',
-            ':hover': {
-              backgroundColor: 'transparent',
-              color: 'primary.main',
-            },
-          }}
-          gutterBottom>
-          EMARO+ Program - Master Studies
-        </Typography>
+        <SectionSubheader fontWeight={300} mt={2}>
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            underline="hover"
+            href="https://master-emaro.ec-nantes.fr/"
+            sx={{
+              color: 'inherit',
+              cursor: 'pointer',
+            }}>
+            EMARO+ Program - Master Studies
+          </Link>
+        </SectionSubheader>
         {/* id="WUT" */}
         <CurriculumItem
           title="M.Eng. in Robotics and Control"
@@ -214,20 +207,19 @@ const Curriculum = () => {
           </Typography>
         </CurriculumItem>
 
-        <Typography
-          variant="h5"
-          onClick={() => window.open('https://corsi.unibo.it/2cycle/AutomationEngineering/almatong-bachelor-programme', '_blank')}
-          sx={{
-            mt: 2,
-            cursor: 'pointer',
-            ':hover': {
-              backgroundColor: 'transparent',
-              color: 'primary.main',
-            },
-          }}
-          gutterBottom>
-          Almatong Project - Bachelor Studies
-        </Typography>
+        <SectionSubheader fontWeight={300} mt={2}>
+          <Link
+            rel="noopener noreferrer"
+            target="_blank"
+            underline="hover"
+            href="https://corsi.unibo.it/2cycle/AutomationEngineering/almatong-bachelor-programme"
+            sx={{
+              color: 'inherit',
+              cursor: 'pointer',
+            }}>
+            Almatong Project - Bachelor Studies
+          </Link>
+        </SectionSubheader>
         {/* id="TJ" */}
         <CurriculumItem
           title="B.S. in Control Theory and Control Engineering"
@@ -272,9 +264,9 @@ const Curriculum = () => {
           </Typography>
         </CurriculumItem>
 
-        <Typography variant="h5" sx={{ mt: 2 }} gutterBottom>
+        <SectionSubheader fontWeight={300} mt={2}>
           High School Studies
-        </Typography>
+        </SectionSubheader>
         {/*  id="Roiti" */}
         <CurriculumItem
           title="Scientific High School Diploma"
@@ -311,20 +303,22 @@ const Curriculum = () => {
         </CurriculumItem>
 
         <Divider sx={{ mt: 4, mb: 4 }} />
-        <Typography variant="h4" color="primary.main" gutterBottom>
-          Skills
-        </Typography>
+        <SectionHeader>Skills</SectionHeader>
         <Table>
           <TableRow>
             <TableCell width="15%">
-              <b>Languages</b>
+              <Typography variant="h6" component="b" fontWeight={600}>
+                Languages
+              </Typography>
             </TableCell>
             <TableCell width="85%">Italian (Native Speaker), English (Proficient, IELTS 7.5), French (Good), Chinese (Basic, HSK3)</TableCell>
           </TableRow>
 
           <TableRow>
             <TableCell rowSpan={4} width="15%" id="digital_skills">
-              <b>Digital</b>
+              <Typography variant="h6" component="b" fontWeight={600}>
+                Digital
+              </Typography>
             </TableCell>
             <TableCell width="85%">
               <b>Languages:</b> TypeScript/Javascript (Proficient), Python (Proficient), Bash (Good), C++ (Good), C (Fair)
@@ -347,7 +341,9 @@ const Curriculum = () => {
           </TableRow>
           <TableRow sx={{ '&:last-child td': { borderBottom: 0 } }}>
             <TableCell width="15%">
-              <b>Softskills</b>
+              <Typography variant="h6" component="b" fontWeight={600}>
+                Softskills
+              </Typography>
             </TableCell>
             <TableCell width="85%">
               Adaptability, Communication, Creativity, Critical Thinking, Problem-Solving, Self-Organization, Teamworking
@@ -357,11 +353,9 @@ const Curriculum = () => {
 
         {/* Accomplishments */}
         <Divider sx={{ mt: 4, mb: 4 }} />
-        <Typography variant="h4" color="primary.main" gutterBottom>
-          Accomplishments
-        </Typography>
+        <SectionHeader>Accomplishments</SectionHeader>
         <Box pb={1}>
-          <Typography variant="h5">Awards</Typography>
+          <SectionSubheader fontWeight={300}>Awards</SectionSubheader>
 
           <Award
             year="2021"
@@ -385,7 +379,7 @@ const Curriculum = () => {
         </Box>
 
         <Box pb={1}>
-          <Typography variant="h5">Press Releases</Typography>
+          <SectionSubheader fontWeight={300}>Press Releases</SectionSubheader>
           <Award
             year="2020"
             title="Covid-19: L'impatto sui giovani talenti"
@@ -405,7 +399,7 @@ const Curriculum = () => {
         </Box>
 
         <Box py={1}>
-          <Typography variant="h5">Publications</Typography>
+          <SectionSubheader fontWeight={300}>Publications</SectionSubheader>
           <Publication
             year="2020"
             title="Control System Design for Human Assisting Robot"
@@ -425,11 +419,9 @@ const Curriculum = () => {
 
         {/* Extacurricoular  */}
         <Divider sx={{ mt: 4, mb: 4 }} />
-        <Typography variant="h4" color="primary.main" gutterBottom>
-          Extracurricular
-        </Typography>
+        <SectionHeader>Extracurricular</SectionHeader>
         {/* Volunteering  */}
-        <Typography variant="h5">Volunteering</Typography>
+        <SectionSubheader fontWeight={300}>Volunteering</SectionSubheader>
         <Box component="ul" pl={4} mt={0}>
           <Extracurricular Component="li" year="2013 - Today" title="Blood Donor, Bone Marrow Donor at AVIS & ADMO" />
           <Extracurricular Component="li" year="2008 - 2014" title="Scoutism and associated volunteering activities in Agesci" />
@@ -437,7 +429,7 @@ const Curriculum = () => {
         </Box>
         {/* Other */}
         {/* Interests */}
-        <Typography variant="h5">Interests</Typography>
+        <SectionSubheader fontWeight={300}>Interests</SectionSubheader>
         <Box component="ul" pl={4} mt={0}>
           <Extracurricular Component="li" title="Historical Handcrafting & Reenactment" />
           <Extracurricular Component="li" title="Hiking/Travelling" />
