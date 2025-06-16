@@ -1,4 +1,13 @@
 /* istanbul ignore file */
+import '@fontsource/oswald/700.css'
+import '@fontsource/oswald/500.css'
+import '@fontsource/oswald/400.css'
+import '@fontsource/oswald/300.css'
+import '@fontsource/inter/700.css'
+import '@fontsource/inter/500.css'
+import '@fontsource/inter/400.css'
+import '@fontsource/inter/300.css'
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { AnalyticsProvider } from 'use-analytics'

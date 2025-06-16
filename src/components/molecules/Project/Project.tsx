@@ -51,7 +51,7 @@ const Project = (props: ProjectProps) => {
           },
         }}>
         <div style={{ flex: 1 }}>
-          <Typography variant="h6">
+          <Typography variant="h5">
             <b>{props.title}</b>
           </Typography>
           <Stack direction="row" gap={1} alignItems="center">
