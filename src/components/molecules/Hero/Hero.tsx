@@ -1,8 +1,8 @@
 import React from 'react'
 import { Avatar, Box, IconButton, Stack, Typography } from '@mui/material'
+import ExpandMore from '@mui/icons-material/ExpandMore'
 
-import { EmailIconLink, GitHubIconLink, LinkedInIconLink } from 'components/atoms'
-import { ExpandMore } from '@mui/icons-material'
+import { EmailIconLink, GitHubIconLink, LinkedInIconLink } from 'components/atoms/IconLinks/index.js'
 
 const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) => {
   return (

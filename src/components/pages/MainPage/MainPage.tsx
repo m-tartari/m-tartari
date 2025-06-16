@@ -2,8 +2,8 @@ import React from 'react'
 import { Box, Stack, Typography } from '@mui/material'
 
 import { ViewportProvider } from 'components/utils/viewport'
-import { AcademyIconLink, DescriptionIconLink, ExternalAppIconLink, GitHubIconLink, VideoIconLink } from 'components/atoms'
-import { Footer, Hero, Toolbar, ProjectSpotlight } from 'components/molecules'
+import { AcademyIconLink, DescriptionIconLink, ExternalAppIconLink, GitHubIconLink, VideoIconLink } from 'components/atoms/index.js'
+import { Footer, Hero, Toolbar, ProjectSpotlight } from 'components/molecules/index.js'
 
 const MainPage = () => {
   React.useEffect(() => {

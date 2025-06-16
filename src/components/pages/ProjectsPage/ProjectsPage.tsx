@@ -1,8 +1,8 @@
 import { Box, Divider, Link, Typography } from '@mui/material'
 
-import { GitHubIconLink, DescriptionIconLink, VideoIconLink, AcademyIconLink, ExternalAppIconLink } from 'components/atoms'
-import { Project } from 'components/molecules'
-import { Page } from 'components/templates'
+import { GitHubIconLink, DescriptionIconLink, VideoIconLink, AcademyIconLink, ExternalAppIconLink } from 'components/atoms/index.js'
+import { Project } from 'components/molecules/index.js'
+import { Page } from 'components/templates/index.js'
 
 const ProjectsPage = () => {
   return (

@@ -4,7 +4,7 @@ import { Box, Link, Stack, Typography } from '@mui/material'
 import PolicyIcon from '@mui/icons-material/Policy'
 import CookieIcon from '@mui/icons-material/Cookie'
 
-import { EmailIconLink, GitHubIconLink, LinkedInIconLink } from 'components/atoms'
+import { EmailIconLink, GitHubIconLink, LinkedInIconLink } from 'components/atoms/IconLinks/index.js'
 import CookieConsent from 'components/molecules/CookieConsent/index.js'
 
 type FooterProps = {

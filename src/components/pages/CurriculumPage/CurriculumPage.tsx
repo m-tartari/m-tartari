@@ -1,8 +1,8 @@
 import { Box, Divider, Link, Stack, Table, TableCell, TableRow, Typography } from '@mui/material'
 
-import { Award, ExternalIconLink, Extracurricular, Publication, SectionHeader, SectionSubheader } from 'components/atoms'
-import { CurriculumItem } from 'components/molecules'
-import { Page } from 'components/templates'
+import { Award, ExternalIconLink, Extracurricular, Publication, SectionHeader, SectionSubheader } from 'components/atoms/index.js'
+import { CurriculumItem } from 'components/molecules/index.js'
+import { Page } from 'components/templates/index.js'
 
 const Curriculum = () => {
   return (

@@ -49,6 +49,8 @@
   // Javascript
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.preferences.importModuleSpecifierEnding": "js",
   "typescript.suggest.paths": true,
   // json
   "[json,jsonc]": {
@@ -68,9 +70,8 @@
   "todo-tree.filtering.excludeGlobs": [
     "**/node_modules"
   ],
+  // other extensions
   "vitest.enable": true,
-  "javascript.preferences.importModuleSpecifierEnding": "js",
-  "typescript.preferences.importModuleSpecifierEnding": "js",
   "cSpell.words": [
     "SRDF",
     "URDF"
