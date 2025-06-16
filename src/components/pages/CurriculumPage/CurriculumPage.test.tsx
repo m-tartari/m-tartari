@@ -38,10 +38,15 @@ describe('Curriculum component', () => {
     expect(screen.getByText('Education')).toBeInTheDocument()
 
     // check the subsections links
-    await userEvent.click(screen.getByText('EMARO+ Program - Master Studies'))
-    expect(open).toHaveBeenCalledWith('https://master-emaro.ec-nantes.fr/', '_blank')
-    await userEvent.click(screen.getByText('Almatong Project - Bachelor Studies'))
-    expect(open).toHaveBeenCalledWith('https://corsi.unibo.it/2cycle/AutomationEngineering/almatong-bachelor-programme', '_blank')
+    let link = screen.getByText('EMARO+ Program - Master Studies')
+    expect(link).toHaveAttribute('href', 'https://master-emaro.ec-nantes.fr/')
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer')
+    expect(link).toHaveAttribute('target', '_blank')
+
+    link = screen.getByText('Almatong Project - Bachelor Studies')
+    expect(link).toHaveAttribute('href', 'https://corsi.unibo.it/2cycle/AutomationEngineering/almatong-bachelor-programme')
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer')
+    expect(link).toHaveAttribute('target', '_blank')
 
     // check some of the entries
     expect(screen.getAllByText('M.Eng. in Robotics and Control')).toHaveLength(2) // large and smallscreen versions

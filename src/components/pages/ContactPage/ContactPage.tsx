@@ -3,7 +3,7 @@ import DraftsIcon from '@mui/icons-material/Drafts'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
-import { Page } from 'components/templates'
+import { Page } from 'components/templates/index.js'
 
 interface ListItemProps {
   children?: React.ReactNode

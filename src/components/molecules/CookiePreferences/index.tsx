@@ -4,6 +4,7 @@ import { Box, Button, Link, Stack, Switch, Typography, SnackbarCloseReason, Snac
 import { useAnalytics } from 'use-analytics'
 
 import { ANALYTICS_PLUGINS, COOKIE_CONSENT_KEY } from 'components/utils/analytics/index.js'
+import { SectionHeader } from 'components/atoms/index.js'
 
 interface CookieConsentState {
   necessary: boolean // Always true, but included for completeness
@@ -64,9 +65,9 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ consentDisplayDefaultOpen
 
   return (
     <Box id="cookie-preferences" aria-labelledby="cookie-preferences-title" aria-describedby="cookie-preferences-description">
-      <Typography id="cookie-preferences-title" aria-label="cookie-preferences" variant="h3" component="h2" gutterBottom>
+      <SectionHeader color="inherit" id="cookie-preferences-title" aria-label="cookie-preferences">
         Cookie Preferences
-      </Typography>
+      </SectionHeader>
       <Typography id="cookie-preferences-description" color="textSecondary" flexGrow={1}>
         Please set your preferences below. You can change these settings at any time in the future.
         <br />
@@ -98,7 +99,7 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ consentDisplayDefaultOpen
 
         <Box>
           <Stack direction="row" alignItems="center" justifyContent="space-between" alignContent="center">
-            <Typography variant="body1" fontWeight="bold">
+            <Typography variant="h6" fontFamily="Oswald, sans-serif">
               Necessary Cookies
             </Typography>
             <Switch slotProps={{ input: { 'aria-label': 'necessary-cookies-toggle' } }} color="default" disabled checked />
@@ -110,7 +111,7 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ consentDisplayDefaultOpen
 
         <Box>
           <Stack direction="row" alignItems="center" justifyContent="space-between" alignContent="center">
-            <Typography variant="body1" fontWeight="bold">
+            <Typography variant="h6" fontFamily="Oswald, sans-serif">
               Analytics Cookies
             </Typography>
             <Switch

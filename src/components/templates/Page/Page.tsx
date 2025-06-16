@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, BoxProps, Container, Divider, Typography } from '@mui/material'
 
-import { Footer, Toolbar } from 'components/molecules'
+import { Footer, Toolbar } from 'components/molecules/index.js'
 
 interface PageProps extends BoxProps {
   showCookieConsent?: boolean
