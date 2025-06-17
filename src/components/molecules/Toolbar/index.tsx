@@ -26,7 +26,9 @@ const AppBarButton = styled(Button<typeof RouterLink>)(({ theme }) => ({
   color: 'inherit',
   ':hover': {
     backgroundColor: 'transparent',
-    color: theme.palette.primary.main,
+    ...(theme.palette.mode === 'dark' && {
+      color: theme.palette.primary.main,
+    }),
   },
 }))
 const DrawerButton = styled(ListItemButton<typeof RouterLink>)(({ theme }) => ({
@@ -57,7 +59,13 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window
   }
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={theme => ({
+        height: '100%',
+        textAlign: 'center',
+        ...(theme.palette.mode === 'light' && { backgroundColor: 'background.default' }),
+      })}>
       <Typography variant="h6" sx={{ my: 2 }}>
         Michele Tartari
       </Typography>
@@ -90,10 +98,14 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window
   return (
     <>
       <AppBar
-        elevation={0}
+        elevation={theme.palette.mode === 'light' ? 1 : 0}
         {...props}
         sx={{
-          backgroundColor: trigger ? (theme.palette.mode === 'dark' ? 'background.paper' : undefined) : 'transparent',
+          backgroundColor: trigger ? 'background.paper' : 'transparent',
+          ...(theme.palette.mode === 'light' && {
+            backgroundColor: 'hsla(0, 0%, 100%, 0.75)',
+            backdropFilter: 'blur(8px)',
+          }),
           ...props.sx,
         }}>
         <Toolbar
@@ -122,17 +134,25 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window
                 mr: 'auto',
               },
             })}>
-            <Typography variant="h6"> Michele Tartari</Typography>
+            <Typography variant="h6" color="text.primary">
+              Michele Tartari
+            </Typography>
           </AppBarButton>
           <Stack component="div" direction="row" spacing={2} sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <AppBarButton component={RouterLink} to="/">
-              <Typography variant="h6">Home</Typography>
+            <AppBarButton component={RouterLink} to="/" disableRipple>
+              <Typography color={theme.palette.mode === 'dark' ? 'inherit' : 'text.secondary'} variant="h6">
+                Home
+              </Typography>
             </AppBarButton>
-            <AppBarButton component={RouterLink} to="/projects">
-              <Typography variant="h6">Projects</Typography>
+            <AppBarButton component={RouterLink} to="/projects" disableRipple>
+              <Typography color={theme.palette.mode === 'dark' ? 'inherit' : 'text.secondary'} variant="h6">
+                Projects
+              </Typography>
             </AppBarButton>
-            <AppBarButton component={RouterLink} to="/curriculum">
-              <Typography variant="h6">Curriculum</Typography>
+            <AppBarButton component={RouterLink} to="/curriculum" disableRipple>
+              <Typography color={theme.palette.mode === 'dark' ? 'inherit' : 'text.secondary'} variant="h6">
+                Curriculum
+              </Typography>
             </AppBarButton>
             <Button
               component={RouterLink}
