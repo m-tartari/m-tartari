@@ -23,7 +23,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 
 const AppBarButton = styled(Button<typeof RouterLink>)(({ theme }) => ({
   textTransform: 'none',
-  color: 'inherit',
+  color: theme.palette.mode === 'dark' ? 'inherit' : 'text.secondary',
   ':hover': {
     backgroundColor: 'transparent',
     ...(theme.palette.mode === 'dark' && {
@@ -106,6 +106,10 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window
             backgroundColor: 'hsla(0, 0%, 100%, 0.75)',
             backdropFilter: 'blur(8px)',
           }),
+          transition: theme.transitions.create('background-color', {
+            duration: theme.transitions.duration.shorter,
+            easing: theme.transitions.easing.easeInOut,
+          }),
           ...props.sx,
         }}>
         <Toolbar
@@ -127,32 +131,21 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window
             to="/"
             disableRipple
             sx={theme => ({
-              [theme.breakpoints.down('md')]: {
-                mx: 'auto',
-              },
-              [theme.breakpoints.up('md')]: {
-                mr: 'auto',
-              },
+              color: theme.palette.text.primary,
+              [theme.breakpoints.down('md')]: { mx: 'auto' },
+              [theme.breakpoints.up('md')]: { mr: 'auto' },
             })}>
-            <Typography variant="h6" color="text.primary">
-              Michele Tartari
-            </Typography>
+            <Typography variant="h6">Michele Tartari</Typography>
           </AppBarButton>
           <Stack component="div" direction="row" spacing={2} sx={{ display: { xs: 'none', md: 'flex' } }}>
             <AppBarButton component={RouterLink} to="/" disableRipple>
-              <Typography color={theme.palette.mode === 'dark' ? 'inherit' : 'text.secondary'} variant="h6">
-                Home
-              </Typography>
+              <Typography variant="h6">Home</Typography>
             </AppBarButton>
             <AppBarButton component={RouterLink} to="/projects" disableRipple>
-              <Typography color={theme.palette.mode === 'dark' ? 'inherit' : 'text.secondary'} variant="h6">
-                Projects
-              </Typography>
+              <Typography variant="h6">Projects</Typography>
             </AppBarButton>
             <AppBarButton component={RouterLink} to="/curriculum" disableRipple>
-              <Typography color={theme.palette.mode === 'dark' ? 'inherit' : 'text.secondary'} variant="h6">
-                Curriculum
-              </Typography>
+              <Typography variant="h6">Curriculum</Typography>
             </AppBarButton>
             <Button
               component={RouterLink}
