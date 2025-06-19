@@ -106,6 +106,10 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window
             backgroundColor: 'hsla(0, 0%, 100%, 0.75)',
             backdropFilter: 'blur(8px)',
           }),
+          transition: theme.transitions.create('background-color', {
+            duration: theme.transitions.duration.shorter,
+            easing: theme.transitions.easing.easeInOut,
+          }),
           ...props.sx,
         }}>
         <Toolbar
