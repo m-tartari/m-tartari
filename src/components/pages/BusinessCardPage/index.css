@@ -27,5 +27,6 @@
 
   @page {
     size: 85mm 55mm;
+    margin: 0;
   }
 }
