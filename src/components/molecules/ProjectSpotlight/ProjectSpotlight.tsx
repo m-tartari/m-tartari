@@ -186,8 +186,8 @@ const ProjectSpotlight = React.forwardRef<HTMLSelectElement, Props>((props, ref)
             maxHeight: '60vh',
             '@media print': {
               maxHeight: '100%',
-              '-webkit-print-color-adjust': 'exact !important',
-              'print-color-adjust': 'exact !important',
+              WebkitPrintColorAdjust: 'exact !important',
+              printColorAdjust: 'exact !important',
             },
           }}
           src={props.mobileImage ?? props.image}
