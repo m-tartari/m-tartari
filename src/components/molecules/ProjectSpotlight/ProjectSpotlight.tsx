@@ -1,6 +1,6 @@
 import React from 'react'
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax'
-import { Box, Grid, IconButton, Typography, useTheme } from '@mui/material'
+import { Box, Grid, IconButton, Typography } from '@mui/material'
 import { ExpandMore } from '@mui/icons-material'
 
 import { useViewport } from 'components/utils/viewport/index.js'
@@ -125,79 +125,91 @@ const Description = (props: Props) => {
   }
 }
 
-const DesktopComponent = React.forwardRef<HTMLSelectElement, Props>((props, ref) => {
-  return (
-    <section ref={ref}>
-      <ParallaxProvider>
-        <ParallaxBanner
-          layers={[
-            {
-              // translateY: [0, 30],
-              // scale: [1, 0.5, 'easeOutCubic'],
-              // shouldAlwaysCompleteAnimation: true,
-              image: props.image,
-              expanded: false,
-              speed: -20,
-            },
-          ]}
-          style={{
-            // width: '150%',
-            // marginLeft: '-25%',
-            minHeight: '100vh',
-            position: 'relative',
+const ProjectSpotlight = React.forwardRef<HTMLSelectElement, Props>((props, ref) => {
+  const { width } = useViewport()
 
-            height: '100vh',
-            overflow: 'hidden',
-          }}>
-          <Description {...props} />
-          {props.scrollTarget && (
-            <IconButton
-              size="large"
-              onClick={() => (props.scrollTarget as React.RefObject<HTMLSelectElement | null>).current?.scrollIntoView()}
-              sx={{ position: 'absolute', p: 1, bottom: 2, left: '50%', transform: 'translate(-50%, 0)' }}>
-              <ExpandMore fontSize="large" />
-            </IconButton>
-          )}
-        </ParallaxBanner>
-      </ParallaxProvider>
-    </section>
-  )
-})
-
-const MobileComponent = React.forwardRef<HTMLSelectElement, Props>((props, ref) => {
   return (
-    <Box component="section">
+    <Box ref={ref}>
       <Box
-        ref={ref}
-        component="img"
-        sx={{
-          width: '100%',
-          height: '100%',
-          maxHeight: '60vh',
-        }}
-        src={props.mobileImage ?? props.image}
-      />
-      <Box
+        component="section"
         sx={theme => ({
-          mt: theme.spacing(-1.05),
-          borderTopStyle: 'solid',
-          borderTopWidth: theme.spacing(0.5),
-          borderTopColor: theme.palette.primary.main,
-          p: `${theme.spacing(7)} ${theme.spacing(5)} ${theme.spacing(5.5)} ${theme.spacing(5)}`,
+          display: width < theme.breakpoints.values.md ? 'none' : 'inline',
+          '@media print': { display: 'none' },
         })}>
-        <Typography variant="h4">{props.title}</Typography>
-        {props.caption}
-        <Typography pt={1}>{props.children}</Typography>
+        <ParallaxProvider>
+          <ParallaxBanner
+            layers={[
+              {
+                // translateY: [0, 30],
+                // scale: [1, 0.5, 'easeOutCubic'],
+                // shouldAlwaysCompleteAnimation: true,
+                image: props.image,
+                expanded: false,
+                speed: -20,
+              },
+            ]}
+            style={{
+              // width: '150%',
+              // marginLeft: '-25%',
+              minHeight: '100vh',
+              position: 'relative',
+
+              height: '100vh',
+              overflow: 'hidden',
+            }}>
+            <Description {...props} />
+            {props.scrollTarget && (
+              <IconButton
+                size="large"
+                onClick={() => (props.scrollTarget as React.RefObject<HTMLSelectElement | null>).current?.scrollIntoView()}
+                sx={{ position: 'absolute', p: 1, bottom: 2, left: '50%', transform: 'translate(-50%, 0)' }}>
+                <ExpandMore fontSize="large" />
+              </IconButton>
+            )}
+          </ParallaxBanner>
+        </ParallaxProvider>
+      </Box>
+      <Box
+        component="section"
+        sx={theme => ({
+          display: width >= theme.breakpoints.values.md ? 'none' : 'inline',
+          '@media print': {
+            display: 'inline',
+            height: '100%',
+          },
+        })}>
+        <Box
+          component="img"
+          sx={{
+            width: '100%',
+            height: '100%',
+            maxHeight: '60vh',
+            '@media print': {
+              maxHeight: '100%',
+              '-webkit-print-color-adjust': 'exact !important',
+              'print-color-adjust': 'exact !important',
+            },
+          }}
+          src={props.mobileImage ?? props.image}
+        />
+        <Box
+          sx={theme => ({
+            mt: theme.spacing(-1.05),
+            borderTopStyle: 'solid',
+            borderTopWidth: theme.spacing(0.5),
+            borderTopColor: theme.palette.primary.main,
+            p: `${theme.spacing(7)} ${theme.spacing(5)} ${theme.spacing(5.5)} ${theme.spacing(5)}`,
+            '@media print': {
+              backgroundColor: 'background.default',
+            },
+          })}>
+          <Typography variant="h4">{props.title}</Typography>
+          {props.caption}
+          <Typography pt={1}>{props.children}</Typography>
+        </Box>
       </Box>
     </Box>
   )
-})
-
-const ProjectSpotlight = React.forwardRef<HTMLSelectElement, Props>((props, ref) => {
-  const { width } = useViewport()
-  const theme = useTheme()
-
-  return width < theme.breakpoints.values.md ? <MobileComponent {...props} ref={ref} /> : <DesktopComponent {...props} ref={ref} />
 })
 
 export default ProjectSpotlight
