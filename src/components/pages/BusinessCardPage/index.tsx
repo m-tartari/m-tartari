@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box, Typography, Stack, Button, Paper, Link, TypographyProps, SvgIcon, PaperProps, ThemeProvider, createTheme } from '@mui/material'
 import { Email, LinkedIn, Print, PhoneInTalk, Public } from '@mui/icons-material'
 
