@@ -5,14 +5,8 @@ import { Email, LinkedIn, Print, PhoneInTalk, Public } from '@mui/icons-material
 import { Page } from 'components/templates/index.js'
 import typography from 'style/typography/index.js'
 import palette from 'style/palette/index.js'
+import * as env from './envVars.js'
 import './index.css'
-
-const NAME = import.meta.env.VITE_BC_NAME || '[FULL NAME]'
-const POSITION = import.meta.env.VITE_BC_POSITION || '[POSITION]'
-const VAT = import.meta.env.VITE_BC_VAT || '[VAT NUMBER]'
-const PHONE = import.meta.env.VITE_BC_PHONE || '[Redacted for privacy]'
-const EMAIL = import.meta.env.VITE_BC_EMAIL || '[Redacted for privacy]'
-const LINKEDIN = import.meta.env.VITE_BC_LINKEDIN || '[Redacted for privacy]'
 
 const TypographyLink = ({ icon: Icon, children, ...props }: TypographyProps<typeof Link, { icon: typeof SvgIcon }>) => (
   <Box
@@ -73,8 +67,8 @@ const BusinessCard = ({ mode = 'dark', src, alt, sx, ...props }: BusinessCardPro
 
         '@media print': {
           backgroundColor: mode === 'light' ? 'white' : 'background.default',
-          '-webkit-print-color-adjust': 'exact !important',
-          'print-color-adjust': 'exact !important',
+          WebkitPrintColorAdjust: 'exact !important',
+          printColorAdjust: 'exact !important',
           elevation: 0,
           borderRadius: 0,
           borderColor: 'transparent',
@@ -128,10 +122,10 @@ const BusinessCardPage = () => {
         }}>
         <BusinessCard src="/fav-icon.svg" alt="logo">
           <Typography variant="h5" component="h1" fontFamily="Oswald, sans-serif" textTransform="uppercase" fontWeight={700}>
-            {NAME}
+            {env.NAME}
           </Typography>
           <Typography variant="subtitle2" color="text.secondary" sx={{ fontSize: '0.55rem', mb: 0.5 }}>
-            {POSITION}
+            {env.POSITION}
           </Typography>
         </BusinessCard>
 
@@ -150,22 +144,22 @@ const BusinessCardPage = () => {
               fontFamily="Oswald, sans-serif"
               textTransform="uppercase"
               fontWeight={700}>
-              {NAME}
+              {env.NAME}
             </Typography>
             <Typography variant="caption" color="text.secondary" fontSize="0.55rem" mb={0.5}>
-              {VAT}
+              {env.VAT}
             </Typography>
-            <TypographyLink icon={PhoneInTalk} href={`tel:${PHONE.replace(/[^\d+]/g, '').replace(/^\+?/, '+')}`}>
-              {PHONE}
+            <TypographyLink icon={PhoneInTalk} href={`tel:${env.PHONE.replace(/[^\d+]/g, '').replace(/^\+?/, '+')}`}>
+              {env.PHONE}
             </TypographyLink>
-            <TypographyLink icon={Email} href={`mailto:${EMAIL}`}>
-              {EMAIL}
+            <TypographyLink icon={Email} href={`mailto:${env.EMAIL}`}>
+              {env.EMAIL}
             </TypographyLink>
             <TypographyLink icon={Public} href="https://www.m-tartari.eu">
               www.m-tartari.eu
             </TypographyLink>
-            <TypographyLink icon={LinkedIn} href={`https://www.linkedin.com/in/${LINKEDIN}/`}>
-              {LINKEDIN}
+            <TypographyLink icon={LinkedIn} href={`https://www.linkedin.com/in/${env.LINKEDIN}/`}>
+              {env.LINKEDIN}
             </TypographyLink>
           </Stack>
         </BusinessCard>
