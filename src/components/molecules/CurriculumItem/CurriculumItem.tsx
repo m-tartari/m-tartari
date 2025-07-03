@@ -32,10 +32,16 @@ const CurriculumItem = (props: CurriculumEntryProps) => {
           // '& .MuiAccordionSummary-expandIconWrapper .MuiSvgIcon-root': { color: 'primary.dark' }, // use summary hover icon color
         },
         '&.Mui-expanded': {
+          bgcolor: 'background.paper', // use summary hover background
           borderBottom: '1px solid',
           borderTop: '1px solid',
-          bgcolor: 'background.paper', // use summary hover background
           elevation: 1,
+          '@media print': {
+            bgcolor: 'background.default',
+            borderBottom: 0,
+            borderTop: 0,
+            elevation: 0,
+          },
           // '& .MuiAccordionSummary-expandIconWrapper .MuiSvgIcon-root': { color: 'primary.dark' }, // use summary hover icon color
         },
       }}>
@@ -48,6 +54,9 @@ const CurriculumItem = (props: CurriculumEntryProps) => {
           },
           '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
             transform: 'rotate(0deg)',
+            '@media print': {
+              transform: 'rotate(-90deg)',
+            },
           },
           '& .MuiAccordionSummary-content': {
             marginLeft: 2,

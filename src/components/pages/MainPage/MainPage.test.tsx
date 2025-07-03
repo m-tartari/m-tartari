@@ -18,25 +18,10 @@ describe('Main page', () => {
     // Make sure the page title is correct
     expect(screen.getByText('Robotics Engineer')).toBeInTheDocument()
 
-    // Make sure the project spotlights are present
-    expect(screen.getByText('LINFA: An Intuitive Block-Programming Interface for Reconfigurable Robots')).toBeInTheDocument()
-    expect(screen.getByText("Revamping HHCM's Modular: Swift Generation of Modular Robot Models")).toBeInTheDocument()
-    expect(screen.getByText('Automated Actuators and Robotic Modules Calibration')).toBeInTheDocument()
-    expect(screen.getByText('Voice Controlled Mobile Robot for Indoor Applications')).toBeInTheDocument()
-  })
-  it('Should render the page correctly on mobile', async () => {
-    // Set the window size to mobile (Galaxy Note 20 Android 11)
-    window.innerWidth = 412
-    window.innerHeight = 915
-    await render(<MainPage />)
-
-    // Make sure the page title is correct
-    expect(screen.getByText('Robotics Engineer')).toBeInTheDocument()
-
-    // Make sure the project spotlights are present
-    expect(screen.getByText('LINFA: An Intuitive Block-Programming Interface for Reconfigurable Robots')).toBeInTheDocument()
-    expect(screen.getByText("Revamping HHCM's Modular: Swift Generation of Modular Robot Models")).toBeInTheDocument()
-    expect(screen.getByText('Automated Actuators and Robotic Modules Calibration')).toBeInTheDocument()
-    expect(screen.getByText('Voice Controlled Mobile Robot for Indoor Applications')).toBeInTheDocument()
+    // Make sure the project spotlights are present for both desktop and mobile
+    expect(screen.getAllByText('LINFA: An Intuitive Block-Programming Interface for Reconfigurable Robots')).toHaveLength(2)
+    expect(screen.getAllByText("Revamping HHCM's Modular: Swift Generation of Modular Robot Models")).toHaveLength(2)
+    expect(screen.getAllByText('Automated Actuators and Robotic Modules Calibration')).toHaveLength(2)
+    expect(screen.getAllByText('Voice Controlled Mobile Robot for Indoor Applications')).toHaveLength(2)
   })
 })

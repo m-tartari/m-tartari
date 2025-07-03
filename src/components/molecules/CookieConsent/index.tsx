@@ -62,6 +62,9 @@ const CookieConsent = () => {
               mb: theme.spacing(1),
               p: theme.spacing(3),
               zIndex: 9999,
+              '@media print': {
+                display: 'none',
+              },
             })}>
             <Box>
               <SectionSubheader id="cookie-consent-dialog-title" component="h2" variant="h6">

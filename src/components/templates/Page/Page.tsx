@@ -19,11 +19,17 @@ const Page: React.FC<PageProps> = ({ title, children, showCookieConsent, ...prop
   }, [title])
 
   return (
-    <Box sx={{ flexGrow: 1 }} aria-label="page">
+    <Box
+      aria-label="page"
+      sx={{
+        '@media print': { backgroundColor: 'background.default' },
+        flexGrow: 1,
+      }}>
       <Toolbar />
       {title && (
         <>
           <Typography
+            id="page-title"
             variant="h1"
             aria-label="page-title"
             textAlign="center"
@@ -53,8 +59,8 @@ const Page: React.FC<PageProps> = ({ title, children, showCookieConsent, ...prop
         </>
       )}
       <Container
+        id="page-content"
         component="main"
-        maxWidth={false}
         sx={{
           mt: { xs: 8, md: 12 },
           mb: 4,

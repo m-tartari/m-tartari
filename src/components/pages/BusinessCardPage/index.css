@@ -1,0 +1,31 @@
+/* Print styles for business card */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #main,
+  #page-content {
+    margin-bottom: 0;
+    margin-top: 0;
+    min-height: 0;
+  }
+
+  #footer {
+    display: none;
+  }
+
+  .print-business-card,
+  .print-business-card * {
+    visibility: visible;
+  }
+
+  .print-business-card {
+    width: 85mm;
+    height: 55mm;
+  }
+
+  @page {
+    size: 85mm 55mm;
+  }
+}

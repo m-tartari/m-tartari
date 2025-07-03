@@ -1,4 +1,4 @@
-import { Box, Divider, Link, Stack, Table, TableCell, TableRow, Typography } from '@mui/material'
+import { Box, Divider, Link, Stack, Table, TableBody, TableCell, TableRow, Typography } from '@mui/material'
 
 import { Award, ExternalIconLink, Extracurricular, Publication, SectionHeader, SectionSubheader } from 'components/atoms/index.js'
 import { CurriculumItem } from 'components/molecules/index.js'
@@ -12,20 +12,18 @@ const Curriculum = () => {
 
         {/* id="selfemployed-software" */}
         <CurriculumItem title="Software Engineering Consultant" dates="04/24 - Today" company="Self-Employed" location="Remote">
-          <Typography>
-            <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
-              <li>
-                Design and development of customized graphical interfaces and software components to facilitate the use of robots and industrial
-                machines.
-              </li>
-              <li>Production and maintenance of revisions of the documentation.</li>
-              <li>Providing technical assistance for R&D activities.</li>
-            </ul>
+          <Typography component="ul" sx={{ paddingLeft: '1em', marginTop: 0 }}>
+            <li>
+              Design and development of customized graphical interfaces and software components to facilitate the use of robots and industrial
+              machines.
+            </li>
+            <li>Production and maintenance of revisions of the documentation.</li>
+            <li>Providing technical assistance for R&D activities.</li>
           </Typography>
         </CurriculumItem>
         {/* id="MinHub-lead" */}
         <CurriculumItem title="Business Partner & Technical Lead" dates="03/23 - 12/24" company="MindHub Ferrara" location="Ferrara, Italy">
-          <Typography>
+          <Typography component="div">
             Co-founded{' '}
             <Link
               target="_blank"
@@ -49,7 +47,7 @@ const Curriculum = () => {
         </CurriculumItem>
         {/* id="IIT-software" */}
         <CurriculumItem title="Software Engineer" dates="06/21 - 04/24" company="Istituto Italiano di Tecnologia" location="Remote">
-          <Typography>
+          <Typography component="div">
             Worked in{' '}
             <Link target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220706131402/https://alberobotics.it/">
               Alberobotics
@@ -76,7 +74,7 @@ const Curriculum = () => {
         </CurriculumItem>
         {/* id="IIT-embedded" */}
         <CurriculumItem title="Embedded Engineer" dates="04/20 - 06/21" company="Istituto Italiano di Tecnologia" location="Genoa, Italy">
-          <Typography>
+          <Typography component="div">
             Worked in{' '}
             <Link target="_blank" rel="noopener noreferrer" href="https://web.archive.org/web/20220706131402/https://alberobotics.it/">
               Alberobotics
@@ -104,7 +102,7 @@ const Curriculum = () => {
           dates="01/19 - 06/19"
           company="Warsaw University of Technology - Division of Theory of Machines and Robots"
           location="Warsaw, Poland">
-          <Typography>
+          <Typography component="div">
             My main duties included:
             <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
               <li>Developing a voice interface and some user detection strategies for low-power robotic systems using ROS.</li>
@@ -115,7 +113,7 @@ const Curriculum = () => {
         </CurriculumItem>
         {/* id="WUT-intern" */}
         <CurriculumItem title="Researcher - Internship" dates="01/17 - 02/17" company="LAR - University of Bologna" location="Bologna, Italy">
-          <Typography>
+          <Typography component="div">
             My main duties included:
             <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
               <li>Developing a setup to control a shape memory alloy material using an embedded PC (a Beagle Bone Black).</li>
@@ -157,26 +155,24 @@ const Curriculum = () => {
           // (grade: 5/5,summa cum laude)
           location="Warsaw, Poland"
           dates="09/18 - 06/19">
-          <Typography>
-            <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
-              <li>Consortium scholarship issued for EMARO+ students based on academic merits and offered to top applicants only.</li>
-              <li>Relevant courses: Research Methodology, Bio-Robotics, Dynamics of Multi-Body Systems, Advanced Mechanical Design.</li>
-              <li>Other relevant courses: 2 exams of Polish language and 1 of Polish culture.</li>
-              <li>
-                Thesis:{' '}
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://drive.google.com/drive/folders/1Y7TJJN8z1llCkSTnpVHMELD3PqsX8VF9?usp=sharing">
-                  Voice Controlled Mobile Robot for Indoor Applications
-                </Link>{' '}
-                (research publication available{' '}
-                <Link target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-3-030-58380-4_7">
-                  <em>here</em>
-                </Link>
-                ).
-              </li>
-            </ul>
+          <Typography component="ul" sx={{ paddingLeft: '1em', marginTop: 0 }}>
+            <li>Consortium scholarship issued for EMARO+ students based on academic merits and offered to top applicants only.</li>
+            <li>Relevant courses: Research Methodology, Bio-Robotics, Dynamics of Multi-Body Systems, Advanced Mechanical Design.</li>
+            <li>Other relevant courses: 2 exams of Polish language and 1 of Polish culture.</li>
+            <li>
+              Thesis:{' '}
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://drive.google.com/drive/folders/1Y7TJJN8z1llCkSTnpVHMELD3PqsX8VF9?usp=sharing">
+                Voice Controlled Mobile Robot for Indoor Applications
+              </Link>{' '}
+              (research publication available{' '}
+              <Link target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1007/978-3-030-58380-4_7">
+                <em>here</em>
+              </Link>
+              ).
+            </li>
           </Typography>
         </CurriculumItem>
         {/* id="ECN" */}
@@ -185,25 +181,23 @@ const Curriculum = () => {
           company="Ecole Centrale de Nantes"
           location="Nantes, France"
           dates="09/17 - 06/18">
-          <Typography>
-            <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
-              <li>Consortium scholarship issued for EMARO+ students based on academic merits and offered to top applicants only.</li>
-              <li>
-                Relevant courses: Mobile Robotics, Non-linear Control Theory, Software Architecture for Robotics, Artificial Intelligence, Computer
-                Vision, Real Time Systems, Mechanical Design Methods in Robotics, Optimization Techniques.
-              </li>
-              <li>Other relevant courses: 2 exams of French language.</li>
-              <li>
-                Project:{' '}
-                <Link
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing">
-                  Recharging electric cars with a mobile robot
-                </Link>
-                .
-              </li>
-            </ul>
+          <Typography component="ul" sx={{ paddingLeft: '1em', marginTop: 0 }}>
+            <li>Consortium scholarship issued for EMARO+ students based on academic merits and offered to top applicants only.</li>
+            <li>
+              Relevant courses: Mobile Robotics, Non-linear Control Theory, Software Architecture for Robotics, Artificial Intelligence, Computer
+              Vision, Real Time Systems, Mechanical Design Methods in Robotics, Optimization Techniques.
+            </li>
+            <li>Other relevant courses: 2 exams of French language.</li>
+            <li>
+              Project:{' '}
+              <Link
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://drive.google.com/file/d/1wBfvAzy9N8uChNxNj9Kd_hcvI0Qq3uQj/view?usp=sharing">
+                Recharging electric cars with a mobile robot
+              </Link>
+              .
+            </li>
           </Typography>
         </CurriculumItem>
 
@@ -227,18 +221,16 @@ const Curriculum = () => {
           // (grade: 5/5)
           location="Shanghai, China"
           dates="09/14 - 06/17">
-          <Typography>
-            <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
-              <li>Relevant courses: Automation Controls, Electrical Circuit, Logical Design of Digital Systems.</li>
-              <li>Other relevant courses: 2 Exams about Chinese Language and 3 Exams about Chinese Culture.</li>
-              <li>
-                Thesis:{' '}
-                <Link target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/0B1z42QMR-0UtYzBYSVhRV3ZPWk0/view?usp=sharing">
-                  Solar Panel Fault Detection Method Based on Infrared Image Processing
-                </Link>
-                .
-              </li>
-            </ul>
+          <Typography component="ul" sx={{ paddingLeft: '1em', marginTop: 0 }}>
+            <li>Relevant courses: Automation Controls, Electrical Circuit, Logical Design of Digital Systems.</li>
+            <li>Other relevant courses: 2 Exams about Chinese Language and 3 Exams about Chinese Culture.</li>
+            <li>
+              Thesis:{' '}
+              <Link target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/0B1z42QMR-0UtYzBYSVhRV3ZPWk0/view?usp=sharing">
+                Solar Panel Fault Detection Method Based on Infrared Image Processing
+              </Link>
+              .
+            </li>
           </Typography>
         </CurriculumItem>
         {/* id="UniBo" */}
@@ -248,19 +240,17 @@ const Curriculum = () => {
           location="Bologna, Italy"
           //(grade: 102/110)
           dates="09/13 - 12/16">
-          <Typography>
-            <ul style={{ paddingLeft: '1em', marginTop: 0 }}>
-              <li>Scholarship issued for Almatong Project student based on academic merits and offered to top applicants only.</li>
-              <li>Relevant courses: Foundation of Industrial Robotics, Automatic Machines, Computer Architectures.</li>
-              <li>Other relevant courses: 2 exams of French language.</li>
-              <li>
-                Thesis:{' '}
-                <Link target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/0B1z42QMR-0UtSkxRVzJPTk1IX0k/view?usp=sharing">
-                  Design of a Testing Machine for Flexure Hinges
-                </Link>
-                .
-              </li>
-            </ul>
+          <Typography component="ul" sx={{ paddingLeft: '1em', marginTop: 0 }}>
+            <li>Scholarship issued for Almatong Project student based on academic merits and offered to top applicants only.</li>
+            <li>Relevant courses: Foundation of Industrial Robotics, Automatic Machines, Computer Architectures.</li>
+            <li>Other relevant courses: 2 exams of French language.</li>
+            <li>
+              Thesis:{' '}
+              <Link target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/0B1z42QMR-0UtSkxRVzJPTk1IX0k/view?usp=sharing">
+                Design of a Testing Machine for Flexure Hinges
+              </Link>
+              .
+            </li>
           </Typography>
         </CurriculumItem>
 
@@ -305,50 +295,52 @@ const Curriculum = () => {
         <Divider sx={{ mt: 4, mb: 4 }} />
         <SectionHeader>Skills</SectionHeader>
         <Table>
-          <TableRow>
-            <TableCell width="15%">
-              <Typography variant="h6" component="b" fontWeight={600}>
-                Languages
-              </Typography>
-            </TableCell>
-            <TableCell width="85%">Italian (Native Speaker), English (Proficient, IELTS 7.5), French (Good), Chinese (Basic, HSK3)</TableCell>
-          </TableRow>
+          <TableBody>
+            <TableRow>
+              <TableCell width="15%">
+                <Typography variant="h6" component="b" fontWeight={600}>
+                  Languages
+                </Typography>
+              </TableCell>
+              <TableCell width="85%">Italian (Native Speaker), English (Proficient, IELTS 7.5), French (Good), Chinese (Basic, HSK3)</TableCell>
+            </TableRow>
 
-          <TableRow>
-            <TableCell rowSpan={4} width="15%" id="digital_skills">
-              <Typography variant="h6" component="b" fontWeight={600}>
-                Digital
-              </Typography>
-            </TableCell>
-            <TableCell width="85%">
-              <b>Languages:</b> TypeScript/Javascript (Proficient), Python (Proficient), Bash (Good), C++ (Good), C (Fair)
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>
-              <b>Softwares:</b> git (Proficient), Matlab (Good), LaTeX (Good), CATIA (Fair)
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>
-              <b>Middleware:</b> Robotic Operative System (ROS, Good)
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>
-              <b>OS Used:</b> Linux, Microsoft
-            </TableCell>
-          </TableRow>
-          <TableRow sx={{ '&:last-child td': { borderBottom: 0 } }}>
-            <TableCell width="15%">
-              <Typography variant="h6" component="b" fontWeight={600}>
-                Softskills
-              </Typography>
-            </TableCell>
-            <TableCell width="85%">
-              Adaptability, Communication, Creativity, Critical Thinking, Problem-Solving, Self-Organization, Teamworking
-            </TableCell>
-          </TableRow>
+            <TableRow>
+              <TableCell rowSpan={4} width="15%" id="digital_skills">
+                <Typography variant="h6" component="b" fontWeight={600}>
+                  Digital
+                </Typography>
+              </TableCell>
+              <TableCell width="85%">
+                <b>Languages:</b> TypeScript/Javascript (Proficient), Python (Proficient), Bash (Good), C++ (Good), C (Fair)
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <b>Softwares:</b> git (Proficient), Matlab (Good), LaTeX (Good), CATIA (Fair)
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <b>Middleware:</b> Robotic Operative System (ROS, Good)
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>
+                <b>OS Used:</b> Linux, Microsoft
+              </TableCell>
+            </TableRow>
+            <TableRow sx={{ '&:last-child td': { borderBottom: 0 } }}>
+              <TableCell width="15%">
+                <Typography variant="h6" component="b" fontWeight={600}>
+                  Softskills
+                </Typography>
+              </TableCell>
+              <TableCell width="85%">
+                Adaptability, Communication, Creativity, Critical Thinking, Problem-Solving, Self-Organization, Teamworking
+              </TableCell>
+            </TableRow>
+          </TableBody>
         </Table>
 
         {/* Accomplishments */}

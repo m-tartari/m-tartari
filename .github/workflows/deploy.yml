@@ -37,8 +37,27 @@ jobs:
           node-version: 'lts/*'
           cache: 'npm'
 
-      - name: Set VITE_GA_MEASUREMENT_ID
-        run: echo "VITE_GA_MEASUREMENT_ID=${{ secrets.VITE_GA_MEASUREMENT_ID }}" > .env
+      - name: Set environment variables
+        run: |
+          echo "VITE_GA_MEASUREMENT_ID=${{ secrets.VITE_GA_MEASUREMENT_ID }}" > .env
+          if [[ -n "${{ vars.VITE_BC_NAME }}" ]]; then
+            echo "VITE_BC_NAME=${{ vars.VITE_BC_NAME }}" >> .env
+          fi
+          if [[ -n "${{ vars.VITE_BC_POSITION }}" ]]; then
+            echo "VITE_BC_POSITION=${{ vars.VITE_BC_POSITION }}" >> .env
+          fi
+          if [[ -n "${{ vars.VITE_BC_VAT }}" ]]; then
+            echo "VITE_BC_VAT=${{ vars.VITE_BC_VAT }}" >> .env
+          fi
+          if [[ -n "${{ vars.VITE_BC_LINKEDIN }}" ]]; then
+            echo "VITE_BC_LINKEDIN=${{ vars.VITE_BC_LINKEDIN }}" >> .env
+          fi
+          if [[ -n "${{ secrets.VITE_BC_PHONE }}" ]]; then
+            echo "VITE_BC_PHONE=${{ secrets.VITE_BC_PHONE }}" >> .env
+          fi
+          if [[ -n "${{ secrets.VITE_BC_EMAIL }}" ]]; then
+            echo "VITE_BC_EMAIL=${{ secrets.VITE_BC_EMAIL }}" >> .env
+          fi
 
       - name: Install dependencies
         run: npm ci --omit=dev

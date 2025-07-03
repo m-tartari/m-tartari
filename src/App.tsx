@@ -10,6 +10,7 @@ const ProjectsPage = React.lazy(() => import('components/pages/ProjectsPage/inde
 const CurriculumPage = React.lazy(() => import('components/pages/CurriculumPage/index.js'))
 const ContactPage = React.lazy(() => import('components/pages/ContactPage/index.js'))
 const PrivacyPage = React.lazy(() => import('components/pages/PrivacyPage/index.js'))
+const BusinessCardPage = React.lazy(() => import('components/pages/BusinessCardPage/index.js'))
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,14 @@ const router = createBrowserRouter([
         element: (
           <React.Suspense fallback={<Loading />}>
             <PrivacyPage />
+          </React.Suspense>
+        ),
+      },
+      {
+        path: 'card',
+        element: (
+          <React.Suspense fallback={<Loading />}>
+            <BusinessCardPage />
           </React.Suspense>
         ),
       },

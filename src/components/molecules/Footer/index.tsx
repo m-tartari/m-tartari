@@ -14,7 +14,17 @@ type FooterProps = {
 const Footer: React.FC<FooterProps> = ({ showCookieConsent = true }) => {
   const year = new Date().getFullYear()
   return (
-    <Box sx={{ bgcolor: 'background.paper', p: 6, display: 'flex', alignItems: 'center', flexDirection: 'column' }} component="footer">
+    <Box
+      id="footer"
+      component="footer"
+      sx={{
+        bgcolor: 'background.paper',
+        py: 6,
+        display: 'flex',
+        alignItems: 'center',
+        flexDirection: 'column',
+        '@media print': { py: 3 },
+      }}>
       <Stack direction="row" gap={2}>
         <LinkedInIconLink fontSize="large" href="https://www.linkedin.com/in/m-tartari/" />
         <GitHubIconLink fontSize="large" href="https://www.github.com/m-tartari/" />

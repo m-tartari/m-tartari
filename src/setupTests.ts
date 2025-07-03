@@ -15,6 +15,11 @@ afterEach(() => {
 })
 
 /**
+ * Mocks the window.scrollTo method (called on page change)
+ */
+vi.stubGlobal('scrollTo', vi.fn())
+
+/**
  * Mocks the ResizeObserver API (used by ParallaxProvider)
  */
 vi.stubGlobal(
