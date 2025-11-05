@@ -36,6 +36,7 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ consentDisplayDefaultOpen
 
     if (savedConsent) {
       const parsedConsent = JSON.parse(savedConsent) as CookieConsentState
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setConsent(parsedConsent)
     }
   }, [analytics.plugins, consentDisplayDefaultOpen])
