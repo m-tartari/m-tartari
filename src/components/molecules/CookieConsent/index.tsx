@@ -19,6 +19,7 @@ const CookieConsent = () => {
     const savedConsent = localStorage.getItem(COOKIE_CONSENT_KEY)
 
     if (!savedConsent) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setOpen(true)
     } else {
       const parsedConsent = JSON.parse(savedConsent) as Consent
