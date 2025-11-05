@@ -24,7 +24,7 @@
     "@emotion/styled": "^11.14.1",
     "@fontsource/inter": "^5.2.8",
     "@fontsource/oswald": "^5.2.8",
-    "@mui/icons-material": "^7.3.4",
+    "@mui/icons-material": "^7.3.5",
     "@mui/material": "^7.0.0",
     "@vitejs/plugin-react-swc": "^4.2.0",
     "analytics": "^0.8.19",
