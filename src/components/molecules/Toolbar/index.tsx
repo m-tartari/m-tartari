@@ -109,8 +109,13 @@ const CustomToolbar: React.FC<CustomToolbarProps> = ({ drawerWidth = 240, window
         elevation={theme.palette.mode === 'light' ? 1 : 0}
         {...props}
         sx={{
-          backgroundColor: trigger ? 'background.paper' : 'transparent',
+          backgroundColor: 'transparent',
           '@media print': { backgroundColor: 'background.default' },
+          ...(trigger && {
+            backgroundColor: 'hsla(230, 18%, 13%, 0.75)',
+            backdropFilter: 'blur(8px)',
+            boxShadow: theme.shadows[4],
+          }),
           ...(theme.palette.mode === 'light' && {
             backgroundColor: 'hsla(0, 0%, 100%, 0.75)',
             backdropFilter: 'blur(8px)',
