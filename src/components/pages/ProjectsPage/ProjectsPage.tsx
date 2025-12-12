@@ -15,6 +15,28 @@ const ProjectsPage = () => {
           Here is a collection of all the projects that are strictly related to the design, development and functioning of robots:
         </Typography>
         <Project
+          title="Behavior Tree Web Editor and Runtime for Robotics Applications"
+          subtitle={<Typography color="text.secondary">Software Engineering Consultant @ IIT</Typography>}>
+          <Typography>
+            This project aims to simplify the remote control, monitoring, programming of behavior trees through an intuitive web interface. It
+            includes a frontend web app, built with TypeScript and React, allowing users to effortlessly add, remove, replace nodes by dragging and
+            dropping them on the a behavior trees canvas. It also allows to start, stop, pause, and resume tree execution. Additionally, backend
+            services, developed with C++ and Python, translate these programs into formats compatible with the underlying libraries, stream them to
+            target systems, and manage the behavior-trees lifecycle. Automated CI/CD pipelines further streamline integration and deployment
+            processes.
+          </Typography>
+        </Project>
+        <Project
+          title="Digital Twin Interface for Reconfigurable Robots"
+          subtitle={<Typography color="text.secondary">Software Engineering Consultant @ IIT</Typography>}>
+          <Typography>
+            This project focuses on the development of a user interface for the control and monitoring of the digital twin of modular reconfigurable
+            robots. It includes a frontend web app, built with TypeScript and React, allowing users to effortlessly monitor and control the digital
+            twin of their robots. The backend is powered by Python, and provides robust APIs for seamless communication between the frontend and the
+            digital twin simulation. Automated CI/CD pipelines further streamline integration and deployment processes.
+          </Typography>
+        </Project>
+        <Project
           title="LINFA: An Intuitive Block-Programming Interface for Reconfigurable Robots"
           subtitle={
             <>
@@ -233,6 +255,17 @@ const ProjectsPage = () => {
           Engineering
         </Typography>
         <Typography gutterBottom>Here there is a collection of all the projects that are related to all the other fields of engineering:</Typography>
+        <Project
+          title="Replacing Legacy CNC Software with a Rust-based G-code Converter"
+          subtitle={<Typography color="text.secondary">Software Engineering Consultant</Typography>}>
+          <Typography>
+            This project focuses on the replacement of mission-critical software which was previously handled by a prioritary solution on an unsecure
+            legacy machine. The converter developed here is a standalone, cross-platform command-line tool written in Rust that transforms ISO-style
+            G-code programs into explicit Fanuc CNC format. Scripts and guides were provided to facilitate adoption for non-technical users, and
+            automation workflows were setup to enable seamless compilation and distribution of the converter across Windows, Linux, and macOS
+            platforms.
+          </Typography>
+        </Project>
         <Project
           title="Automated Actuators and Robotic Modules Calibration"
           subtitle={
