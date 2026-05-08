@@ -1,4 +1,3 @@
-ARG PRODUCTION_IMAGE=nginx:alpine
 ARG BASE_IMAGE=node:lts
 
 # --------------> The development image
@@ -21,17 +20,24 @@ WORKDIR /app
 RUN npm ci --omit=dev
 RUN npm run build:prod
 
-# --------------> The production image
-FROM ${PRODUCTION_IMAGE} AS production
+# -------------->  Nginx extraction (Debian-based for glibc compatibility)
+FROM nginx:stable AS nginx-extractor
+COPY --from=nginx:stable /usr/sbin/nginx /extracted/nginx
+RUN ldd /extracted/nginx | grep -o '/[^ ]*' | xargs -I {} cp --parents {} /extracted/
 
-# Remove default nginx website
-RUN rm -rf html; mkdir html
+# -------------->  Production image (Distroless)
+FROM gcr.io/distroless/base-debian13:nonroot AS runner
 
-COPY --from=production-build /app/dist /usr/share/nginx/html
+# Copy nginx and libraries
+COPY --from=nginx-extractor /extracted/ /
+
+# Copy static files and config (edit nginx.conf locally to remove 'user nginx;')
+COPY --from=production-build --chown=nonroot /app/dist /usr/share/nginx/html
 # COPY .htpasswd /usr/share/nginx/html/.htpasswd
-COPY ./nginx.conf /etc/nginx/
+COPY --chown=nonroot ./nginx.conf /etc/nginx/
 
-RUN chmod -R o+r /usr/share/nginx/html
 WORKDIR /usr/share/nginx
+USER nonroot
 
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+EXPOSE 8080
+ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]

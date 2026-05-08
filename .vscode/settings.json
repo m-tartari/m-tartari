@@ -73,6 +73,7 @@
   // other extensions
   "vitest.enable": true,
   "cSpell.words": [
+    "nonroot",
     "SRDF",
     "URDF"
   ],
