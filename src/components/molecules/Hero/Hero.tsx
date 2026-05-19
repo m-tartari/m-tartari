@@ -89,7 +89,7 @@ const Hero = (props: { scrollTarget?: React.ForwardedRef<HTMLSelectElement> }) =
             color={t => (t.palette.mode === 'light' ? 'inherit' : 'text.secondary')}>
             <LinkedInIconLink fontSize="large" href="https://www.linkedin.com/in/m-tartari/" />
             <GitHubIconLink fontSize="large" href="https://www.github.com/m-tartari/" />
-            <EmailIconLink fontSize="large" href="mailto:info@m-tartari.eu" />
+            <EmailIconLink fontSize="large" href="mailto:info@m-tartari.it" />
           </Stack>
         </Box>
         <Avatar

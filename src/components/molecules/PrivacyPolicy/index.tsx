@@ -101,8 +101,8 @@ const PrivacyPolicy: React.FC = () => {
       <SectionSubheader sx={{ mt: 4 }}>Contact Us</SectionSubheader>
       <Typography component="p" color="textSecondary">
         If you have any questions about this privacy policy or our privacy practices, please contact us at{' '}
-        <Link color="textPrimary" href="mailto:privacy@m-tartari.eu" target="_blank" rel="noopener noreferrer">
-          privacy@m-tartari.eu
+        <Link color="textPrimary" href="mailto:privacy@m-tartari.it" target="_blank" rel="noopener noreferrer">
+          privacy@m-tartari.it
         </Link>
         .
       </Typography>
