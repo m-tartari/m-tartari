@@ -28,7 +28,7 @@ const Footer: React.FC<FooterProps> = ({ showCookieConsent = true }) => {
       <Stack direction="row" gap={2}>
         <LinkedInIconLink fontSize="large" href="https://www.linkedin.com/in/m-tartari/" />
         <GitHubIconLink fontSize="large" href="https://www.github.com/m-tartari/" />
-        <EmailIconLink fontSize="large" href="mailto:info@m-tartari.eu" />
+        <EmailIconLink fontSize="large" href="mailto:info@m-tartari.it" />
       </Stack>
 
       <Typography variant="subtitle2" align="center" color="text.secondary" component="em" mt={3}>

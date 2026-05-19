@@ -44,12 +44,12 @@ const ContactPage = () => {
         Feel free to contact me using any of the following:
       </Typography>
       <List>
-        <ListItemLink href="mailto:info@m-tartari.eu" aria-label="Email link">
+        <ListItemLink href="mailto:info@m-tartari.it" aria-label="Email link">
           <DraftsIcon fontSize="large" />
           <Typography variant="h6" ml={2}>
             info
             <wbr />
-            @m-tartari.eu
+            @m-tartari.it
           </Typography>
         </ListItemLink>
         <ListItemLink aria-label="LinkedIn link" href="https://www.linkedin.com/in/m-tartari/">

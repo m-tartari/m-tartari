@@ -154,8 +154,8 @@ const BusinessCardPage = () => {
             <TypographyLink icon={Email} href={`mailto:${env.EMAIL}`}>
               {env.EMAIL}
             </TypographyLink>
-            <TypographyLink icon={Public} href="https://www.m-tartari.eu">
-              www.m-tartari.eu
+            <TypographyLink icon={Public} href="https://www.m-tartari.it">
+              www.m-tartari.it
             </TypographyLink>
             <TypographyLink icon={LinkedIn} href={`https://www.linkedin.com/in/${env.LINKEDIN}/`}>
               {env.LINKEDIN}

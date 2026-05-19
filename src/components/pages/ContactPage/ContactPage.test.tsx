@@ -24,7 +24,7 @@ describe('ContactPage', () => {
   test.each([
     {
       label: 'Email link',
-      href: 'mailto:info@m-tartari.eu',
+      href: 'mailto:info@m-tartari.it',
     },
     // {
     //   label: 'LinkedIn link',

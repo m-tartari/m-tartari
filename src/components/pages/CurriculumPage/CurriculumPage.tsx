@@ -122,12 +122,22 @@ const Curriculum = () => {
             </ul>
           </Typography>
         </CurriculumItem>
-
-        <Divider sx={{ mt: 4, mb: 4 }} />
+      </Box>
+      <Divider sx={{ mt: 4, mb: 4 }} />
+      <Box component="section" id="education">
         <SectionHeader>Education</SectionHeader>
 
-        <SectionSubheader fontWeight={300}>Certifications</SectionSubheader>
-        {/* id="WUT" */}
+        <SectionSubheader fontWeight={300}>Certifications & Courses</SectionSubheader>
+        <CurriculumItem title="FANUC RO44 - CRX Robot Programming" dates="04/26">
+          <Stack direction="row" alignItems="center" gap={0.5}>
+            <Typography>
+              Course provided by{' '}
+              <Link href="https://www.fanuc.eu/it-it/fanuc-academy-italia" target="_blank" rel="noopener noreferrer">
+                FANUC Academy Italia
+              </Link>
+            </Typography>
+          </Stack>
+        </CurriculumItem>
         <CurriculumItem title="IBM Full Stack Software Developer Professional Certificate" dates="03/24">
           <Stack direction="row" alignItems="center" gap={0.5}>
             <Typography>Credential ID: EZ34GWQLRHEG</Typography>

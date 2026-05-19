@@ -40,7 +40,7 @@ describe('BusinessCardPage', () => {
     expect(screen.getByText('Test VAT')).toBeInTheDocument()
     expect(screen.getByText('+123456789')).toBeInTheDocument()
     expect(screen.getByText('test@example.com')).toBeInTheDocument()
-    expect(screen.getByText('www.m-tartari.eu')).toBeInTheDocument()
+    expect(screen.getByText('www.m-tartari.it')).toBeInTheDocument()
     expect(screen.getByText('testlinkedin')).toBeInTheDocument()
   })
 
@@ -56,8 +56,8 @@ describe('BusinessCardPage', () => {
     expect(emailLink).toHaveAttribute('href', 'mailto:test@example.com')
 
     // Check website link
-    const websiteLink = screen.getByText('www.m-tartari.eu').closest('a')
-    expect(websiteLink).toHaveAttribute('href', 'https://www.m-tartari.eu')
+    const websiteLink = screen.getByText('www.m-tartari.it').closest('a')
+    expect(websiteLink).toHaveAttribute('href', 'https://www.m-tartari.it')
 
     // Check LinkedIn link
     const linkedinLink = screen.getByText('testlinkedin').closest('a')
