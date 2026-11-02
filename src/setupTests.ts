@@ -24,9 +24,9 @@ vi.stubGlobal('scrollTo', vi.fn())
  */
 vi.stubGlobal(
   'ResizeObserver',
-  vi.fn().mockImplementation(() => ({
-    observe: vi.fn(),
-    unobserve: vi.fn(),
-    disconnect: vi.fn(),
-  }))
+  class MockResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  }
 )

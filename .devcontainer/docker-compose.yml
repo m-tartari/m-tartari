@@ -12,7 +12,7 @@ services:
     #   - '5173:5173'
     #   - '4173:4173'
     volumes:
-      - ..:/workspaces/m-tartari.github.io:cached
+      - ..:/workspaces/app:cached
     # Uncomment the next four lines if you will use a ptrace-based debugger like C++, Go, and Rust.
     # cap_add:
     #   - SYS_PTRACE

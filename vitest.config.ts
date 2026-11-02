@@ -13,6 +13,10 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./src/setupTests.ts'],
+    isolate: false,
+    sequence: {
+      shuffle: true,
+    },
     coverage: {
       provider: 'istanbul',
       include: ['src'],
