@@ -6,6 +6,8 @@ updates:
       time: '03:30'
       timezone: 'Europe/Rome'
       interval: 'daily'
+    cooldown:
+      default-days: 1
     open-pull-requests-limit: 10
     commit-message:
       prefix: '⬆️ chore'
