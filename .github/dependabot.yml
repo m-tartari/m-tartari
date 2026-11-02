@@ -23,10 +23,12 @@ updates:
           - 'vite'
           - 'vite-*'
           - '@vitejs/*'
-      vitest:
+      tests:
         patterns:
           - 'vitest'
           - '@vitest*'
+          - '@testing-library/*'
+          - 'jsdom'
       lint:
         patterns:
           - 'eslint*'
@@ -38,9 +40,6 @@ updates:
           - '@mui/material'
           - '@mui/icons-material'
           - '@emotion/*'
-      testing-library:
-        patterns:
-          - '@testing-library/*'
       lodash:
         patterns:
           - 'lodash*'
