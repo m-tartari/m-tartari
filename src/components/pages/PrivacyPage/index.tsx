@@ -7,7 +7,7 @@ import { Divider } from '@mui/material'
 
 const PrivacyPage: React.FC = () => {
   return (
-    <Page title="Privacy" showCookieConsent={false}>
+    <Page title="Privacy">
       <PrivacyPolicy />
       <Divider sx={{ my: 4 }} />
       <CookiePreferences />

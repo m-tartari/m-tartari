@@ -1,7 +1,5 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { useAnalytics } from 'use-analytics'
 
 import { renderWithRouter as render } from 'components/utils/tests/index.js'
 import BusinessCardPage from './index.js'
@@ -18,11 +16,6 @@ vi.mock('./envVars.js', () => ({
 // Mock window.print
 const mockPrint = vi.fn()
 window.print = mockPrint
-
-// Mock the analytics module
-vi.mock('use-analytics', () => ({
-  useAnalytics: () => ({ plugins: { enable: vi.fn(), disable: vi.fn() } }),
-}))
 
 describe('BusinessCardPage', () => {
   beforeEach(() => {

@@ -1,17 +1,12 @@
-import React from 'react'
+import { FC } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 import { Box, Link, Stack, Typography } from '@mui/material'
 import PolicyIcon from '@mui/icons-material/Policy'
 import CookieIcon from '@mui/icons-material/Cookie'
 
 import { EmailIconLink, GitHubIconLink, LinkedInIconLink } from 'components/atoms/IconLinks/index.js'
-import CookieConsent from 'components/molecules/CookieConsent/index.js'
 
-type FooterProps = {
-  showCookieConsent?: boolean
-}
-
-const Footer: React.FC<FooterProps> = ({ showCookieConsent = true }) => {
+const Footer: FC = () => {
   const year = new Date().getFullYear()
   return (
     <Box
@@ -53,8 +48,6 @@ const Footer: React.FC<FooterProps> = ({ showCookieConsent = true }) => {
           </Stack>
         </Link>
       </Stack>
-
-      {showCookieConsent && <CookieConsent />}
     </Box>
   )
 }
