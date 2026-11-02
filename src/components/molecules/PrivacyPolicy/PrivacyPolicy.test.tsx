@@ -12,8 +12,7 @@ describe('Privacy Policy', () => {
       </BrowserRouter>
     )
     expect(screen.getByText('Privacy Policy')).toBeInTheDocument()
-    expect(screen.getByText('Google Analytics')).toBeInTheDocument()
-    expect(screen.getByText('Your Rights')).toBeInTheDocument()
-    expect(screen.getByText('Contact Us')).toBeInTheDocument()
+    expect(screen.getByText('Tipi di dati trattati (Dati di navigazione)')).toBeInTheDocument()
+    expect(screen.getByText('Diritti di accesso e reclamo')).toBeInTheDocument()
   })
 })
