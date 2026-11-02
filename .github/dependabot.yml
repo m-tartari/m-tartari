@@ -46,12 +46,6 @@ updates:
         patterns:
           - 'lodash*'
           - '@types/lodash*'
-      analytics:
-        patterns:
-          - 'analytics'
-          - '@analytics/*'
-          - 'use-analytics'
-          - '@types/use-analytics'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
