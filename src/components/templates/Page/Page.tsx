@@ -3,15 +3,11 @@ import { Box, BoxProps, Container, Divider, Typography } from '@mui/material'
 
 import { Footer, Toolbar } from 'components/molecules/index.js'
 
-interface PageProps extends BoxProps {
-  showCookieConsent?: boolean
-}
-
 /**
  * React function component that implements the default page template.
  * @see BoxProps from '@mui/material' for props
  */
-const Page: React.FC<PageProps> = ({ title, children, showCookieConsent, ...props }) => {
+const Page: React.FC<BoxProps> = ({ title, children, ...props }) => {
   React.useEffect(() => {
     if (title) {
       document.title = `Michele Tartari - ${title}`
@@ -72,7 +68,7 @@ const Page: React.FC<PageProps> = ({ title, children, showCookieConsent, ...prop
         }}>
         {children}
       </Container>
-      <Footer showCookieConsent={showCookieConsent} />
+      <Footer />
     </Box>
   )
 }
