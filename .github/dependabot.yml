@@ -52,3 +52,29 @@ updates:
           - '@analytics/*'
           - 'use-analytics'
           - '@types/use-analytics'
+
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      time: '04:00'
+      timezone: 'Europe/Rome'
+      interval: 'weekly'
+    cooldown:
+      default-days: 1
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: '⬆️ chore'
+      include: 'scope'
+
+  # - package-ecosystem: 'docker'
+  #   directory: '/'
+  #   schedule:
+  #     time: '04:30'
+  #     timezone: 'Europe/Rome'
+  #     interval: 'weekly'
+    # cooldown:
+    #   default-days: 1
+  #   open-pull-requests-limit: 10
+  #   commit-message:
+  #     prefix: '⬆️ chore'
+  #     include: 'scope'
