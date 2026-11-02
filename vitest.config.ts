@@ -14,6 +14,9 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/setupTests.ts'],
     isolate: false,
+    sequence: {
+      shuffle: true,
+    },
     coverage: {
       provider: 'istanbul',
       include: ['src'],
